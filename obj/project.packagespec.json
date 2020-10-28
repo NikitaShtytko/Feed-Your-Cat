@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj",
+    "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
     "projectName": "FeedYourCat",
-    "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj",
-    "outputPath": "W:\\Projects\\FeedYourCat\\FeedYourCat\\obj\\",
+    "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+    "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"

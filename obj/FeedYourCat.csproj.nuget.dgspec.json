@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj": {}
+    "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj": {}
   },
   "projects": {
-    "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj": {
+    "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj",
+        "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
         "projectName": "FeedYourCat",
-        "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat\\FeedYourCat.csproj",
+        "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
         "packagesPath": "C:\\Users\\shtyt\\.nuget\\packages\\",
-        "outputPath": "W:\\Projects\\FeedYourCat\\FeedYourCat\\obj\\",
+        "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shtyt\\AppData\\Roaming\\NuGet\\NuGet.Config"
