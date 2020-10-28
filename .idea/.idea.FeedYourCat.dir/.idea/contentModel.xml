@@ -37,6 +37,7 @@
         </e>
         <e p="karma.conf.js" t="Include" />
         <e p="node_modules\@angular\animations" t="IncludeRecursive" />
+        <e p="node_modules\@angular\cdk" t="IncludeRecursive" />
         <e p="node_modules\@angular\cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\common" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
@@ -52,9 +53,11 @@
         <e p="node_modules\@angular-devkit\build-webpack" t="IncludeRecursive" />
         <e p="node_modules\@angular-devkit\core" t="IncludeRecursive" />
         <e p="node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
+        <e p="node_modules\@fortawesome\fontawesome-free" t="IncludeRecursive" />
         <e p="node_modules\@jsdevtools\coverage-istanbul-loader" t="IncludeRecursive" />
         <e p="node_modules\@ngtools\webpack" t="IncludeRecursive" />
         <e p="node_modules\@types" t="IncludeRecursive">
+          <e p="chart.js" t="IncludeRecursive" />
           <e p="jasmine" t="IncludeRecursive" />
           <e p="jasminewd2" t="IncludeRecursive" />
           <e p="minimatch" t="IncludeRecursive" />
@@ -64,21 +67,26 @@
         <e p="node_modules\acorn" t="IncludeRecursive" />
         <e p="node_modules\ajv" t="IncludeRecursive" />
         <e p="node_modules\ajv-keywords" t="IncludeRecursive" />
+        <e p="node_modules\angular-bootstrap-md" t="IncludeRecursive" />
+        <e p="node_modules\animate.css" t="IncludeRecursive" />
         <e p="node_modules\ansi-colors" t="IncludeRecursive" />
         <e p="node_modules\ansi-regex" t="IncludeRecursive" />
         <e p="node_modules\arg" t="IncludeRecursive" />
         <e p="node_modules\blocking-proxy" t="IncludeRecursive" />
         <e p="node_modules\canonical-path" t="IncludeRecursive" />
         <e p="node_modules\chalk" t="IncludeRecursive" />
+        <e p="node_modules\chart.js" t="IncludeRecursive" />
         <e p="node_modules\cli-cursor" t="IncludeRecursive" />
         <e p="node_modules\cli-spinners" t="IncludeRecursive" />
         <e p="node_modules\codelyzer" t="IncludeRecursive" />
         <e p="node_modules\colorette" t="IncludeRecursive" />
         <e p="node_modules\commander" t="IncludeRecursive" />
         <e p="node_modules\dependency-graph" t="IncludeRecursive" />
+        <e p="node_modules\es6-promise" t="IncludeRecursive" />
         <e p="node_modules\fast-deep-equal" t="IncludeRecursive" />
         <e p="node_modules\fast-json-stable-stringify" t="IncludeRecursive" />
         <e p="node_modules\fsevents" t="IncludeRecursive" />
+        <e p="node_modules\hammerjs" t="IncludeRecursive" />
         <e p="node_modules\hash.js" t="IncludeRecursive" />
         <e p="node_modules\is-docker" t="IncludeRecursive" />
         <e p="node_modules\is-interactive" t="IncludeRecursive" />
@@ -96,6 +104,7 @@
         <e p="node_modules\magic-string" t="IncludeRecursive" />
         <e p="node_modules\make-error" t="IncludeRecursive" />
         <e p="node_modules\mimic-fn" t="IncludeRecursive" />
+        <e p="node_modules\moment" t="IncludeRecursive" />
         <e p="node_modules\onetime" t="IncludeRecursive" />
         <e p="node_modules\open" t="IncludeRecursive" />
         <e p="node_modules\ora" t="IncludeRecursive" />
@@ -118,6 +127,59 @@
         <e p="node_modules\tslib" t="IncludeRecursive" />
         <e p="node_modules\tslint" t="IncludeRecursive" />
         <e p="node_modules\tsutils" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.regexp.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.array.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.object.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.bigint.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.esnext.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.esnext.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.esnext.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
         <e p="node_modules\uri-js" t="IncludeRecursive" />
         <e p="node_modules\webdriver-js-extender" t="IncludeRecursive" />
         <e p="node_modules\webdriver-manager" t="IncludeRecursive" />
@@ -134,9 +196,32 @@
             <e p="app.component.spec.ts" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
+            <e p="components" t="Include">
+              <e p="login-page" t="Include">
+                <e p="login-page.component.css" t="Include" />
+                <e p="login-page.component.html" t="Include" />
+                <e p="login-page.component.spec.ts" t="Include" />
+                <e p="login-page.component.ts" t="Include" />
+              </e>
+              <e p="not-found-page" t="Include">
+                <e p="not-found-page.component.css" t="Include" />
+                <e p="not-found-page.component.html" t="Include" />
+                <e p="not-found-page.component.spec.ts" t="Include" />
+                <e p="not-found-page.component.ts" t="Include" />
+              </e>
+              <e p="register-page" t="Include">
+                <e p="register-page.component.css" t="Include" />
+                <e p="register-page.component.html" t="Include" />
+                <e p="register-page.component.spec.ts" t="Include" />
+                <e p="register-page.component.ts" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
+            <e p="images" t="Include">
+              <e p="249769-P3XH87-447.jpg" t="Include" />
+            </e>
           </e>
           <e p="environments" t="Include">
             <e p="environment.prod.ts" t="Include" />
