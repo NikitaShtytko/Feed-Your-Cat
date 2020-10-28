@@ -23,29 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/assets/images/249769-P3XH87-447.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FeedYourCat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FeedYourCat.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/assets/images/249769-P3XH87-447.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +40,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -65,8 +57,9 @@
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" />
       </list>
     </option>
   </component>
@@ -145,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603908907548</updated>
       <workItem from="1603908913921" duration="570000" />
-      <workItem from="1603909509745" duration="2786000" />
+      <workItem from="1603909509745" duration="5201000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -154,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603909331058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="register and login pages">
+      <created>1603912874900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603912874900</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +178,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initialize Angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize Angular" />
+    <MESSAGE value="register and login pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="register and login pages" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1603910598414">
@@ -197,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603910598414" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603909332982">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603912877049">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603909332982" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603912877049" />
     <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1603909607204">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

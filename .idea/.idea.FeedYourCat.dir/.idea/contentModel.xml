@@ -220,7 +220,10 @@
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
             <e p="images" t="Include">
-              <e p="249769-P3XH87-447.jpg" t="Include" />
+              <e p="error-image-1.jpg" t="Include" />
+              <e p="error-image-2.jpg" t="Include" />
+              <e p="error-image-3.jpg" t="Include" />
+              <e p="error-image-4.jpg" t="Include" />
             </e>
           </e>
           <e p="environments" t="Include">
