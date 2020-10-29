@@ -14,7 +14,7 @@ const appRoutes: Routes =[
   { path: '', component: LoginPageComponent},
   { path: 'login', component: LoginPageComponent},
   { path: 'register', component: RegisterPageComponent},
-  { path: '404', component: NotFoundPageComponent},
+  { path: '**', component: NotFoundPageComponent},
 ];
 
 @NgModule({

@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/assets/images/error-image-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/assets/images/249769-P3XH87-447.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +48,10 @@
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
       </list>
     </option>
   </component>
