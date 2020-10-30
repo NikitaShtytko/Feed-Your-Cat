@@ -197,6 +197,12 @@
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="components" t="Include">
+              <e p="admin-panel" t="Include">
+                <e p="admin-panel.component.css" t="Include" />
+                <e p="admin-panel.component.html" t="Include" />
+                <e p="admin-panel.component.spec.ts" t="Include" />
+                <e p="admin-panel.component.ts" t="Include" />
+              </e>
               <e p="login-page" t="Include">
                 <e p="login-page.component.css" t="Include" />
                 <e p="login-page.component.html" t="Include" />
@@ -220,10 +226,14 @@
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
             <e p="images" t="Include">
+              <e p="background.png" t="Include" />
               <e p="error-image-1.jpg" t="Include" />
               <e p="error-image-2.jpg" t="Include" />
               <e p="error-image-3.jpg" t="Include" />
               <e p="error-image-4.jpg" t="Include" />
+              <e p="feeder.png" t="Include" />
+              <e p="request.png" t="Include" />
+              <e p="user.png" t="Include" />
             </e>
           </e>
           <e p="environments" t="Include">

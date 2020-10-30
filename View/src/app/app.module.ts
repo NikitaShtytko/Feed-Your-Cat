@@ -9,11 +9,14 @@ import { RegisterPageComponent } from './components/register-page/register-page.
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import {RouterModule, Routes} from "@angular/router";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 
 const appRoutes: Routes =[
   { path: '', component: LoginPageComponent},
   { path: 'login', component: LoginPageComponent},
   { path: 'register', component: RegisterPageComponent},
+  { path: 'admin', component: AdminPanelComponent},
+
   { path: '**', component: NotFoundPageComponent},
 ];
 
@@ -23,6 +26,7 @@ const appRoutes: Routes =[
     LoginPageComponent,
     RegisterPageComponent,
     NotFoundPageComponent,
+    AdminPanelComponent,
   ],
   imports: [
     BrowserModule,
