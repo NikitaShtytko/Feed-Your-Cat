@@ -1,25 +1,35 @@
-<table class="table">
-  <thead class="thead-color">
-  <tr class="raw">
-    <th scope="col">#</th>
-    <th scope="col">Name</th>
-    <th scope="col">Type</th>
-    <th scope="col">Empty</th>
-    <th scope="col">Status</th>
-    <th scope="col">Log</th>
-  </tr>
-  </thead>
+<div class="main-page">
+  <nav class="navbar navbar-dark bg-warning justify-content-between">
+    <a id="logo" class="navbar-brand" routerLink="/admin">Admin</a>
+    <div class="form-inline">
+      <button>
+        <img id="logout__image" src="assets/images/logout.svg" alt="logout">
+      </button>
+    </div>
+  </nav>
 
-  <tbody class="thead-dark-child">
-  <tr class="second-raw">
-    <td>{{feeder.id}}</td>
-    <td>{{feeder.user_id}}</td>
-<!--    <td>{{feeder.user_id.name}}</td>-->
-    <td>{{feeder.type}}</td>
-    <td>{{feeder.empty}}</td>
-    <td>{{feeder.status}}%</td>
-    <td>{{feeder.log_id}}</td>
-  </tr>
-  </tbody>
-</table>
+  <table class="table">
+    <thead class="thead-color">
+    <tr class="raw">
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Empty</th>
+      <th scope="col">Status</th>
+      <th scope="col">Log</th>
+    </tr>
+    </thead>
 
+    <tbody class="thead-dark-child">
+    <tr class="second-raw">
+      <td>{{feeder.id}}</td>
+      <td>{{feeder.user_id}}</td>
+      <!--    <td>{{feeder.user_id.name}}</td>-->
+      <td>{{feeder.type}}</td>
+      <td>{{feeder.empty}}</td>
+      <td>{{feeder.status}}%</td>
+      <td>{{feeder.log_id}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

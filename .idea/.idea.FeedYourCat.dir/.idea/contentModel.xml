@@ -260,12 +260,15 @@
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
             <e p="images" t="Include">
+              <e p="background-2.png" t="Include" />
+              <e p="background-3.png" t="Include" />
               <e p="background.png" t="Include" />
               <e p="error-image-1.jpg" t="Include" />
               <e p="error-image-2.jpg" t="Include" />
               <e p="error-image-3.jpg" t="Include" />
               <e p="error-image-4.jpg" t="Include" />
               <e p="feeder.png" t="Include" />
+              <e p="logout.svg" t="Include" />
               <e p="request.png" t="Include" />
               <e p="user.png" t="Include" />
             </e>

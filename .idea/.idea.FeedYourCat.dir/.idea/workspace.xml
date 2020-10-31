@@ -23,30 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/models/feeder.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/models/request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/app/models/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/background-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/background-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/logout.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FeedYourCat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FeedYourCat.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,28 +61,28 @@
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/models/user.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/View/src/app/models/request.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" />
       </list>
     </option>
   </component>
@@ -111,6 +102,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/View/src/app/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="W:\Projects\FeedYourCat\View\node_modules\typescript\lib" />
@@ -175,7 +167,9 @@
       <workItem from="1603909509745" duration="5201000" />
       <workItem from="1603993977495" duration="186000" />
       <workItem from="1604077202652" duration="12350000" />
-      <workItem from="1604129511322" duration="10959000" />
+      <workItem from="1604129511322" duration="11143000" />
+      <workItem from="1604142026247" duration="679000" />
+      <workItem from="1604162543109" duration="3744000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -205,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604093710482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="admin full page">
+      <created>1604141094922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604141094922</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,25 +233,30 @@
     <MESSAGE value="register and login pages" />
     <MESSAGE value="fix 404 page routing" />
     <MESSAGE value="Добавил главную страницу админа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил главную страницу админа" />
+    <MESSAGE value="admin full page" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin full page" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1604139805128">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604164893350">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604139805128" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1604139805128">
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164893350" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1604165723900">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604139805128" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1604139805128">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604165723900" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1604165723899">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604139805128" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1604139805128">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604165723899" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1604165723899">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604139805128" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604165723899" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1604165723900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604165723900" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -299,14 +305,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="390" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604093711948">
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1604141106747">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093711948" />
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604141106747" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603988950770">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603988950770" />
+    <state x="638" y="139" width="644" height="801" key="find.popup" timestamp="1604164936273">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="638" y="139" width="644" height="801" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164936273" />
     <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1604140684330">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

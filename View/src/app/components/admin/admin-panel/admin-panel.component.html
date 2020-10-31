@@ -1,5 +1,14 @@
 <div class="main-page">
 
+  <nav class="navbar navbar-dark bg-warning justify-content-between">
+    <a id="logo" class="navbar-brand" routerLink="/admin">Admin</a>
+    <div class="form-inline">
+      <button>
+        <img id="logout__image" src="assets/images/logout.svg" alt="logout">
+      </button>
+    </div>
+  </nav>
+
   <div *ngIf="loading" class="loading-bar" role="status"></div>
 
   <!--  <div *ngIf="loading" class="spinner-border text-info" role="status">-->
