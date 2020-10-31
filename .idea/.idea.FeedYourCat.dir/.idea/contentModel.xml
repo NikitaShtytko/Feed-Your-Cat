@@ -197,11 +197,31 @@
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="components" t="Include">
-              <e p="admin-panel" t="Include">
-                <e p="admin-panel.component.css" t="Include" />
-                <e p="admin-panel.component.html" t="Include" />
-                <e p="admin-panel.component.spec.ts" t="Include" />
-                <e p="admin-panel.component.ts" t="Include" />
+              <e p="admin" t="Include">
+                <e p="admin-panel" t="Include">
+                  <e p="admin-panel.component.css" t="Include" />
+                  <e p="admin-panel.component.html" t="Include" />
+                  <e p="admin-panel.component.spec.ts" t="Include" />
+                  <e p="admin-panel.component.ts" t="Include" />
+                </e>
+                <e p="feeders-list" t="Include">
+                  <e p="feeders-list.component.css" t="Include" />
+                  <e p="feeders-list.component.html" t="Include" />
+                  <e p="feeders-list.component.spec.ts" t="Include" />
+                  <e p="feeders-list.component.ts" t="Include" />
+                </e>
+                <e p="requests-list" t="Include">
+                  <e p="requests-list.component.css" t="Include" />
+                  <e p="requests-list.component.html" t="Include" />
+                  <e p="requests-list.component.spec.ts" t="Include" />
+                  <e p="requests-list.component.ts" t="Include" />
+                </e>
+                <e p="users-list" t="Include">
+                  <e p="users-list.component.css" t="Include" />
+                  <e p="users-list.component.html" t="Include" />
+                  <e p="users-list.component.spec.ts" t="Include" />
+                  <e p="users-list.component.ts" t="Include" />
+                </e>
               </e>
               <e p="login-page" t="Include">
                 <e p="login-page.component.css" t="Include" />
@@ -221,7 +241,21 @@
                 <e p="register-page.component.spec.ts" t="Include" />
                 <e p="register-page.component.ts" t="Include" />
               </e>
+              <e p="user" t="Include">
+                <e p="feeders-page" t="Include">
+                  <e p="feeders-page.component.css" t="Include" />
+                  <e p="feeders-page.component.html" t="Include" />
+                  <e p="feeders-page.component.spec.ts" t="Include" />
+                  <e p="feeders-page.component.ts" t="Include" />
+                </e>
+              </e>
             </e>
+            <e p="models" t="Include">
+              <e p="feeder.ts" t="Include" />
+              <e p="request.ts" t="Include" />
+              <e p="user.ts" t="Include" />
+            </e>
+            <e p="services" t="Include" />
           </e>
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />

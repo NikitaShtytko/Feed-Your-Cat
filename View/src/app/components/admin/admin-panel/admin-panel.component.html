@@ -2,12 +2,12 @@
 
   <div *ngIf="loading" class="loading-bar" role="status"></div>
 
-<!--  <div *ngIf="loading" class="spinner-border text-info" role="status">-->
-<!--    <span class="sr-only">Loading...</span>-->
-<!--  </div>-->
+  <!--  <div *ngIf="loading" class="spinner-border text-info" role="status">-->
+  <!--    <span class="sr-only">Loading...</span>-->
+  <!--  </div>-->
 
   <div *ngIf="!loading" class="d-flex flex-raw">
-    <div class="p-2" mdbWavesEffect>
+    <div class="p-2" routerLink="users" mdbWavesEffect>
       <div class="info-color white-text text-center py-4">
         <h5>
           <strong>Users</strong>
@@ -15,7 +15,7 @@
       </div>
       <img id="p-2__image-1" src="assets/images/user.png" alt="no content">
     </div>
-    <div class="p-2" mdbWavesEffect>
+    <div class="p-2" mdbWavesEffect routerLink="feeders">
       <div class="info-color white-text text-center py-4">
         <h5>
           <strong>Feeders</strong>
@@ -24,7 +24,7 @@
       <img id="p-2__image-2" src="assets/images/feeder.png" alt="no content">
     </div>
 
-    <div class="p-2" mdbWavesEffect>
+    <div class="p-2" routerLink="requests" mdbWavesEffect>
       <div class="info-color white-text text-center py-4">
         <h5>
           <strong>Requests</strong>

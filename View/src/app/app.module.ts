@@ -9,13 +9,20 @@ import { RegisterPageComponent } from './components/register-page/register-page.
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import {RouterModule, Routes} from "@angular/router";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { UsersListComponent } from './components/admin/users-list/users-list.component';
+import { FeedersListComponent } from './components/admin/feeders-list/feeders-list.component';
+import { RequestsListComponent } from './components/admin/requests-list/requests-list.component';
+import {AdminPanelComponent} from "./components/admin/admin-panel/admin-panel.component";
+import { FeedersPageComponent } from './components/user/feeders-page/feeders-page.component';
 
 const appRoutes: Routes =[
   { path: '', component: LoginPageComponent},
   { path: 'login', component: LoginPageComponent},
   { path: 'register', component: RegisterPageComponent},
   { path: 'admin', component: AdminPanelComponent},
+  { path: 'admin/users', component: UsersListComponent},
+  { path: 'admin/feeders', component: FeedersListComponent},
+  { path: 'admin/requests', component: RequestsListComponent},
 
   { path: '**', component: NotFoundPageComponent},
 ];
@@ -27,6 +34,10 @@ const appRoutes: Routes =[
     RegisterPageComponent,
     NotFoundPageComponent,
     AdminPanelComponent,
+    UsersListComponent,
+    FeedersListComponent,
+    RequestsListComponent,
+    FeedersPageComponent,
   ],
   imports: [
     BrowserModule,

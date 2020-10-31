@@ -5,7 +5,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="View\src\app\components" />
+      <Folder Include="View\src\app\components\admin" />
+      <Folder Include="View\src\app\components\user" />
+      <Folder Include="View\src\app\models" />
+      <Folder Include="View\src\app\services" />
     </ItemGroup>
 
 </Project>

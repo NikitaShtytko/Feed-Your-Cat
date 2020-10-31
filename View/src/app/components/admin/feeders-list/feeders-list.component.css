@@ -1,0 +1,29 @@
+.table{
+  margin: 0;
+}
+
+.thead-color{
+  background-color: #33b5e5;
+  text-align: center;
+  margin: 0;
+}
+
+.raw th{
+  border: solid 2px black;
+}
+
+.second-raw td{
+  border: solid 1px;
+  font-weight: bold;
+  color: #474747;
+}
+
+.thead-dark-child{
+  margin: 0;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.table thead th {
+  border-bottom: 2px solid black;
+}

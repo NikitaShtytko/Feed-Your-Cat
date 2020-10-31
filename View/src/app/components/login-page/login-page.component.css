@@ -1,4 +1,4 @@
-.main-page{
+.main-page {
   height: 100%;
   width: 100%;
   background-image: url(../../../assets/images/background.png);
@@ -6,7 +6,7 @@
   background-size: cover;
 }
 
-mdb-card{
+mdb-card {
   width: 80ch;
   position: absolute;
   left: 50%;
