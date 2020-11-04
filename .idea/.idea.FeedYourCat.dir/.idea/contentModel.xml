@@ -260,6 +260,7 @@
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
             <e p="images" t="Include">
+              <e p="add-button.svg" t="Include" />
               <e p="background-2.png" t="Include" />
               <e p="background-3.png" t="Include" />
               <e p="background.png" t="Include" />
