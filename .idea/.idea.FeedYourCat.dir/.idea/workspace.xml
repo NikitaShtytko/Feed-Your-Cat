@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/View/src/assets/images/add-button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature_admin_panel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,14 +49,35 @@
       <list>
         <option value="$PROJECT_DIR$/View/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/View/angular.json" />
-        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/not-found-page/not-found-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/models/user.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/models/request.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" />
       </list>
     </option>
   </component>
@@ -66,9 +92,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/View/src/app/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="W:\Projects\FeedYourCat\View\node_modules\typescript\lib" />
@@ -131,6 +159,12 @@
       <updated>1603908907548</updated>
       <workItem from="1603908913921" duration="570000" />
       <workItem from="1603909509745" duration="5201000" />
+      <workItem from="1603993977495" duration="186000" />
+      <workItem from="1604077202652" duration="12350000" />
+      <workItem from="1604129511322" duration="11143000" />
+      <workItem from="1604142026247" duration="679000" />
+      <workItem from="1604162543109" duration="5301000" />
+      <workItem from="1604510686042" duration="9897000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -146,7 +180,35 @@
       <option name="project" value="LOCAL" />
       <updated>1603912874900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix 404 page routing">
+      <created>1603988864442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603988864442</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавил главную страницу админа">
+      <created>1604093710482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604093710482</updated>
+    </task>
+    <task id="LOCAL-00005" summary="admin full page">
+      <created>1604141094922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604141094922</updated>
+    </task>
+    <task id="LOCAL-00006" summary="admin nav bar">
+      <created>1604166352941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604166352941</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,32 +233,100 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initialize Angular" />
     <MESSAGE value="register and login pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="register and login pages" />
+    <MESSAGE value="fix 404 page routing" />
+    <MESSAGE value="Добавил главную страницу админа" />
+    <MESSAGE value="admin full page" />
+    <MESSAGE value="admin nav bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin nav bar" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1603910598414">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604164893350">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603910598414" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1603910598414">
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164893350" />
+    <state width="1877" height="292" key="GridCell.Tab.0.bottom" timestamp="1604520305127">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604168658391" />
+    <state width="1877" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604520305127" />
+    <state width="1877" height="292" key="GridCell.Tab.0.center" timestamp="1604520305127">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604168658391" />
+    <state width="1877" height="292" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604520305127" />
+    <state width="1877" height="292" key="GridCell.Tab.0.left" timestamp="1604520305127">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604168658391" />
+    <state width="1877" height="292" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604520305127" />
+    <state width="1877" height="292" key="GridCell.Tab.0.right" timestamp="1604520305127">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604168658391" />
+    <state width="1877" height="292" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604520305127" />
+    <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603910598414" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1603910598414">
+    <state width="1877" height="390" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732076" />
+    <state width="1877" height="390" key="GridCell.Tab.1.center" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603910598414" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1603910598414">
+    <state width="1877" height="390" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732076" />
+    <state width="1877" height="390" key="GridCell.Tab.1.left" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603910598414" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603912877049">
+    <state width="1877" height="390" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732076" />
+    <state width="1877" height="390" key="GridCell.Tab.1.right" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603912877049" />
-    <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1603909607204">
+    <state width="1877" height="390" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732076" />
+    <state width="1877" height="390" key="GridCell.Tab.2.bottom" timestamp="1604093732077">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603909607204" />
+    <state width="1877" height="390" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.2.center" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.2.left" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.2.right" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.3.bottom" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.3.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.3.center" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.3.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.3.left" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.3.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state width="1877" height="390" key="GridCell.Tab.3.right" timestamp="1604093732077">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="390" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1604510728601">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604510728601" />
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603988950770">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603988950770" />
+    <state x="638" y="139" width="644" height="801" key="find.popup" timestamp="1604164936273">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="638" y="139" width="644" height="801" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164936273" />
+    <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1604140684330">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140684330" />
   </component>
 </project>

@@ -1,0 +1,56 @@
+.table{
+  margin: 0;
+}
+
+.thead-color{
+  background-color: #33b5e5;
+  text-align: center;
+  margin: 0;
+}
+
+.raw th{
+  border: solid 2px black;
+}
+
+.second-raw td{
+  border: solid 1px;
+  font-weight: bold;
+  color: #474747;
+}
+
+.thead-dark-child{
+  margin: 0;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.table thead th {
+  border-bottom: 2px solid black;
+}
+
+
+.form-inline button{
+  background-color: inherit;
+  border: none;
+  width: 100px;
+}
+
+.form-inline button:focus{
+  outline: none;
+}
+
+#logout__image{
+  height: 25px;
+  width: 25px;
+  margin-right: -20px;
+}
+
+.form-inline button:active{
+  transform: scale(1.2);
+}
+
+#logo{
+  font-weight: bold;
+  color: black;
+  margin-left: 20px;
+}
