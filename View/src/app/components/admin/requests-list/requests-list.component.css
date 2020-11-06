@@ -9,11 +9,14 @@
 }
 
 .raw th{
-  border: solid 2px black;
+  /*border: solid 1px black;*/
+  border-top: solid 2px black;
+  /*border-right: none;*/
+  /*border-left: none;*/
 }
 
 .second-raw td{
-  border: solid 1px;
+  border-bottom: solid 1px;
   font-weight: bold;
   color: #474747;
 }
@@ -54,3 +57,54 @@
   color: black;
   margin-left: 20px;
 }
+
+.table{
+  display: flex;
+  box-shadow: #757575 4px 2px 2px;
+}
+
+.spans{
+  display: flex;
+  justify-content: space-around;
+}
+
+.spans {
+  text-align: center;
+  background-color: #33b5e5;
+  padding: 0;
+  border-top: solid 2px black;
+}
+
+.table table{
+  width: 100%;
+  margin: 0;
+}
+
+.main-page{
+  min-width: 300px;
+
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none;
+}
+
+h5{
+  height: 50px;
+  padding: 15px;
+}
+
+.feeder-table{
+  border-left: solid 1px black;
+}
+
+.user-table{
+  border-right: solid 1px black;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-around;
+}
+

@@ -9,17 +9,56 @@
     </div>
   </nav>
 
-<table class="table">
-  <thead class="thead-color">
-  <tr class="raw">
-    <th scope="col">#</th>
-  </tr>
-  </thead>
+  <div class="spans">
+      <h5>User</h5>
+      <h5>Feeders</h5>
+  </div>
 
-  <tbody class="thead-dark-child">
-  <tr class="second-raw">
-    <td>{{request.id}}</td>
-  </tr>
-  </tbody>
-</table>
+  <div class="table">
+    <table class="user-table">
+      <thead class="thead-color">
+      <tr class="raw">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+
+      <tbody class="thead-dark-child">
+      <tr class="second-raw">
+        <td>{{request.id}}</td>
+        <td>{{request.id}}</td>
+        <td>
+          <div class="actions">
+            <span style="color: blue; cursor: pointer">accept</span>
+            <span style="color: #f12711; cursor: pointer">decline</span>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="feeder-table">
+      <thead class="thead-color">
+      <tr class="raw">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+
+      <tbody class="thead-dark-child">
+      <tr class="second-raw">
+        <td>{{request.id + 1}}</td>
+        <td>{{request.id + 1}}</td>
+        <td>
+          <div class="actions">
+            <span style="color: blue; cursor: pointer">accept</span>
+            <span style="color: #f12711; cursor: pointer">decline</span>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

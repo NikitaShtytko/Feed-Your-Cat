@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from "@angular/material/dialog";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -14,6 +15,8 @@ import {FeedersListComponent} from './components/admin/feeders-list/feeders-list
 import {RequestsListComponent} from './components/admin/requests-list/requests-list.component';
 import {AdminPanelComponent} from "./components/admin/admin-panel/admin-panel.component";
 import {FeedersPageComponent} from './components/user/feeders-page/feeders-page.component';
+import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confirm-dialog.component';
+
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginPageComponent},
@@ -38,6 +41,7 @@ const appRoutes: Routes = [
     FeedersListComponent,
     RequestsListComponent,
     FeedersPageComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +49,13 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MDBBootstrapModule.forRoot(),
     NoopAnimationsModule,
+    MatDialogModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+    ],
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmDialogComponent],
 })
 export class AppModule {
 }

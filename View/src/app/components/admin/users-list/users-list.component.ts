@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../../../models/user";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
 
 @Component({
   selector: 'app-users-list',
@@ -9,7 +11,24 @@ import {User} from "../../../models/user";
 export class UsersListComponent implements OnInit {
   public user: User;
 
-  constructor() {
+  constructor(private dialog: MatDialog) {}
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    dialogConfig.data = {
+      id: 1,
+      title: 'Angular For Beginners'
+    };
+
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(
+      data => console.log("Dialog output:", data)
+    );
   }
 
   ngOnInit(): void {
@@ -19,5 +38,4 @@ export class UsersListComponent implements OnInit {
     this.user.email = 'nik@mail.ru';
     this.user.role = 'user';
   }
-
 }

@@ -1,5 +1,7 @@
 .table{
   margin: 0;
+  border-top: solid 2px black;
+  box-shadow: #757575 4px 2px 2px;
 }
 
 .thead-color{
@@ -9,7 +11,8 @@
 }
 
 .raw th{
-  border: solid 2px black;
+  /*border: solid 2px black;*/
+  margin: 0;
 }
 
 .second-raw td{
@@ -53,4 +56,12 @@
   font-weight: bold;
   color: black;
   margin-left: 20px;
+}
+
+.main-page{
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none;
 }

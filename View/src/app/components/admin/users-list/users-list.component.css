@@ -3,10 +3,18 @@
   background-image: url(../../../../assets/images/background-3.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none;
 }
 
 .table{
   margin: 0;
+  box-shadow: #757575 4px 2px 2px;
+  border-top: solid 2px black;
 }
 
 .thead-color{
@@ -16,12 +24,12 @@
 }
 
 .raw th{
-  border: solid 2px black;
+  /*border: solid 2px black;*/
   margin: 0;
 }
 
 .second-raw td{
-  border: solid 1px black;
+  border-bottom: solid 1px black;
   font-weight: bold;
   /*color: #474747;*/
   color: black;

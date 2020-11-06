@@ -44,6 +44,7 @@
         <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\core" t="IncludeRecursive" />
         <e p="node_modules\@angular\forms" t="IncludeRecursive" />
+        <e p="node_modules\@angular\material" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
         <e p="node_modules\@angular\router" t="IncludeRecursive" />
@@ -203,6 +204,12 @@
                   <e p="admin-panel.component.html" t="Include" />
                   <e p="admin-panel.component.spec.ts" t="Include" />
                   <e p="admin-panel.component.ts" t="Include" />
+                </e>
+                <e p="confirm-dialog" t="Include">
+                  <e p="confirm-dialog.component.css" t="Include" />
+                  <e p="confirm-dialog.component.html" t="Include" />
+                  <e p="confirm-dialog.component.spec.ts" t="Include" />
+                  <e p="confirm-dialog.component.ts" t="Include" />
                 </e>
                 <e p="feeders-list" t="Include">
                   <e p="feeders-list.component.css" t="Include" />

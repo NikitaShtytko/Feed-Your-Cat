@@ -37,6 +37,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
+
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none;
 }
 
 
@@ -53,6 +59,7 @@
   text-align: center;
   padding: 0 !important;
   box-shadow: 3px 3px 4px 3px #A9A9A9;
+  cursor: pointer;
 }
 
 .p-2:active {
@@ -102,4 +109,3 @@
     transform: translateX(0%);
   }
 }
-
