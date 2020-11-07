@@ -32,7 +32,7 @@
 .main-page {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background-image: url(../../../../assets/images/background-3.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,5 +107,28 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .d-flex{
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .p-2{
+    height: 50%;
+    width: 50%;
+    margin: 10px auto;
+  }
+
+  .pt-4, .py-4 {
+     padding-top: 0 !important;
+     padding-bottom: 0 !important;
+  }
+
+  .p-2 {
+    border-radius: 20px;
   }
 }
