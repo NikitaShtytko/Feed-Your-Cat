@@ -13,12 +13,14 @@
   border-top: solid 2px black;
   /*border-right: none;*/
   /*border-left: none;*/
+  color: black;
 }
 
 .second-raw td{
   border-bottom: solid 1px;
   font-weight: bold;
-  color: #474747;
+  /*color: #474747;*/
+  color: black;
 }
 
 .thead-dark-child{
@@ -82,6 +84,7 @@
 
 .main-page{
   min-width: 300px;
+  color: black;
 
   -webkit-user-select: none;
   /* user-select -- это нестандартное свойство */
