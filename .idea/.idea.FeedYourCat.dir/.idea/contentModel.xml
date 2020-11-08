@@ -249,6 +249,12 @@
                 <e p="register-page.component.ts" t="Include" />
               </e>
               <e p="user" t="Include">
+                <e p="feeder-modal" t="Include">
+                  <e p="feeder-modal.component.css" t="Include" />
+                  <e p="feeder-modal.component.html" t="Include" />
+                  <e p="feeder-modal.component.spec.ts" t="Include" />
+                  <e p="feeder-modal.component.ts" t="Include" />
+                </e>
                 <e p="feeders-page" t="Include">
                   <e p="feeders-page.component.css" t="Include" />
                   <e p="feeders-page.component.html" t="Include" />

@@ -10,7 +10,7 @@
   </nav>
 
   <div class="spans">
-      <h5>User</h5>
+      <h5>Users</h5>
       <h5>Feeders</h5>
   </div>
 
@@ -30,8 +30,8 @@
         <td>{{request.id}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer">accept</span>
-            <span style="color: #f12711; cursor: pointer">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept')">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline')">decline</span>
           </div>
         </td>
       </tr>
@@ -53,8 +53,8 @@
         <td>{{request.id + 1}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer">accept</span>
-            <span style="color: #f12711; cursor: pointer">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept')">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline')">decline</span>
           </div>
         </td>
       </tr>

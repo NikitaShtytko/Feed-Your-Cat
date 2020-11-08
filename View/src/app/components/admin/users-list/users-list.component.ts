@@ -20,11 +20,14 @@ export class UsersListComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     dialogConfig.data = {
-      id: 1,
-      title: 'Angular For Beginners'
+      title: 'delete'
     };
 
     const dialogRef = this.dialog.open(ConfirmDialogComponent, dialogConfig);
+
+    if (dialogConfig){
+
+    }
 
     dialogRef.afterClosed().subscribe(
       data => console.log("Dialog output:", data)

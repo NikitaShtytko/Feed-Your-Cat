@@ -16,6 +16,7 @@ import {RequestsListComponent} from './components/admin/requests-list/requests-l
 import {AdminPanelComponent} from "./components/admin/admin-panel/admin-panel.component";
 import {FeedersPageComponent} from './components/user/feeders-page/feeders-page.component';
 import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confirm-dialog.component';
+import { FeederModalComponent } from './components/user/feeder-modal/feeder-modal.component';
 
 
 const appRoutes: Routes = [
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     RequestsListComponent,
     FeedersPageComponent,
     ConfirmDialogComponent,
+    FeederModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,10 @@ const appRoutes: Routes = [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
     ],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmDialogComponent],
+  entryComponents: [
+    ConfirmDialogComponent,
+    FeederModalComponent
+  ],
 })
 export class AppModule {
 }
