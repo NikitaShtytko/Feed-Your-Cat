@@ -17,6 +17,7 @@ import {AdminPanelComponent} from "./components/admin/admin-panel/admin-panel.co
 import {FeedersPageComponent} from './components/user/feeders-page/feeders-page.component';
 import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confirm-dialog.component';
 import { FeederModalComponent } from './components/user/feeder-modal/feeder-modal.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 const appRoutes: Routes = [
@@ -52,6 +53,8 @@ const appRoutes: Routes = [
     MDBBootstrapModule.forRoot(),
     NoopAnimationsModule,
     MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}

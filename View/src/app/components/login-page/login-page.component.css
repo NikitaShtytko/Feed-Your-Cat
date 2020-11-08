@@ -13,3 +13,7 @@ mdb-card {
   transform: translate(-50%, -50%);
   top: 50%;
 }
+
+.btn-block{
+  cursor: pointer;
+}
