@@ -26,8 +26,15 @@ export class FeedersPageComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
+    let tags = ['дом', 'любимый', 'барсик', 'кухня', 'дом', 'любимый', 'барсик', 'кухня', '0123456789'];
+    let status = 1, state = 80, empty = 0;
+
     dialogConfig.data = {
-      title: way
+      title: way,
+      tags: tags,
+      status: status,
+      state: state,
+      empty: empty,
     };
     const dialogRef = this.dialog.open(FeederModalComponent, dialogConfig);
 

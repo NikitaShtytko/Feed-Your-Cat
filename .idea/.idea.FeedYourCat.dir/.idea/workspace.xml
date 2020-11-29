@@ -23,20 +23,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/app/models/tag.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.RazorComponent.input.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28_[Default_Changelist]/FeedYourCat.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2020_13_20_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2020_13_20__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeedYourCat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FeedYourCat.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/models/feeder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/models/feeder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/polyfills.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -58,36 +84,38 @@
         <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin-panel/admin-panel.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/models/user.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/models/request.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/admin-panel/admin-panel.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/models/tag.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
+        <option value="$PROJECT_DIR$/View/src/index.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" />
       </list>
     </option>
   </component>
@@ -178,6 +206,13 @@
       <workItem from="1604510686042" duration="9897000" />
       <workItem from="1604764548234" duration="4019000" />
       <workItem from="1604770981289" duration="4212000" />
+      <workItem from="1604840333612" duration="574000" />
+      <workItem from="1605092454140" duration="4191000" />
+      <workItem from="1605181271512" duration="2690000" />
+      <workItem from="1605348182884" duration="109000" />
+      <workItem from="1605348317036" duration="8927000" />
+      <workItem from="1606660171341" duration="797000" />
+      <workItem from="1606672679349" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -228,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604769596198</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="validation on start page">
+      <created>1604834312725</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604834312725</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,33 +300,34 @@
     <MESSAGE value="admin full page" />
     <MESSAGE value="admin nav bar" />
     <MESSAGE value="new popup for admin actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="new popup for admin actions" />
+    <MESSAGE value="validation on start page" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation on start page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604164893350">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164893350" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1604834220956">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1606673242919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834220956" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781436288" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1604834220956">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="938" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1606673242919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834220956" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781436288" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1604834220956">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="938" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1606673242919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834220956" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781436287" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1604834220956">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="938" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1606673242919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834220956" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781436288" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="938" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -333,10 +376,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="390" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1604769597946">
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1604834314285">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604769597946" />
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834314285" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603988950770">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -350,5 +393,9 @@
     </state>
     <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604693420179" />
     <state x="2743" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781421649" />
+    <state x="2536" y="250" key="run.anything.popup" timestamp="1605356776720">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2536" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605356776720" />
   </component>
 </project>

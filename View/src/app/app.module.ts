@@ -18,6 +18,7 @@ import {FeedersPageComponent} from './components/user/feeders-page/feeders-page.
 import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confirm-dialog.component';
 import { FeederModalComponent } from './components/user/feeder-modal/feeder-modal.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const appRoutes: Routes = [
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}

@@ -8,6 +8,8 @@
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  /*padding: 30px 50px 55px;*/
+  padding: 10px 10px 30px;
 
   -webkit-user-select: none;
   /* user-select -- это нестандартное свойство */
@@ -24,6 +26,9 @@
 
 .mat-dialog-actions button{
   width: 30%;
+  height: 70%;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 *, *::before, *::after {

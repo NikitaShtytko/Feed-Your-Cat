@@ -295,6 +295,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none;
 }
 
 @media (max-width: 815px) {

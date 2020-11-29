@@ -1,7 +1,7 @@
 .dialog{
   border-radius: 20px;
   background-color: whitesmoke;
-  height: 200px;
+  height: 500px;
   width: 500px;
   opacity: 0.95;
   text-align: center;
@@ -28,4 +28,28 @@
 
 *, *::before, *::after {
   box-sizing: initial;
+}
+
+.feeder-exist{
+  display: flex;
+  /*justify-content: space-between;*/
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.right-column{
+  overflow: scroll;
+  height: 250px;
+  text-align: left;
+  font-size: 20px;
+  margin-right: -30px;
+  width: 40%;
+}
+
+.left-column{
+  margin: auto 0;
+}
+
+.close-button{
+  width: 70%!important;
 }

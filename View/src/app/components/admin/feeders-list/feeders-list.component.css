@@ -13,12 +13,14 @@
 .raw th{
   /*border: solid 2px black;*/
   margin: 0;
+  color: black;
 }
 
 .second-raw td{
   border: solid 1px;
   font-weight: bold;
-  color: #474747;
+  /*color: #474747;*/
+  color: black;
 }
 
 .thead-dark-child{

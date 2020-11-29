@@ -44,6 +44,7 @@
         <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\core" t="IncludeRecursive" />
         <e p="node_modules\@angular\forms" t="IncludeRecursive" />
+        <e p="node_modules\@angular\localize" t="IncludeRecursive" />
         <e p="node_modules\@angular\material" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
@@ -56,6 +57,7 @@
         <e p="node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
         <e p="node_modules\@fortawesome\fontawesome-free" t="IncludeRecursive" />
         <e p="node_modules\@jsdevtools\coverage-istanbul-loader" t="IncludeRecursive" />
+        <e p="node_modules\@ng-bootstrap\ng-bootstrap" t="IncludeRecursive" />
         <e p="node_modules\@ngtools\webpack" t="IncludeRecursive" />
         <e p="node_modules\@types" t="IncludeRecursive">
           <e p="chart.js" t="IncludeRecursive" />
@@ -74,6 +76,7 @@
         <e p="node_modules\ansi-regex" t="IncludeRecursive" />
         <e p="node_modules\arg" t="IncludeRecursive" />
         <e p="node_modules\blocking-proxy" t="IncludeRecursive" />
+        <e p="node_modules\bootstrap" t="IncludeRecursive" />
         <e p="node_modules\canonical-path" t="IncludeRecursive" />
         <e p="node_modules\chalk" t="IncludeRecursive" />
         <e p="node_modules\chart.js" t="IncludeRecursive" />
@@ -266,6 +269,7 @@
             <e p="models" t="Include">
               <e p="feeder.ts" t="Include" />
               <e p="request.ts" t="Include" />
+              <e p="tag.ts" t="Include" />
               <e p="user.ts" t="Include" />
             </e>
             <e p="services" t="Include" />

@@ -9,12 +9,17 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 })
 export class ConfirmDialogComponent implements OnInit {
   public data: any;
+  public reverse = false;
 
   constructor(
     private dialogRef: MatDialogRef<ConfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data
   ) {
     this.data = data;
+
+    if (this.data.title == 'accept'){
+      this.reverse = !this.reverse;
+    }
   }
 
   ngOnInit(): void {

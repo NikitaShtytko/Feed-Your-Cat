@@ -12,7 +12,7 @@
   <div *ngIf="loading" class="loading-bar" role="status"></div>
 
   <div class="masonry">
-    <div class="item" *ngFor="let t of arr" (click)="openDialog(t)">
+    <div class="item relative waves-light" *ngFor="let t of arr" (click)="openDialog(t)" mdbBtn mdbWavesEffect>
       <div class="item-content">
         {{t}}
       </div>
