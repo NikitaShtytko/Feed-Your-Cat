@@ -9,7 +9,32 @@
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="UsersController.cs" t="Include" />
+      </e>
+      <e p="Entities" t="Include">
+        <e p="User.cs" t="Include" />
+      </e>
       <e p="FeedYourCat.csproj" t="IncludeRecursive" />
+      <e p="Helpers" t="Include">
+        <e p="AppException.cs" t="Include" />
+        <e p="AppSettings.cs" t="Include" />
+        <e p="AutoMapperProfile.cs" t="Include" />
+        <e p="DataContext.cs" t="Include" />
+        <e p="MySQLDataContext.cs" t="Include" />
+      </e>
+      <e p="Migrations" t="Include">
+        <e p="MySQLMigrations" t="Include" />
+        <e p="SqlServerMigrations" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Users" t="Include">
+          <e p="AuthenticateModel.cs" t="Include" />
+          <e p="RegisterModel.cs" t="Include" />
+          <e p="UpdateModel.cs" t="Include" />
+          <e p="UserModel.cs" t="Include" />
+        </e>
+      </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -21,6 +46,9 @@
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="services" t="Include">
+        <e p="UserService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="View" t="Include">
@@ -267,7 +295,7 @@
                 </e>
               </e>
             </e>
-            <e p="models" t="Include">
+            <e p="Models" t="Include">
               <e p="feeder.ts" t="Include" />
               <e p="request.ts" t="Include" />
               <e p="tag.ts" t="Include" />
