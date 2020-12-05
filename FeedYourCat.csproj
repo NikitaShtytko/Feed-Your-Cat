@@ -9,7 +9,6 @@
       <Folder Include="Migrations\SqlServerMigrations" />
       <Folder Include="View\src\app\components\admin" />
       <Folder Include="View\src\app\components\user" />
-      <Folder Include="View\src\app\services" />
     </ItemGroup>
 
     <ItemGroup>
