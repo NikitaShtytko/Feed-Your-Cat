@@ -86,8 +86,8 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        //GET: users
-        [HttpGet("/users")]
+        [AllowAnonymous]
+        [HttpGet("/api/users")]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();

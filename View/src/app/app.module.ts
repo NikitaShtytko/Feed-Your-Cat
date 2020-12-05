@@ -19,6 +19,7 @@ import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confir
 import { FeederModalComponent } from './components/user/feeder-modal/feeder-modal.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from "@angular/common/http";
 
 
 const appRoutes: Routes = [
@@ -57,6 +58,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
+    HttpClientModule,
   ],
   providers: [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
