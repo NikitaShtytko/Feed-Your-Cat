@@ -23,34 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/app/models/tag.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.RazorComponent.input.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/proxy.conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/app/services/user/user.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/app/services/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28_[Default_Changelist]/FeedYourCat.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_19_28__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2020_13_20_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2020_13_20__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FeedYourCat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FeedYourCat.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/View/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/app/models/feeder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/models/feeder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/polyfills.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature_user_home_page" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,6 +94,8 @@
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" />
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/services/user/user.service.ts" />
+        <option value="$PROJECT_DIR$/View/proxy.conf.json" />
       </list>
     </option>
   </component>
@@ -212,7 +192,8 @@
       <workItem from="1605348182884" duration="109000" />
       <workItem from="1605348317036" duration="8927000" />
       <workItem from="1606660171341" duration="797000" />
-      <workItem from="1606672679349" duration="1175000" />
+      <workItem from="1606672679349" duration="1404000" />
+      <workItem from="1607158979417" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -270,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604834312725</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="gui update">
+      <created>1606674084719</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606674084719</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,32 +289,33 @@
     <MESSAGE value="admin nav bar" />
     <MESSAGE value="new popup for admin actions" />
     <MESSAGE value="validation on start page" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation on start page" />
+    <MESSAGE value="gui update" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604164893350">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164893350" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1606673242919">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1606674094507">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606674094507" />
     <state width="938" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1606673242919">
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1606674094507">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606674094507" />
     <state width="938" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1606673242919">
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1606674094507">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606674094507" />
     <state width="938" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1606673242919">
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1606674094507">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606673242919" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606674094507" />
     <state width="938" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -376,10 +365,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="390" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604093732077" />
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1604834314285">
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1606674086086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834314285" />
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606674086086" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603988950770">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -388,10 +377,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="638" y="139" width="644" height="801" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604164936273" />
-    <state x="2743" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1604781421649">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="482" y="335" width="348" height="298" key="org.angular.cli.generate" timestamp="1607159099132">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604693420179" />
+    <state x="482" y="335" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607159099132" />
     <state x="2743" y="425" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604781421649" />
     <state x="2536" y="250" key="run.anything.popup" timestamp="1605356776720">
       <screen x="1920" y="0" width="1920" height="1080" />
