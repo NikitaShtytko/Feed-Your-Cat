@@ -30,8 +30,8 @@
         <td>{{item.email}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept')">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline')">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', item.id)">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', null)">decline</span>
           </div>
         </td>
       </tr>
@@ -53,8 +53,8 @@
         <td>{{request.id + 1}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept')">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline')">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', null)">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', null)">decline</span>
           </div>
         </td>
       </tr>

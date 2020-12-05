@@ -1,5 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {UserService} from "../../../services/user/user.service";
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -10,23 +12,32 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 export class ConfirmDialogComponent implements OnInit {
   public data: any;
   public reverse = false;
+  public userId = null;
 
   constructor(
     private dialogRef: MatDialogRef<ConfirmDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) data
+    @Inject(MAT_DIALOG_DATA) data,
+    private userService: UserService,
   ) {
     this.data = data;
 
     if (this.data.title == 'accept'){
       this.reverse = !this.reverse;
+      this.userId = this.data.userId;
+      console.log(this.userId);
     }
   }
+
+  public subscriptions: Subscription[] = [];
 
   ngOnInit(): void {
     console.log(this.data);
   }
 
   save() {
+    this.subscriptions.push(this.userService.accept(this.userId).subscribe(response => {
+
+    }));
     this.dialogRef.close(true);
   }
 

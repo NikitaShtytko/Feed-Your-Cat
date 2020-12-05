@@ -30,14 +30,15 @@ export class RequestsListComponent implements OnInit {
     }));
   }
 
-  openDialog(title: string) {
+  openDialog(title: string, id: number) {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
     dialogConfig.data = {
-      title: title
+      title: title,
+      userId: id,
     };
 
     const dialogRef = this.dialog.open(ConfirmDialogComponent, dialogConfig);

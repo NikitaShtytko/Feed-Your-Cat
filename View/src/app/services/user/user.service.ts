@@ -18,6 +18,14 @@ export class UserService {
     return this.httpClient.get<User[]>('http://localhost:5000/api/users/moderation');
   }
 
+  accept(id: number): Observable<User>{
+    return this.httpClient.get<User>('http://localhost:5000/api/users/accept/' + id);
+  }
+
+  decline(id: number): Observable<User>{
+    return this.httpClient.delete<User>('http://localhost:5000/api/users/' + id);
+  }
+
   register(user: User): Observable<User[]>{
     return this.httpClient.post<User[]>('/api/users/register', user);
   }

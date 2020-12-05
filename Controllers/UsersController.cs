@@ -85,15 +85,15 @@ namespace FeedYourCat.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
-        [AllowAnonymous]
-        [HttpGet("/api/users")]
-        public IActionResult GetAll()
-        {
-            var users = _userService.GetAll();
-            var model = _mapper.Map<IList<UserModel>>(users);
-            return Ok(model);
-        }
+        
+        // [AllowAnonymous]
+        // [HttpGet("/api/users")]
+        // public IActionResult GetAll()
+        // {
+        //     var users = _userService.GetAll();
+        //     var model = _mapper.Map<IList<UserModel>>(users);
+        //     return Ok(model);
+        // }
         
         [AllowAnonymous]
         [HttpGet("/api/users")]
@@ -141,7 +141,8 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        [HttpPost("/api/users/accept/{id}")]
+        [AllowAnonymous]
+        [HttpGet("/api/users/accept/{id}")]
         public IActionResult Accept(int id)
         {
             _userService.Accept(id);
