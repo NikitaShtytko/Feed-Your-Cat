@@ -112,6 +112,15 @@ namespace FeedYourCat.Controllers
             var model = _mapper.Map<IList<UserModel>>(users);
             return Ok(model);
         }
+        
+        /*[AllowAnonymous]
+        [HttpGet("/api/user-by-email/{email}")]
+        public IActionResult GetByEmail(string email)
+        {
+            var users = _userService.GetByEmail(email);
+            var model = _mapper.Map<IList<UserModel>>(users);
+            return Ok(model);
+        }*/
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)

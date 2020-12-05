@@ -14,6 +14,7 @@ namespace FeedYourCat.Services
         public IEnumerable<User> GetModerated();
         public IEnumerable<User> GetNonModerated();
         User GetById(int id);
+        //User GetByEmail(string email);
         User Create(User user, string password);
         void Update(User user, string password = null);
         void Delete(int id);
@@ -68,6 +69,12 @@ namespace FeedYourCat.Services
         {
             return _context.Users.Find(id);
         }
+        
+        //public User GetByEmail(string email)
+        //{
+            //IEnumerable<User> usr = _context.Users.Where(p => p.Email == email);
+            //return usr.First();
+        //}
 
         public User Create(User user, string password)
         {
