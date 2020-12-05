@@ -1,15 +1,11 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\C#\\FeedYourCat\\FeedYourCat.csproj",
+    "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
     "projectName": "FeedYourCat",
-    "projectPath": "D:\\C#\\FeedYourCat\\FeedYourCat.csproj",
-    "outputPath": "D:\\C#\\FeedYourCat\\obj\\",
+    "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+    "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
     "projectStyle": "PackageReference",
-    "fallbackFolders": [
-      "C:\\ProgramData\\Xamarin\\NuGet",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
@@ -91,7 +87,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Users\\shtyt\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
     }
   }
 }

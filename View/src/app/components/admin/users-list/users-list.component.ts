@@ -45,11 +45,5 @@ export class UsersListComponent implements OnInit {
     this.subscriptions.push(this.userService.getUsers().subscribe(response => {
       this.user = response;
     }));
-
-    // this.user = new User();
-    // this.user.id = 2;
-    // this.user.name = 'nick';
-    // this.user.email = 'nik@mail.ru';
-    // this.user.role = 'user';
   }
 }

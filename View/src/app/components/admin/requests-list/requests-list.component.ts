@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Request} from "../../../models/request";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
+import {UserService} from "../../../services/user/user.service";
+import {Subscription} from "rxjs";
+import {User} from "../../../models/user";
 
 @Component({
   selector: 'app-requests-list',
@@ -10,12 +13,21 @@ import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component
 })
 export class RequestsListComponent implements OnInit {
   public request: Request;
+  public user: User[];
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog,
+              private userService: UserService) {
+  }
+
+  public subscriptions: Subscription[] = [];
 
   ngOnInit(): void {
     this.request = new Request();
     this.request.id = 123;
+
+    this.subscriptions.push(this.userService.getModeration().subscribe(response => {
+      this.user = response;
+    }));
   }
 
   openDialog(title: string) {
@@ -30,7 +42,7 @@ export class RequestsListComponent implements OnInit {
 
     const dialogRef = this.dialog.open(ConfirmDialogComponent, dialogConfig);
 
-    if (dialogConfig){
+    if (dialogConfig) {
 
     }
 

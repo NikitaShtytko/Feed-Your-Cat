@@ -14,11 +14,15 @@ export class UserService {
     return this.httpClient.get<User[]>('http://localhost:5000/api/users');
   }
 
+  getModeration(): Observable<User[]>{
+    return this.httpClient.get<User[]>('http://localhost:5000/api/users/moderation');
+  }
+
   register(user: User): Observable<User[]>{
-    return this.httpClient.get<User[]>('/api/users/register');
+    return this.httpClient.post<User[]>('/api/users/register', user);
   }
 
   login(user: User): Observable<User[]>{
-    return this.httpClient.get<User[]>('/api/users/login');
+    return this.httpClient.post<User[]>('/api/users/login', user);
   }
 }

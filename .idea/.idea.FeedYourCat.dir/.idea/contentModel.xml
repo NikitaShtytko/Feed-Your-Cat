@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Владимир\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Владимир\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Владимир\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Владимир\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="D:\C#\FeedYourCat" t="IncludeRecursive">
+    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\shtyt\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="W:\Projects\FeedYourCat" t="IncludeRecursive">
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
@@ -27,7 +26,7 @@
         <e p="MySQLMigrations" t="Include" />
         <e p="SqlServerMigrations" t="Include" />
       </e>
-      <e p="Models" t="Include">
+      <e p="models" t="Include">
         <e p="Users" t="Include">
           <e p="AuthenticateModel.cs" t="Include" />
           <e p="RegisterModel.cs" t="Include" />
@@ -296,7 +295,7 @@
                 </e>
               </e>
             </e>
-            <e p="Models" t="Include">
+            <e p="models" t="Include">
               <e p="feeder.ts" t="Include" />
               <e p="request.ts" t="Include" />
               <e p="tag.ts" t="Include" />

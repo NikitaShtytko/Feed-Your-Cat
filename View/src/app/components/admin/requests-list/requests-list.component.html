@@ -25,9 +25,9 @@
       </thead>
 
       <tbody class="thead-dark-child">
-      <tr class="second-raw">
-        <td>{{request.id}}</td>
-        <td>{{request.id}}</td>
+      <tr class="second-raw" *ngFor="let item of user; let r = index">
+        <td>{{item.id}}</td>
+        <td>{{item.email}}</td>
         <td>
           <div class="actions">
             <span style="color: blue; cursor: pointer" (click)="openDialog('accept')">accept</span>
