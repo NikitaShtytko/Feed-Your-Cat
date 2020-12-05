@@ -17,7 +17,7 @@ namespace FeedYourCat.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("")]
     public class UsersController : ControllerBase
     {
         private IUserService _userService;
@@ -87,7 +87,7 @@ namespace FeedYourCat.Controllers
         }
 
         //GET: users
-        [HttpGet]
+        [HttpGet("/users")]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
