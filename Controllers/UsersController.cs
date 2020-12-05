@@ -38,7 +38,7 @@ namespace FeedYourCat.Controllers
         [HttpPost("login")]
         public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
-            var user = _userService.Authenticate(model.Name, model.Password);
+            var user = _userService.Authenticate(model.Email, model.Password);
 
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
@@ -72,7 +72,7 @@ namespace FeedYourCat.Controllers
         {
             // map model to entity
             var user = _mapper.Map<User>(model);
-
+            
             try
             {
                 // create user
@@ -92,7 +92,24 @@ namespace FeedYourCat.Controllers
         {
             var users = _userService.GetAll();
             var model = _mapper.Map<IList<UserModel>>(users);
-            Console.WriteLine(users);
+            return Ok(model);
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("/api/users")]
+        public IActionResult GetAuth()
+        {
+            var users = _userService.GetModerated();
+            var model = _mapper.Map<IList<UserModel>>(users);
+            return Ok(model);
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("/api/users/moderation")]
+        public IActionResult GetNonModerated()
+        {
+            var users = _userService.GetNonModerated();
+            var model = _mapper.Map<IList<UserModel>>(users);
             return Ok(model);
         }
 
@@ -104,7 +121,7 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("/api/users/{id}")]
         public IActionResult Update(int id, [FromBody]UpdateModel model)
         {
             // map model to entity and set id
@@ -124,7 +141,14 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpPost("/api/users/accept/{id}")]
+        public IActionResult Accept(int id)
+        {
+            _userService.Accept(id);
+            return Ok();
+        }
+        
+        [HttpDelete("/api/users/{id}")]
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);

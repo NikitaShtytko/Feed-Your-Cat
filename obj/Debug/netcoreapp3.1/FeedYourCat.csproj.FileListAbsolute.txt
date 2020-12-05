@@ -173,3 +173,4 @@ W:\Projects\FeedYourCat\obj\Debug\netcoreapp3.1\staticwebassets\FeedYourCat.Stat
 W:\Projects\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.dll
 W:\Projects\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.pdb
 W:\Projects\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.genruntimeconfig.cache
+D:\C#\FeedYourCat\bin\Debug\netcoreapp3.1\View\proxy.conf.json
