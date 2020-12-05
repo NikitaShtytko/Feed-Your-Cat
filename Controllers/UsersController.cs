@@ -92,17 +92,24 @@ namespace FeedYourCat.Controllers
         {
             var users = _userService.GetAll();
             var model = _mapper.Map<IList<UserModel>>(users);
-            Console.WriteLine(users);
             return Ok(model);
         }
         
         [AllowAnonymous]
-        [HttpGet("/api/users_auth")]
+        [HttpGet("/api/users_moderated")]
         public IActionResult GetAuth()
         {
-            var users = _userService.GetAuth();
+            var users = _userService.GetModerated();
             var model = _mapper.Map<IList<UserModel>>(users);
-            Console.WriteLine(users);
+            return Ok(model);
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("/api/users_non_moderated")]
+        public IActionResult GetNonModerated()
+        {
+            var users = _userService.GetNonModerated();
+            var model = _mapper.Map<IList<UserModel>>(users);
             return Ok(model);
         }
 

@@ -11,7 +11,8 @@ namespace FeedYourCat.Services
     {
         User Authenticate(string username, string password);
         IEnumerable<User> GetAll();
-        IEnumerable<User> GetAuth();
+        public IEnumerable<User> GetModerated();
+        public IEnumerable<User> GetNonModerated();
         User GetById(int id);
         User Create(User user, string password);
         void Update(User user, string password = null);
@@ -39,8 +40,8 @@ namespace FeedYourCat.Services
                 return null;
 
             // check if password is correct
-            //if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-            //    return null;
+            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+                return null;
 
             // authentication successful
             return user;
@@ -51,11 +52,16 @@ namespace FeedYourCat.Services
             return _context.Users;
         }
         
-        public IEnumerable<User> GetAuth()
+        public IEnumerable<User> GetModerated()
         {
             return _context.Users.Where(p=> p.Status==1);
         }
 
+        public IEnumerable<User> GetNonModerated()
+        {
+            return _context.Users.Where(p=> p.Status==0);
+        }
+        
         public User GetById(int id)
         {
             return _context.Users.Find(id);
@@ -73,10 +79,8 @@ namespace FeedYourCat.Services
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
-            //user.PasswordHash = passwordHash;
-            //user.PasswordSalt = passwordSalt;
-
-            user.Password = password;
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
             
             _context.Users.Add(user);
             _context.SaveChanges();
@@ -111,10 +115,9 @@ namespace FeedYourCat.Services
                 byte[] passwordHash, passwordSalt;
                 CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
-                //user.PasswordHash = passwordHash;
-                //user.PasswordSalt = passwordSalt;
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
 
-                user.Password = password;
             }
 
             _context.Users.Update(user);
