@@ -38,7 +38,7 @@ namespace FeedYourCat.Controllers
         [HttpPost("login")]
         public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
-            var user = _userService.Authenticate(model.Name, model.Password);
+            var user = _userService.Authenticate(model.Email, model.Password);
 
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
@@ -112,15 +112,6 @@ namespace FeedYourCat.Controllers
             var model = _mapper.Map<IList<UserModel>>(users);
             return Ok(model);
         }
-        
-        /*[AllowAnonymous]
-        [HttpGet("/api/user-by-email/{email}")]
-        public IActionResult GetByEmail(string email)
-        {
-            var users = _userService.GetByEmail(email);
-            var model = _mapper.Map<IList<UserModel>>(users);
-            return Ok(model);
-        }*/
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)

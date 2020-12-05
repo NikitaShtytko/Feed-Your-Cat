@@ -14,7 +14,6 @@ namespace FeedYourCat.Services
         public IEnumerable<User> GetModerated();
         public IEnumerable<User> GetNonModerated();
         User GetById(int id);
-        //User GetByEmail(string email);
         User Create(User user, string password);
         void Update(User user, string password = null);
         void Delete(int id);
@@ -29,21 +28,19 @@ namespace FeedYourCat.Services
             _context = context;
         }
 
-        public User Authenticate(string name, string password)
+        public User Authenticate(string email, string password)
         {
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
                 return null;
 
-            var user = _context.Users.SingleOrDefault(x => x.Name == name);
+            var user = _context.Users.SingleOrDefault(x => x.Email == email);
 
             // check if username exists
             if (user == null)
                 return null;
 
             // check if password is correct
-            byte[] passwordHash, passwordSalt;
-            CreatePasswordHash(user.Password, out passwordHash, out passwordSalt);
-            if (!VerifyPasswordHash(password, passwordHash, passwordSalt))
+            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
                 return null;
 
             // authentication successful
@@ -69,12 +66,6 @@ namespace FeedYourCat.Services
         {
             return _context.Users.Find(id);
         }
-        
-        //public User GetByEmail(string email)
-        //{
-            //IEnumerable<User> usr = _context.Users.Where(p => p.Email == email);
-            //return usr.First();
-        //}
 
         public User Create(User user, string password)
         {
@@ -82,14 +73,14 @@ namespace FeedYourCat.Services
             if (string.IsNullOrWhiteSpace(password))
                 throw new AppException("Password is required");
 
-            if (_context.Users.Any(x => x.Name == user.Name))
-                throw new AppException("Username \"" + user.Name + "\" is already taken");
+            if (_context.Users.Any(x => x.Email == user.Email))
+                throw new AppException("Email \"" + user.Email + "\" is already taken");
 
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
-            user.Password = Convert.ToBase64String(passwordHash) + Convert.ToBase64String(passwordSalt);
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
 
-            
             _context.Users.Add(user);
             _context.SaveChanges();
 
@@ -122,8 +113,8 @@ namespace FeedYourCat.Services
             {
                 byte[] passwordHash, passwordSalt;
                 CreatePasswordHash(password, out passwordHash, out passwordSalt);
-                
-                user.Password = Convert.ToBase64String(passwordHash) + Convert.ToBase64String(passwordSalt);
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
 
             }
 
