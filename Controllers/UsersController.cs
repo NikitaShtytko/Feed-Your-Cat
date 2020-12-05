@@ -67,7 +67,7 @@ namespace FeedYourCat.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("register")]
+        [HttpPost]
         public IActionResult Register([FromBody]RegisterModel model)
         {
             // map model to entity
