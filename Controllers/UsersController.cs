@@ -72,7 +72,7 @@ namespace FeedYourCat.Controllers
         {
             // map model to entity
             var user = _mapper.Map<User>(model);
-
+            
             try
             {
                 // create user
@@ -86,11 +86,21 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        //GET: users
-        [HttpGet("/users")]
+        [AllowAnonymous]
+        [HttpGet("/api/users")]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
+            var model = _mapper.Map<IList<UserModel>>(users);
+            Console.WriteLine(users);
+            return Ok(model);
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("/api/users_auth")]
+        public IActionResult GetAuth()
+        {
+            var users = _userService.GetAuth();
             var model = _mapper.Map<IList<UserModel>>(users);
             Console.WriteLine(users);
             return Ok(model);

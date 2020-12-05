@@ -11,6 +11,7 @@ namespace FeedYourCat.Services
     {
         User Authenticate(string username, string password);
         IEnumerable<User> GetAll();
+        IEnumerable<User> GetAuth();
         User GetById(int id);
         User Create(User user, string password);
         void Update(User user, string password = null);
@@ -48,6 +49,11 @@ namespace FeedYourCat.Services
         public IEnumerable<User> GetAll()
         {
             return _context.Users;
+        }
+        
+        public IEnumerable<User> GetAuth()
+        {
+            return _context.Users.Where(p=> p.Status==1);
         }
 
         public User GetById(int id)
