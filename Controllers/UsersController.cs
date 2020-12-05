@@ -96,7 +96,7 @@ namespace FeedYourCat.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("/api/users_moderated")]
+        [HttpGet("/api/users")]
         public IActionResult GetAuth()
         {
             var users = _userService.GetModerated();
@@ -105,7 +105,7 @@ namespace FeedYourCat.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("/api/users_non_moderated")]
+        [HttpGet("/api/users/moderation")]
         public IActionResult GetNonModerated()
         {
             var users = _userService.GetNonModerated();
@@ -141,7 +141,7 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        [HttpPost("/api/users/{id}/accept")]
+        [HttpPost("/api/users/accept/{id}")]
         public IActionResult Accept(int id)
         {
             _userService.Accept(id);
