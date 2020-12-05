@@ -1,11 +1,15 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+    "projectUniqueName": "D:\\C#\\FeedYourCat\\FeedYourCat.csproj",
     "projectName": "FeedYourCat",
-    "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
-    "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
+    "projectPath": "D:\\C#\\FeedYourCat\\FeedYourCat.csproj",
+    "outputPath": "D:\\C#\\FeedYourCat\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\ProgramData\\Xamarin\\NuGet",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
@@ -25,6 +29,50 @@
   },
   "frameworks": {
     "netcoreapp3.1": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[10.1.1, )"
+        },
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[8.1.0, )"
+        },
+        "IdentityModel": {
+          "target": "Package",
+          "version": "[4.5.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.JwtBearer": {
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Microsoft.AspNetCore.SpaServices": {
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Microsoft.AspNetCore.SpaServices.Extensions": {
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Microsoft.EntityFrameworkCore.Design": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "[3.1.10, )"
+        },
+        "Pomelo.EntityFrameworkCore.MySql": {
+          "target": "Package",
+          "version": "[3.2.4, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",
@@ -43,7 +91,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Users\\shtyt\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
     }
   }
 }
