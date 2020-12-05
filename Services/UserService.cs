@@ -40,7 +40,9 @@ namespace FeedYourCat.Services
                 return null;
 
             // check if password is correct
-            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            byte[] passwordHash, passwordSalt;
+            CreatePasswordHash(user.Password, out passwordHash, out passwordSalt);
+            if (!VerifyPasswordHash(password, passwordHash, passwordSalt))
                 return null;
 
             // authentication successful
@@ -78,9 +80,8 @@ namespace FeedYourCat.Services
 
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
+            user.Password = Convert.ToBase64String(passwordHash) + Convert.ToBase64String(passwordSalt);
 
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
             
             _context.Users.Add(user);
             _context.SaveChanges();
@@ -114,9 +115,8 @@ namespace FeedYourCat.Services
             {
                 byte[] passwordHash, passwordSalt;
                 CreatePasswordHash(password, out passwordHash, out passwordSalt);
-
-                user.PasswordHash = passwordHash;
-                user.PasswordSalt = passwordSalt;
+                
+                user.Password = Convert.ToBase64String(passwordHash) + Convert.ToBase64String(passwordSalt);
 
             }
 
@@ -146,6 +146,7 @@ namespace FeedYourCat.Services
                 passwordSalt = hmac.Key;
                 passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
+            
         }
 
         private static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)

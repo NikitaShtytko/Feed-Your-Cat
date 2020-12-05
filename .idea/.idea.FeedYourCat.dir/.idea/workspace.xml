@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="add support back">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.dll" afterDir="false" />
@@ -346,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607164123082</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="passwordHash, passwordSalt">
+      <created>1607166038129</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607166038129</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +399,8 @@
     <MESSAGE value="try controller" />
     <MESSAGE value="implement registration and CRUD" />
     <MESSAGE value="status 0 and role user on default, show users with status = 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="status 0 and role user on default, show users with status = 1" />
+    <MESSAGE value="passwordHash, passwordSalt" />
+    <option name="LAST_COMMIT_MESSAGE" value="passwordHash, passwordSalt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607160342105">
@@ -409,28 +416,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="279" key="Github.CreatePullRequestDialog/0.0.1536.824@0.0.1536.824" timestamp="1607159227741" />
-    <state width="839" height="210" key="GridCell.Tab.0.bottom" timestamp="1607165658555">
+    <state width="831" height="210" key="GridCell.Tab.0.bottom" timestamp="1607168429312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="839" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607165658555" />
+    <state width="831" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607168429312" />
     <state width="1877" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160966148" />
     <state width="938" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="839" height="210" key="GridCell.Tab.0.center" timestamp="1607165658554">
+    <state width="831" height="210" key="GridCell.Tab.0.center" timestamp="1607168429312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="839" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607165658554" />
+    <state width="831" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607168429312" />
     <state width="1877" height="307" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160966148" />
     <state width="938" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="839" height="210" key="GridCell.Tab.0.left" timestamp="1607165658554">
+    <state width="831" height="210" key="GridCell.Tab.0.left" timestamp="1607168429312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="839" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607165658554" />
+    <state width="831" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607168429312" />
     <state width="1877" height="307" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160966148" />
     <state width="938" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="839" height="210" key="GridCell.Tab.0.right" timestamp="1607165658554">
+    <state width="831" height="210" key="GridCell.Tab.0.right" timestamp="1607168429312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="839" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607165658554" />
+    <state width="831" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607168429312" />
     <state width="1877" height="307" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160966148" />
     <state width="938" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
@@ -493,19 +500,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606838014422" />
-    <state x="197" y="213" key="Vcs.Push.Dialog.v2" timestamp="1607159192755">
+    <state x="197" y="213" key="Vcs.Push.Dialog.v2" timestamp="1607166050193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="197" y="213" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607159192755" />
+    <state x="197" y="213" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607166050193" />
     <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604834314285" />
-    <state x="659" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607165622464">
+    <state x="659" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607166391709">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="659" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1607165622464" />
-    <state x="780" y="128" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607165551111">
+    <state x="659" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1607166391709" />
+    <state x="780" y="128" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607168042679">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="780" y="128" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1607165551111" />
+    <state x="780" y="128" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1607168042679" />
     <state x="386" y="102" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606838732517">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -532,5 +539,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2536" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605356776720" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607167688418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607167688418" />
   </component>
 </project>
