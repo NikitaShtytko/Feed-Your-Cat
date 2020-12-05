@@ -16,6 +16,7 @@ namespace FeedYourCat.Services
         User GetById(int id);
         User Create(User user, string password);
         void Update(User user, string password = null);
+        void Accept(int id);
         void Delete(int id);
     }
 
@@ -120,6 +121,17 @@ namespace FeedYourCat.Services
 
             _context.Users.Update(user);
             _context.SaveChanges();
+        }
+
+        public void Accept(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user != null)
+            {
+                user.Status = 1;
+                _context.Users.Update(user);
+                _context.SaveChanges();
+            }
         }
 
         public void Delete(int id)

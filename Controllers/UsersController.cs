@@ -121,7 +121,7 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("/api/users/{id}")]
         public IActionResult Update(int id, [FromBody]UpdateModel model)
         {
             // map model to entity and set id
@@ -141,7 +141,14 @@ namespace FeedYourCat.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpPost("/api/users/{id}/accept")]
+        public IActionResult Accept(int id)
+        {
+            _userService.Accept(id);
+            return Ok();
+        }
+        
+        [HttpDelete("/api/users/{id}")]
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);
