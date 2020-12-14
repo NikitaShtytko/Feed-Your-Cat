@@ -27,10 +27,14 @@ export class UserService {
   }
 
   register(user: User): Observable<User[]>{
-    return this.httpClient.post<User[]>('/api/users/register', user);
+    return this.httpClient.post<User[]>('http://localhost:5000/api/users/register', user);
   }
 
-  login(user: User): Observable<User[]>{
-    return this.httpClient.post<User[]>('/api/users/login', user);
+  login(user: { login: string, password: string }): Observable<User[]>{
+    return this.httpClient.post<User[]>('http://localhost:5000/api/users/login', user);
+  }
+
+  existEmail(email: string): Observable<User>{
+    return this.httpClient.get<User>('http://localhost:5000/api/users/email' + email);
   }
 }

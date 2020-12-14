@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UserService} from "../../services/user/user.service";
+import {Router} from "@angular/router";
+import {CookieService} from "../../services/cookie/cookie.service";
 
 @Component({
   selector: 'app-login-page',
@@ -18,13 +21,39 @@ export class LoginPageComponent implements OnInit {
 
     password: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$')
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{7,40}$')
     ]),
   });
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private _authCookie: CookieService) {
+  }
 
   ngOnInit(): void {
+  }
+
+  login() {
+
+    const user = {
+      login: this.form.controls.email.value,
+      password: this.form.controls.password.value,
+    };
+
+    console.log(user);
+
+    this.userService.login(user)
+      .subscribe(
+        (data: any) => {
+          this._authCookie.setAuth(JSON.stringify(data));
+          console.log(this._authCookie);
+          this.router.navigate(['/home']);
+        },
+        error => {
+          this.error = 'Incorrect Login Or Password';
+        },
+      );
   }
 
 }
