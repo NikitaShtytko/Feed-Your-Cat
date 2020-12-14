@@ -20,12 +20,13 @@ import { FeederModalComponent } from './components/user/feeder-modal/feeder-moda
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from "@angular/common/http";
+import {AuthService} from "./services/auth/auth.service";
 
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'admin', component: AdminPanelComponent},
+  {path: 'admin', component: AdminPanelComponent, canActivate: [AuthService]},
   {path: 'admin/users', component: UsersListComponent},
   {path: 'admin/feeders', component: FeedersListComponent},
   {path: 'admin/requests', component: RequestsListComponent},

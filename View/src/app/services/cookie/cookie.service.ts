@@ -20,4 +20,9 @@ export class CookieService {
   deleteAuth(): void {
     Cookie.delete('id_token');
   }
+
+  public isAuthenticated(): boolean {
+    const token = Cookie.get('id_token');
+    return token != null;
+  }
 }

@@ -21,14 +21,14 @@ export class LoginPageComponent implements OnInit {
 
     password: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$')
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{7,40}$')
     ]),
   });
 
-  constructor(private userService: UserService,
-              private router: Router,
-              private _authCookie: CookieService
-  ) {
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private _authCookie: CookieService) {
   }
 
   ngOnInit(): void {

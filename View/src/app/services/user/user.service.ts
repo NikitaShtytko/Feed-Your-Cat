@@ -35,6 +35,6 @@ export class UserService {
   }
 
   existEmail(email: string): Observable<User>{
-    return this.httpClient.get<User>('http://localhost:5000/api/users/ ?' + email);
+    return this.httpClient.get<User>('http://localhost:5000/api/users/email' + email);
   }
 }

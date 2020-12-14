@@ -297,6 +297,9 @@
                 </e>
               </e>
             </e>
+            <e p="interceptor" t="Include">
+              <e p="authentication.interceptor.ts" t="Include" />
+            </e>
             <e p="models" t="Include">
               <e p="feeder.ts" t="Include" />
               <e p="request.ts" t="Include" />
@@ -304,6 +307,10 @@
               <e p="user.ts" t="Include" />
             </e>
             <e p="services" t="Include">
+              <e p="auth" t="Include">
+                <e p="auth.service.spec.ts" t="Include" />
+                <e p="auth.service.ts" t="Include" />
+              </e>
               <e p="Cookie" t="Include">
                 <e p="cookie.service.spec.ts" t="Include" />
                 <e p="cookie.service.ts" t="Include" />
