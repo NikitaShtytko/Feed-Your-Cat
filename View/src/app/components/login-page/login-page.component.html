@@ -40,7 +40,7 @@
         <!-- Sign in button -->
         <button mdbBtn color="info" outline="true" rounded="true" block="true"
                 class="my-4 waves-effect z-depth-0 btn-block" mdbWavesEffect [disabled]="form.invalid"
-                type="submit">Sign in
+                type="submit" (click)="login()">Sign in
         </button>
 
         <!-- Register -->

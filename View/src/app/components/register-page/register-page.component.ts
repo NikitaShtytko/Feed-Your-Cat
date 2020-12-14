@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AsyncValidatorFn, FormControl, FormGroup, Validators} from "@angular/forms";
+import {debounceTime, distinctUntilChanged, first, map, switchMap} from "rxjs/operators";
+import {User} from "../../models/user";
+import {UserService} from "../../services/user/user.service";
 
 @Component({
   selector: 'app-register-page',
@@ -19,6 +22,7 @@ export class RegisterPageComponent implements OnInit {
     email: new FormControl('', [
       Validators.required,
       Validators.email,
+      this.emailValidator()
     ]),
 
     password: new FormControl('', [
@@ -27,9 +31,19 @@ export class RegisterPageComponent implements OnInit {
     ]),
   });
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
+  private emailValidator(): AsyncValidatorFn {
+    return control => control.valueChanges
+      .pipe(
+        debounceTime(500),
+        distinctUntilChanged(),
+        switchMap((val: string) => this.userService.existEmail(val)),
+        map((res: User) => (res != null ? {emailExist: true} : null)),
+        first()
+      );
+  }
 }
