@@ -60,5 +60,12 @@ namespace FeedYourCat.Controllers
             var model = _mapper.Map<IList<FeederModel>>(feeder);
             return Ok(model);
         }
+        
+        [AllowAnonymous]
+        [HttpPost("/feeder")]
+        public IActionResult CreateFeeder([FromBody]FeederModel model)
+        {
+            return Ok();
+        }
     }
 }
