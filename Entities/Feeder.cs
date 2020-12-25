@@ -1,13 +1,16 @@
-﻿namespace FeedYourCat.Entities
+﻿using System;
+using Newtonsoft.Json.Linq;
+
+namespace FeedYourCat.Entities
 {
     public class Feeder
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public int User_Id { get; set; }
         public string Type { get; set; }
         public int State { get; set; }
         public bool Status { get; set; }
         public bool Empty { get; set; }
-        public string Schedule { get; set; }
+        public JsonObject Schedule_Feed { get; set; }
     }
 }

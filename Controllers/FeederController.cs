@@ -18,8 +18,29 @@ namespace FeedYourCat.Controllers
     [Authorize]
     [ApiController]
     [Route("")]
-    public class FeederController
+    public class FeederController : ControllerBase
     {
+        private IFeederService _feederService;
+        private IMapper _mapper;
+        private readonly AppSettings _appSettings;
         
+        public FeederController(
+            IFeederService feederService,
+            IMapper mapper,
+            IOptions<AppSettings> appSettings)
+        {
+            _feederService = feederService;
+            _mapper = mapper;
+            _appSettings = appSettings.Value;
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("feeder")]
+        public IActionResult GetFeeders()
+        {
+            var feeders = _feederService.GetAll();
+            var model = _mapper.Map<IList<FeederModel>>(feeders);
+            return Ok(model);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FeedYourCat.Entities;
 using FeedYourCat.Models.Users;
+using FeedYourCat.Models.Feeders;
 
 namespace FeedYourCat.Helpers
 {
@@ -11,6 +12,7 @@ namespace FeedYourCat.Helpers
             CreateMap<User, UserModel>();
             CreateMap<RegisterModel, User>();
             CreateMap<UpdateModel, User>();
+            CreateMap<Feeder, FeederModel>();
         }
     }
 }
