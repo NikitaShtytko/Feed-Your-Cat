@@ -18,9 +18,9 @@
 
         <!-- name -->
         <div class="md-form mt-0">
-          <input type="email" id="materialRegisterFormName" class="form-control" mdbInput formControlName="login">
+          <input type="text" id="materialRegisterFormName" class="form-control" mdbInput formControlName="name">
           <label for="materialRegisterFormName">Name</label>
-          <div class="alert alert-danger mt-3" *ngIf="form.controls['login'].invalid && form.controls['login'].dirty">
+          <div class="alert alert-danger mt-3" *ngIf="form.controls['name'].invalid && form.controls['name'].dirty">
             login
           </div>
         </div>
@@ -30,9 +30,9 @@
           <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput formControlName="email">
           <label for="materialRegisterFormEmail">E-mail</label>
           <div class="alert alert-danger mt-3"
-               *ngIf="form.controls['email'].invalid && form.controls['email'].dirty
-               && !form.controls['email'].errors?.emailExist">
-            Email
+               *ngIf="form.controls['email'].invalid && form.controls['email'].errors?.emailExist
+               && form.controls['email'].dirty">
+            Вы ввели некорректный почтовый адрес или он уже используется
           </div>
         </div>
 
@@ -59,7 +59,7 @@
 <!--        </div>-->
         <button mdbBtn color="info" outline="true" rounded="true" block="true"
                 class="my-4 waves-effect z-depth-0 btn-block" mdbWavesEffect [disabled]="form.invalid"
-                type="submit">Sign Up
+                (click)="register()">Sign Up
         </button>
 
         <div class="alert alert-danger mt-3" *ngIf="error">{{error}}</div>

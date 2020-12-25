@@ -30,7 +30,7 @@ const appRoutes: Routes = [
   {path: 'admin/users', component: UsersListComponent},
   {path: 'admin/feeders', component: FeedersListComponent},
   {path: 'admin/requests', component: RequestsListComponent},
-  {path: '', component: FeedersPageComponent},
+  {path: '', component: FeedersPageComponent, canActivate: [AuthService]},
 
   {path: '**', component: NotFoundPageComponent},
 ];

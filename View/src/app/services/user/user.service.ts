@@ -11,30 +11,30 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   getUsers(): Observable<User[]>{
-    return this.httpClient.get<User[]>('http://localhost:5000/api/users');
+    return this.httpClient.get<User[]>('http://localhost:8000/api/admin/users');
   }
 
   getModeration(): Observable<User[]>{
-    return this.httpClient.get<User[]>('http://localhost:5000/api/users/moderation');
+    return this.httpClient.get<User[]>('http://localhost:8000/api/admin/users/moderation');
   }
 
   accept(id: number): Observable<User>{
-    return this.httpClient.get<User>('http://localhost:5000/api/users/accept/' + id);
+    return this.httpClient.get<User>('http://localhost:8000/api/admin/user/approve/' + id);
   }
 
   decline(id: number): Observable<User>{
-    return this.httpClient.delete<User>('http://localhost:5000/api/users/' + id);
+    return this.httpClient.delete<User>('http://localhost:8000/api/user/not-approve/' + id);
   }
 
   register(user: User): Observable<User[]>{
-    return this.httpClient.post<User[]>('http://localhost:5000/api/users/register', user);
+    return this.httpClient.post<User[]>('http://localhost:8000/api/auth/sign-up', user);
   }
 
-  login(user: { login: string, password: string }): Observable<User[]>{
-    return this.httpClient.post<User[]>('http://localhost:5000/api/users/login', user);
+  login(user: { email: string, password: string }): Observable<User[]>{
+    return this.httpClient.post<User[]>('http://localhost:8000/api/auth/sign-in', user);
   }
 
-  existEmail(email: string): Observable<User>{
-    return this.httpClient.get<User>('http://localhost:5000/api/users/email' + email);
+  existEmail(email: string): Observable<boolean>{
+    return this.httpClient.get<boolean>('http://localhost:8000/api/email?email=' + email);
   }
 }
