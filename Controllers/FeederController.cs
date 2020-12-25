@@ -48,7 +48,7 @@ namespace FeedYourCat.Controllers
         public IActionResult GetById(int id)
         {
             var feeder = _feederService.GetById(id);
-            var model = _mapper.Map<IList<FeederModel>>(feeder);
+            var model = _mapper.Map<FeederModel>(feeder);
             return Ok(model);
         }
         
@@ -63,9 +63,19 @@ namespace FeedYourCat.Controllers
         
         [AllowAnonymous]
         [HttpPost("/feeder")]
-        public IActionResult CreateFeeder([FromBody]FeederModel model)
+        public IActionResult CreateFeeder([FromBody]NewFeederModel model)
         {
-            return Ok();
+            var feeder = _mapper.Map<Feeder>(model);
+            try
+            {
+                _feederService.Create(feeder);
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                // return error message if there was an exception
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }

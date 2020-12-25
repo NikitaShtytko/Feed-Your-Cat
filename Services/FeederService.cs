@@ -12,6 +12,7 @@ namespace FeedYourCat.Services
         IEnumerable<Feeder> GetAll();
         Feeder GetById(int id);
         IEnumerable<Feeder> GetByUserId(int id);
+        public Feeder Create(Feeder feeder);
     }
     public class FeederService : IFeederService
     {
@@ -35,6 +36,13 @@ namespace FeedYourCat.Services
         public IEnumerable<Feeder> GetByUserId(int id)
         {
             return _context.Feeders.Where(feeder => feeder.User_Id == id);
+        }
+
+        public Feeder Create(Feeder feeder)
+        {
+            _context.Feeders.Add(feeder);
+            _context.SaveChanges();
+            return feeder;
         }
     }
 }

@@ -11,6 +11,6 @@ namespace FeedYourCat.Models.Feeders
         public int State { get; set; }
         public bool Status { get; set; }
         public bool Empty { get; set; }
-        public JsonObject Schedule_Feed { get; set; }
+        public string Schedule_Feed { get; set; }
     }
 }
