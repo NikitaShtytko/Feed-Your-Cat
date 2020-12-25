@@ -35,7 +35,7 @@ namespace FeedYourCat.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("feeder")]
+        [HttpGet("api/feeders")]
         public IActionResult GetFeeders()
         {
             var feeders = _feederService.GetAll();
