@@ -42,5 +42,14 @@ namespace FeedYourCat.Controllers
             var model = _mapper.Map<IList<FeederModel>>(feeders);
             return Ok(model);
         }
+        
+        [AllowAnonymous]
+        [HttpGet("/api/feeders/{id}")]
+        public IActionResult GetById(int id)
+        {
+            var feeder = _feederService.GetById(id);
+            var model = _mapper.Map<IList<FeederModel>>(feeder);
+            return Ok(model);
+        }
     }
 }

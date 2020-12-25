@@ -10,6 +10,7 @@ namespace FeedYourCat.Services
     public interface IFeederService
     {
         IEnumerable<Feeder> GetAll();
+        Feeder GetById(int id);
     }
     public class FeederService : IFeederService
     {
@@ -24,6 +25,10 @@ namespace FeedYourCat.Services
         {
             return _context.Feeders;
         }
-        
+
+        public Feeder GetById(int id)
+        {
+            return _context.Feeders.Find(id);
+        }
     }
 }
