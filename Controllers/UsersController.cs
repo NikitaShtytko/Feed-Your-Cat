@@ -36,7 +36,7 @@ namespace FeedYourCat.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("login")]
+        [HttpPost("/api/auth/sign-in")]
         public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
             var user = _userService.Authenticate(model.Email, model.Password);
@@ -97,7 +97,7 @@ namespace FeedYourCat.Controllers
         // }
         
         [AllowAnonymous]
-        [HttpGet("/api/users")]
+        [HttpGet("/api/admin/users/moderation/moderated")]
         public IActionResult GetAuth()
         {
             var users = _userService.GetModerated();
@@ -106,15 +106,6 @@ namespace FeedYourCat.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("/api/users/moderation")]
-        public IActionResult GetNonModerated()
-        {
-            var users = _userService.GetNonModerated();
-            var model = _mapper.Map<IList<UserModel>>(users);
-            return Ok(model);
-        }
-
-        [AllowAnonymous]
         [HttpGet("/api/users/email")]
         public bool CheckEmail([FromQuery]string email)
         {
@@ -122,6 +113,15 @@ namespace FeedYourCat.Controllers
             return user != null && user.Any() ? true : false;
         }
         
+        [AllowAnonymous]
+        [HttpGet("/api/admin/users/moderation")]
+        public IActionResult GetNonModerated()
+        {
+            var users = _userService.GetNonModerated();
+            var model = _mapper.Map<IList<UserModel>>(users);
+            return Ok(model);
+        }
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -151,14 +151,14 @@ namespace FeedYourCat.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("/api/users/accept/{id}")]
+        [HttpGet("/api/admin/user/approve/{id}")]
         public IActionResult Accept(int id)
         {
             _userService.Accept(id);
             return Ok();
         }
         
-        [HttpDelete("/api/users/{id}")]
+        [HttpDelete("/api/user/not-approve/{id}")]
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);
