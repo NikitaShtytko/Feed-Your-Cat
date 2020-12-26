@@ -21,13 +21,13 @@
     </tr>
     </thead>
 
-    <tbody class="thead-dark-child">
+    <tbody class="thead-dark-child" *ngFor="let item of user; let r = index ">
     <tr class="second-raw">
-      <td>{{user.id}}</td>
-      <td>{{user.role}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.id}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.role}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.id}}</td>
       <td>
         <span style="color: #f12711; cursor: pointer" (click)="openDialog()">delete</span>
       </td>

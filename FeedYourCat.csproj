@@ -5,9 +5,29 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Migrations\MySQLMigrations" />
+      <Folder Include="Migrations\SqlServerMigrations" />
       <Folder Include="View\src\app\components\admin" />
       <Folder Include="View\src\app\components\user" />
-      <Folder Include="View\src\app\services" />
+      <Folder Include="View\src\app\services\auth" />
+      <Folder Include="View\src\app\services\cookie" />
+      <Folder Include="View\src\app\services\feeder" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+      <PackageReference Include="IdentityModel" Version="4.5.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+      <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.10" />
+      <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
     </ItemGroup>
 
 </Project>

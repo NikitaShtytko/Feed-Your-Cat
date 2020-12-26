@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {User} from "../../../models/user";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
+import {UserService} from "../../../services/user/user.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-users-list',
@@ -9,9 +11,14 @@ import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit {
-  public user: User;
+  public user: User[];
 
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog,
+    private userService: UserService,
+  ) {}
+
+  public subscriptions: Subscription[] = [];
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -25,7 +32,7 @@ export class UsersListComponent implements OnInit {
 
     const dialogRef = this.dialog.open(ConfirmDialogComponent, dialogConfig);
 
-    if (dialogConfig){
+    if (dialogConfig) {
 
     }
 
@@ -35,10 +42,9 @@ export class UsersListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user = new User();
-    this.user.id = 2;
-    this.user.name = 'nick';
-    this.user.email = 'nik@mail.ru';
-    this.user.role = 'user';
+    this.subscriptions.push(this.userService.getUsers().subscribe(response => {
+        this.user = response.data;
+        console.log(this.user);
+    }));
   }
 }

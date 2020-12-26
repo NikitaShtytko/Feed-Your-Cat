@@ -5,9 +5,9 @@ export class Feeder {
   id: number;
   user_id: string;
   type: string;
-  status: number;
-  empty: boolean;
-  log_id: number;
+  is_empty: boolean;
+  fullness: number;
+  is_registered: boolean;
   // tags :Tag[];
-  // user_id: User;
+  user: User;
 }

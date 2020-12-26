@@ -15,20 +15,23 @@ import {FeedersListComponent} from './components/admin/feeders-list/feeders-list
 import {RequestsListComponent} from './components/admin/requests-list/requests-list.component';
 import {AdminPanelComponent} from "./components/admin/admin-panel/admin-panel.component";
 import {FeedersPageComponent} from './components/user/feeders-page/feeders-page.component';
-import { ConfirmDialogComponent } from './components/admin/confirm-dialog/confirm-dialog.component';
-import { FeederModalComponent } from './components/user/feeder-modal/feeder-modal.component';
+import {ConfirmDialogComponent} from './components/admin/confirm-dialog/confirm-dialog.component';
+import {FeederModalComponent} from './components/user/feeder-modal/feeder-modal.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {AuthService} from "./services/auth/auth.service";
+import {AuthenticationInterceptor} from "./interceptor/authentication.interceptor";
 
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'admin', component: AdminPanelComponent},
+  {path: 'admin', component: AdminPanelComponent, canActivate: [AuthService]},
   {path: 'admin/users', component: UsersListComponent},
   {path: 'admin/feeders', component: FeedersListComponent},
   {path: 'admin/requests', component: RequestsListComponent},
-  {path: '', component: FeedersPageComponent},
+  {path: '', component: FeedersPageComponent, canActivate: [AuthService]},
 
   {path: '**', component: NotFoundPageComponent},
 ];
@@ -57,10 +60,22 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
+    HttpClientModule,
   ],
   providers: [
-    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
-    ],
+    {
+      provide: MAT_DIALOG_DEFAULT_OPTIONS,
+      useValue:
+        {
+          hasBackdrop: false
+        }
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     ConfirmDialogComponent,
