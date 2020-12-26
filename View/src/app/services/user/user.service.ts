@@ -20,11 +20,11 @@ export class UserService {
   }
 
   accept(id: number): Observable<User>{
-    return this.httpClient.get<User>(this.route + '/api/admin/user/approve/' + id);
+    return this.httpClient.get<User>(this.route + '/api/admin/users/approve/' + id);
   }
 
   decline(id: number): Observable<User>{
-    return this.httpClient.delete<User>(this.route + '/api/user/not-approve/' + id);
+    return this.httpClient.delete<User>(this.route + '/api/admin/users/not-approve/' + id);
   }
 
   register(user: User): Observable<User[]>{

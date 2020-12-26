@@ -11,9 +11,7 @@ namespace FeedYourCat.Models.Feeders
         public string Type { get; set; }
         [Required]
         public int State { get; set; }
-        [Required]
         public bool Status { get; set; }
-        [Required]
         public bool Empty { get; set; }
         [Required]
         public string Schedule_Feed { get; set; }

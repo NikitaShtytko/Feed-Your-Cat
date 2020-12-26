@@ -97,7 +97,6 @@ namespace FeedYourCat.Controllers
         //     return Ok(model);
         // }
         
-        [AllowAnonymous]
         [HttpGet("/api/admin/users/moderation/moderated")]
         public IActionResult GetAuth()
         {
@@ -114,7 +113,6 @@ namespace FeedYourCat.Controllers
             return user != null && user.Any() ? true : false;
         }
         
-        [AllowAnonymous]
         [HttpGet("/api/admin/users/moderation")]
         public IActionResult GetNonModerated()
         {
@@ -150,16 +148,15 @@ namespace FeedYourCat.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
-        [AllowAnonymous]
-        [HttpGet("/api/admin/user/approve/{id}")]
+        
+        [HttpGet("/api/admin/users/approve/{id}")]
         public IActionResult Accept(int id)
         {
             _userService.Accept(id);
             return Ok();
         }
         
-        [HttpDelete("/api/user/not-approve/{id}")]
+        [HttpDelete("/api/admin/users/not-approve/{id}")]
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);

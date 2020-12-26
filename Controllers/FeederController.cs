@@ -34,7 +34,6 @@ namespace FeedYourCat.Controllers
             _appSettings = appSettings.Value;
         }
         
-        [AllowAnonymous]
         [HttpGet("api/feeders")]
         public IActionResult GetFeeders()
         {
@@ -43,7 +42,14 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
         
-        [AllowAnonymous]
+        [HttpGet("/api/admin/feeders/moderation")]
+        public IActionResult GetNonModerated()
+        {
+            var feeders = _feederService.GetNonModerated();
+            var model = _mapper.Map<IList<FeederModel>>(feeders);
+            return Ok(model);
+        }
+        
         [HttpGet("/api/feeders/{id}")]
         public IActionResult GetById(int id)
         {
@@ -52,7 +58,6 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
         
-        [AllowAnonymous]
         [HttpGet("/api/user_feeders/{id}")]
         public IActionResult GetByUserId(int id)
         {
@@ -61,7 +66,6 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
         
-        [AllowAnonymous]
         [HttpPost("/feeder")]
         public IActionResult CreateFeeder([FromBody]NewFeederModel model)
         {
@@ -76,6 +80,20 @@ namespace FeedYourCat.Controllers
                 // return error message if there was an exception
                 return BadRequest(new { message = ex.Message });
             }
+        }
+        
+        [HttpGet("/api/admin/feeders/approve/{id}")]
+        public IActionResult Accept(int id)
+        {
+            _feederService.Accept(id);
+            return Ok();
+        }
+        
+        [HttpDelete("/api/admin/feeders/not-approve/{id}")]
+        public IActionResult Delete(int id)
+        {
+            _feederService.Delete(id);
+            return Ok();
         }
     }
 }
