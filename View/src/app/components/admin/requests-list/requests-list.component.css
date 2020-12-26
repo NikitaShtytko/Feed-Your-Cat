@@ -82,9 +82,14 @@
   margin: 0;
 }
 
-.main-page{
-  min-width: 300px;
-  color: black;
+.main-page {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(../../../../assets/images/background-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
 
   -webkit-user-select: none;
   /* user-select -- это нестандартное свойство */
@@ -111,3 +116,19 @@ h5{
   justify-content: space-around;
 }
 
+.loading-bar {
+  margin: 0;
+  height: 1.5%;
+  width: 300%;
+  background: linear-gradient(90deg, #f12711, #f5af19, #799F0C, #5614B0, #f12711, #f5af19, #799F0C, #5614B0);
+  animation: load 1.75s ease infinite normal;
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

@@ -41,18 +41,20 @@ export class LoginPageComponent implements OnInit {
       password: this.form.controls.password.value,
     };
 
-    console.log(user);
-
     this.userService.login(user)
       .subscribe(
         (data: any) => {
           JSON.stringify(data);
           this._authCookie.setAuth(data.data.token);
-          console.log(this._authCookie);
-          this.router.navigate(['']);
+
+          if (data.data.role === 'admin'){
+            this.router.navigate(['/admin']);
+          }
+          else {
+            this.router.navigate(['']);
+          }
         },
         error => {
-          console.log(error);
           this.error = 'Incorrect Login Or Password';
         },
       );

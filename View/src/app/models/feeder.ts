@@ -3,11 +3,11 @@ import {Tag} from "./tag";
 
 export class Feeder {
   id: number;
-  user_id: string;
+  name: string;
   type: string;
   is_empty: boolean;
   fullness: number;
   is_registered: boolean;
-  // tags :Tag[];
+  tags :Tag[];
   user: User;
 }

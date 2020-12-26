@@ -8,28 +8,30 @@
     </select>
   </div>
   <div *ngIf="is_exist" class="feeder-exist">
+
     <div class="left-column">
-      <h2>State {{data.state}} %</h2>
-      <h2>{{data.empty}}</h2>
-      <button mdbBtn mdbWavesEffect class="btn btn-primary">Logs</button>
+        <h2 class="left-column__item">State {{feeder.fullness}} %</h2>
+        <h2 class="left-column__item">{{empty}}</h2>
+        <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item">Logs</button>
     </div>
-    <div class="right-column">
+
+    <div class="center-column">
       <ul>
-        <li *ngFor="let t of data.tags">{{t}}</li>
+        <li *ngFor="let tag of feeder.tags">{{tag.tag}}</li>
       </ul>
-      <!--      <div *ngFor="let t of data.tags">-->
-      <!--        <h2>{{t}}</h2>-->
-      <!--      </div>-->
-      <!--        <h2 *ngFor="let t of data.tags">{{t}}</h2>-->
     </div>
-    <!--    <h2 mat-dialog-title>exist</h2>-->
+
+    <div class="right-column">
+      <h2>Расписание кормления</h2>
+      <div class="time-picker">
+        <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+      </div>
+    </div>
   </div>
-  <div>
-    <h2>Расписание кормления</h2>
-    <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
-  </div>
+
   <mat-dialog-actions>
-    <button class="mat-raised-button btn btn-info close-button" (click)="feed()">Feed the cat</button>
+    <button class="mat-raised-button btn btn-info close-button" (click)="fill()">Fill the feeder</button>
+    <button class="mat-raised-button btn btn-info close-button" *ngIf="feeder.fullness >= 20" (click)="feed()">Feed the cat</button>
     <button class="mat-raised-button btn btn-danger close-button" (click)="close()">Close</button>
   </mat-dialog-actions>
 </div>

@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from "@angular/material/dialog";
 
@@ -28,9 +28,9 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'admin', component: AdminPanelComponent, canActivate: [AuthService]},
-  {path: 'admin/users', component: UsersListComponent},
-  {path: 'admin/feeders', component: FeedersListComponent},
-  {path: 'admin/requests', component: RequestsListComponent},
+  {path: 'admin/users', component: UsersListComponent, canActivate: [AuthService]},
+  {path: 'admin/feeders', component: FeedersListComponent, canActivate: [AuthService]},
+  {path: 'admin/requests', component: RequestsListComponent, canActivate: [AuthService]},
   {path: '', component: FeedersPageComponent, canActivate: [AuthService]},
 
   {path: '**', component: NotFoundPageComponent},
@@ -82,5 +82,6 @@ const appRoutes: Routes = [
     FeederModalComponent
   ],
 })
+
 export class AppModule {
 }

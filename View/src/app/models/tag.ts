@@ -1,4 +1,7 @@
-﻿export class Tag {
+﻿import {Feeder} from "./feeder";
+
+export class Tag {
   id: number;
-  text: string;
+  tag: string;
+  feeder: Feeder;
 }

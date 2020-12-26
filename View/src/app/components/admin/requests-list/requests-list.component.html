@@ -3,62 +3,68 @@
   <nav class="navbar navbar-dark bg-warning justify-content-between">
     <a id="logo" class="navbar-brand" routerLink="/admin">Admin</a>
     <div class="form-inline">
-      <button>
+      <button (click)="logOut()">
         <img id="logout__image" src="assets/images/logout.svg" alt="logout">
       </button>
     </div>
   </nav>
 
-  <div class="spans">
-    <h5>Users</h5>
-    <h5>Feeders</h5>
-  </div>
+  <div *ngIf="loadingUsers || loadingFeeders" class="loading-bar" role="status"></div>
 
-  <div class="table">
-    <table class="user-table">
-      <thead class="thead-color">
-      <tr class="raw">
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Actions</th>
-      </tr>
-      </thead>
+  <div *ngIf="!(loadingUsers && loadingFeeders)">
+    <div class="spans">
+      <h5>Users</h5>
+      <h5>Feeders</h5>
+    </div>
 
-      <tbody class="thead-dark-child">
-      <tr class="second-raw" *ngFor="let item of user; let r = index">
-        <td>{{item.id}}</td>
-        <td>{{item.email}}</td>
-        <td>
-          <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'user', item.id)">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', 'user', item.id)">decline</span>
-          </div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="table">
+      <table class="user-table">
+        <thead class="thead-color">
+        <tr class="raw">
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
 
-    <table class="feeder-table">
-      <thead class="thead-color">
-      <tr class="raw">
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Actions</th>
-      </tr>
-      </thead>
+        <tbody class="thead-dark-child">
+        <tr class="second-raw" *ngFor="let item of user; let r = index">
+          <td>{{item.id}}</td>
+          <td>{{item.email}}</td>
+          <td>
+            <div class="actions">
+              <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'user', item.id)">accept</span>
+              <span style="color: #f12711; cursor: pointer"
+                    (click)="openDialog('decline', 'user', item.id)">decline</span>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
 
-      <tbody class="thead-dark-child">
-      <tr class="second-raw" *ngFor="let item of feeder; let r = index">
-        <td>{{item.id}}</td>
-        <td>{{item.user.name}}</td>
-        <td>
-          <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'feeder', item.id)">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', 'feeder', item.id)">decline</span>
-          </div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+      <table class="feeder-table">
+        <thead class="thead-color">
+        <tr class="raw">
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
+
+        <tbody class="thead-dark-child">
+        <tr class="second-raw" *ngFor="let item of feeder; let r = index">
+          <td>{{item.id}}</td>
+          <td>{{item.user.name}}</td>
+          <td>
+            <div class="actions">
+              <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'feeder', item.id)">accept</span>
+              <span style="color: #f12711; cursor: pointer"
+                    (click)="openDialog('decline', 'feeder', item.id)">decline</span>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

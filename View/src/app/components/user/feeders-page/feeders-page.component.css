@@ -15,6 +15,10 @@
   }
 }
 
+h3, h5{
+  color: black;
+}
+
 /*.navbar{*/
 /*  !*position: fixed;*!*/
 /*  width: 100%;*/
