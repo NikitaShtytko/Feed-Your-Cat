@@ -5,6 +5,7 @@ import {CookieService} from "../../../services/cookie/cookie.service";
 import {Feeder} from "../../../models/feeder";
 import {FeederService} from "../../../services/feeder/feeder.service";
 import {Subscription} from "rxjs";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-feeder-modal',
@@ -13,7 +14,7 @@ import {Subscription} from "rxjs";
 })
 export class FeederModalComponent implements OnInit {
   public feeder: Feeder;
-  public is_exist;
+  public is_exist = false;
   public empty;
   time: any;
 
@@ -25,9 +26,9 @@ export class FeederModalComponent implements OnInit {
     private feederService: FeederService,
     @Inject(MAT_DIALOG_DATA) data
   ) {
-    this.is_exist = data.title != 'request';
+    this.is_exist = data.data !== 'request';
 
-    console.log(data.data);
+    console.log(data);
 
     if (this.is_exist) {
       this.feeder = data.data;
@@ -40,7 +41,22 @@ export class FeederModalComponent implements OnInit {
           break;
       }
     }
+    else{
+      this.feeder = new Feeder();
+    }
   }
+
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$'),
+    ]),
+
+    type: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$'),
+    ]),
+  });
 
 
   ngOnInit(): void {
@@ -50,12 +66,28 @@ export class FeederModalComponent implements OnInit {
   fill() {
     this.subscriptions.push(this.feederService.fillTheFeeder(this.feeder.id).subscribe(response => {
       this.feeder.fullness = response;
+      this.empty = 'Full';
     }));
   }
 
   feed() {
     this.subscriptions.push(this.feederService.feedTheCat(this.feeder.id).subscribe(response => {
       this.feeder.fullness = response;
+      if (response == 0){
+        this.empty = 'Empty';
+      }
+      else {
+        this.empty = 'Not empty';
+      }
+    }));
+  }
+
+  save() {
+    this.feeder.type = this.form.controls.type.value;
+    this.feeder.name = this.form.controls.name.value;
+
+    this.subscriptions.push(this.feederService.newFeeder(this.feeder).subscribe(response => {
+      this.dialogRef.close(true);
     }));
   }
 

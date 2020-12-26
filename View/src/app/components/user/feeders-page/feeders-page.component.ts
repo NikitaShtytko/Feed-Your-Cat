@@ -44,7 +44,12 @@ export class FeedersPageComponent implements OnInit {
     }
 
     dialogRef.afterClosed().subscribe(
-      data => console.log("Dialog output:", data)
+      data => {
+        if (data === true){
+          this.ngOnInit();
+        }
+        console.log("Dialog output:", data)
+      }
     );
   }
 

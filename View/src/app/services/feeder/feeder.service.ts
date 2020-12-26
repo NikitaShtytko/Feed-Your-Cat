@@ -38,4 +38,8 @@ export class FeederService {
   fillTheFeeder(id: number): Observable<number>{
     return this.httpClient.get<number>(this.route + '/api/feeders/fill/' + id);
   }
+
+  newFeeder(feeder: Feeder): Observable<Feeder>{
+    return this.httpClient.post<Feeder>(this.route + '/api/feeders', feeder);
+  }
 }

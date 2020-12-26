@@ -67,7 +67,7 @@
   border-radius: 10px;
 }
 
-.close-button{
+.mat-raised-button{
   width: 70%!important;
 }
 
@@ -82,3 +82,14 @@ mat-dialog-actions{
 .left-column__item{
   margin-top: 10px;
 }
+
+#materialRegisterFormName{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.alert-danger{
+  width: 50%;
+  margin: 0 auto;
+}
+

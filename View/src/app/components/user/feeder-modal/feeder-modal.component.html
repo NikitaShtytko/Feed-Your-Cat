@@ -1,18 +1,29 @@
 <div class="dialog">
   <div *ngIf="!is_exist">
-    <label for="type">Select feeder type</label>
-    <br>
-    <select name="type" id="type">
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
-  </div>
-  <div *ngIf="is_exist" class="feeder-exist">
 
+    <form [formGroup]="form" class="new-feeder-form">
+      <label for="type">Выберите тип</label>
+      <select name="type" id="type" formControlName="type">
+        <option value="dispenser">Дозаторный</option>
+        <option value="sensor">Весовой</option>
+      </select>
+
+      <br>
+
+      <label for="materialRegisterFormName">Название</label>
+      <input type="text" id="materialRegisterFormName" class="form-control" mdbInput formControlName="name">
+      <div class="alert alert-danger mt-3" *ngIf="form.controls['name'].invalid && form.controls['name'].dirty">
+        Введите нормальное название
+      </div>
+    </form>
+
+  </div>
+
+  <div *ngIf="is_exist" class="feeder-exist">
     <div class="left-column">
-        <h2 class="left-column__item">State {{feeder.fullness}} %</h2>
-        <h2 class="left-column__item">{{empty}}</h2>
-        <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item">Logs</button>
+      <h2 class="left-column__item" *ngIf="feeder.type === 'sensor'">State {{feeder.fullness}} %</h2>
+      <h2 class="left-column__item">{{empty}}</h2>
+      <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item">Logs</button>
     </div>
 
     <div class="center-column">
@@ -30,8 +41,9 @@
   </div>
 
   <mat-dialog-actions>
-    <button class="mat-raised-button btn btn-info close-button" (click)="fill()">Fill the feeder</button>
-    <button class="mat-raised-button btn btn-info close-button" *ngIf="feeder.fullness >= 20" (click)="feed()">Feed the cat</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="is_exist" (click)="fill()">Fill the feeder</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="!is_exist" (click)="save()">Save</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="feeder.fullness >= 20" (click)="feed()">Feed the cat</button>
     <button class="mat-raised-button btn btn-danger close-button" (click)="close()">Close</button>
   </mat-dialog-actions>
 </div>
