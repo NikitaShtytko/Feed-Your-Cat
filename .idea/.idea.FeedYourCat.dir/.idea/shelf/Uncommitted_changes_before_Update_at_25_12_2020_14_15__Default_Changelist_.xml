@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_25_12_2020_14_15_[Default_Changelist]" date="1608894964394" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2020_14_15_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25.12.2020 14:15 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2020_14_15_[Default_Changelist]/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/netcoreapp3.1/FeedYourCat.assets.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/netcoreapp3.1/FeedYourCat.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2020_14_15_[Default_Changelist]/FeedYourCat.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2020_14_15_[Default_Changelist]/FeedYourCat.csprojAssemblyReference.cache" />
+  </binary>
+</changelist>

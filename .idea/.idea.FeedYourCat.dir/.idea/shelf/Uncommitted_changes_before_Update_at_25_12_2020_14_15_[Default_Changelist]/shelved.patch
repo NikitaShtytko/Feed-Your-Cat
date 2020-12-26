@@ -1,0 +1,489 @@
+Index: .idea/.idea.FeedYourCat.dir/.idea/contentModel.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ContentModelStore\">\r\n    <e p=\"C:\\Users\\shtyt\\AppData\\Local\\JetBrains\\Rider2020.2\\extResources\" t=\"IncludeRecursive\" />\r\n    <e p=\"C:\\Users\\shtyt\\AppData\\Local\\JetBrains\\Rider2020.2\\resharper-host\\Local\\Transient\\Rider\\v202\\SolutionCaches\\_.19.00\" t=\"ExcludeRecursive\" />\r\n    <e p=\"C:\\Users\\shtyt\\AppData\\Roaming\\JetBrains\\Rider2020.2\\consoles\\db\" t=\"IncludeRecursive\" />\r\n    <e p=\"W:\\Projects\\FeedYourCat\" t=\"IncludeRecursive\">\r\n      <e p=\"appsettings.Development.json\" t=\"Include\" />\r\n      <e p=\"appsettings.json\" t=\"Include\" />\r\n      <e p=\"bin\" t=\"ExcludeRecursive\" />\r\n      <e p=\"FeedYourCat.csproj\" t=\"IncludeRecursive\" />\r\n      <e p=\"obj\" t=\"ExcludeRecursive\">\r\n        <e p=\"Debug\" t=\"Include\">\r\n          <e p=\"netcoreapp3.1\" t=\"Include\">\r\n            <e p=\"FeedYourCat.AssemblyInfo.cs\" t=\"Include\" />\r\n          </e>\r\n        </e>\r\n      </e>\r\n      <e p=\"packages\" t=\"ExcludeRecursive\" />\r\n      <e p=\"Program.cs\" t=\"Include\" />\r\n      <e p=\"Properties\" t=\"Include\">\r\n        <e p=\"launchSettings.json\" t=\"Include\" />\r\n      </e>\r\n      <e p=\"Startup.cs\" t=\"Include\" />\r\n      <e p=\"View\" t=\"Include\">\r\n        <e p=\".browserslistrc\" t=\"Include\" />\r\n        <e p=\".editorconfig\" t=\"Include\" />\r\n        <e p=\".gitignore\" t=\"Include\" />\r\n        <e p=\"angular.json\" t=\"Include\" />\r\n        <e p=\"e2e\" t=\"Include\">\r\n          <e p=\"protractor.conf.js\" t=\"Include\" />\r\n          <e p=\"src\" t=\"Include\">\r\n            <e p=\"app.e2e-spec.ts\" t=\"Include\" />\r\n            <e p=\"app.po.ts\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"tsconfig.json\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"karma.conf.js\" t=\"Include\" />\r\n        <e p=\"node_modules\\@angular\\animations\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\cdk\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\cli\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\common\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\compiler\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\compiler-cli\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\core\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\forms\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\localize\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\material\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\platform-browser\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\platform-browser-dynamic\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular\\router\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\architect\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\build-angular\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\build-optimizer\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\build-webpack\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\core\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@angular-devkit\\schematics\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@fortawesome\\fontawesome-free\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@jsdevtools\\coverage-istanbul-loader\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@ng-bootstrap\\ng-bootstrap\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@ngtools\\webpack\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\@types\" t=\"IncludeRecursive\">\r\n          <e p=\"chart.js\" t=\"IncludeRecursive\" />\r\n          <e p=\"jasmine\" t=\"IncludeRecursive\" />\r\n          <e p=\"jasminewd2\" t=\"IncludeRecursive\" />\r\n          <e p=\"minimatch\" t=\"IncludeRecursive\" />\r\n          <e p=\"node\" t=\"IncludeRecursive\" />\r\n          <e p=\"source-list-map\" t=\"IncludeRecursive\" />\r\n        </e>\r\n        <e p=\"node_modules\\acorn\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ajv\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ajv-keywords\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\angular-bootstrap-md\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\animate.css\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ansi-colors\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ansi-regex\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\arg\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\blocking-proxy\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\bootstrap\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\canonical-path\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\chalk\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\chart.js\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\cli-cursor\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\cli-spinners\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\codelyzer\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\colorette\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\commander\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\dependency-graph\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\es6-promise\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\fast-deep-equal\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\fast-json-stable-stringify\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\fsevents\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\hammerjs\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\hash.js\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\is-docker\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\is-interactive\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\is-wsl\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\jasmine-core\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\jasmine-spec-reporter\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\jest-worker\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\karma\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\karma-chrome-launcher\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\karma-coverage-istanbul-reporter\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\karma-jasmine\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\karma-jasmine-html-reporter\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\license-webpack-plugin\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\log-symbols\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\magic-string\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\make-error\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\mimic-fn\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\moment\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\onetime\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\open\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ora\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\portfinder\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\postcss\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\protractor\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\reflect-metadata\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\restore-cursor\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\rollup\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\rxjs\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\schema-utils\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\semver-dsl\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\source-map\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\sourcemap-codec\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\strip-ansi\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\symbol-observable\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\terser\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\tree-kill\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\ts-node\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\tslib\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\tslint\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\tsutils\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.dom.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.dom.iterable.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.collection.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.core.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.generator.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.iterable.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.promise.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.proxy.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.reflect.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.symbol.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2015.symbol.wellknown.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2016.array.include.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2016.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2016.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.intl.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.object.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.sharedmemory.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.string.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2017.typedarrays.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.asyncgenerator.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.asynciterable.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.intl.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.promise.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2018.regexp.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.array.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.object.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.string.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2019.symbol.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.bigint.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.intl.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.promise.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.string.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es2020.symbol.wellknown.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es5.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.es6.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.esnext.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.esnext.full.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.esnext.intl.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.esnext.promise.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.esnext.string.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.scripthost.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.webworker.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\typescript\\lib\\lib.webworker.importscripts.d.ts\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\uri-js\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\webdriver-js-extender\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\webdriver-manager\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\yn\" t=\"IncludeRecursive\" />\r\n        <e p=\"node_modules\\zone.js\" t=\"IncludeRecursive\" />\r\n        <e p=\"package-lock.json\" t=\"Include\" />\r\n        <e p=\"package.json\" t=\"Include\" />\r\n        <e p=\"README.md\" t=\"Include\" />\r\n        <e p=\"src\" t=\"Include\">\r\n          <e p=\"app\" t=\"Include\">\r\n            <e p=\"app-routing.module.ts\" t=\"Include\" />\r\n            <e p=\"app.component.css\" t=\"Include\" />\r\n            <e p=\"app.component.html\" t=\"Include\" />\r\n            <e p=\"app.component.spec.ts\" t=\"Include\" />\r\n            <e p=\"app.component.ts\" t=\"Include\" />\r\n            <e p=\"app.module.ts\" t=\"Include\" />\r\n            <e p=\"components\" t=\"Include\">\r\n              <e p=\"admin\" t=\"Include\">\r\n                <e p=\"admin-panel\" t=\"Include\">\r\n                  <e p=\"admin-panel.component.css\" t=\"Include\" />\r\n                  <e p=\"admin-panel.component.html\" t=\"Include\" />\r\n                  <e p=\"admin-panel.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"admin-panel.component.ts\" t=\"Include\" />\r\n                </e>\r\n                <e p=\"confirm-dialog\" t=\"Include\">\r\n                  <e p=\"confirm-dialog.component.css\" t=\"Include\" />\r\n                  <e p=\"confirm-dialog.component.html\" t=\"Include\" />\r\n                  <e p=\"confirm-dialog.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"confirm-dialog.component.ts\" t=\"Include\" />\r\n                </e>\r\n                <e p=\"feeders-list\" t=\"Include\">\r\n                  <e p=\"feeders-list.component.css\" t=\"Include\" />\r\n                  <e p=\"feeders-list.component.html\" t=\"Include\" />\r\n                  <e p=\"feeders-list.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"feeders-list.component.ts\" t=\"Include\" />\r\n                </e>\r\n                <e p=\"requests-list\" t=\"Include\">\r\n                  <e p=\"requests-list.component.css\" t=\"Include\" />\r\n                  <e p=\"requests-list.component.html\" t=\"Include\" />\r\n                  <e p=\"requests-list.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"requests-list.component.ts\" t=\"Include\" />\r\n                </e>\r\n                <e p=\"users-list\" t=\"Include\">\r\n                  <e p=\"users-list.component.css\" t=\"Include\" />\r\n                  <e p=\"users-list.component.html\" t=\"Include\" />\r\n                  <e p=\"users-list.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"users-list.component.ts\" t=\"Include\" />\r\n                </e>\r\n              </e>\r\n              <e p=\"login-page\" t=\"Include\">\r\n                <e p=\"login-page.component.css\" t=\"Include\" />\r\n                <e p=\"login-page.component.html\" t=\"Include\" />\r\n                <e p=\"login-page.component.spec.ts\" t=\"Include\" />\r\n                <e p=\"login-page.component.ts\" t=\"Include\" />\r\n              </e>\r\n              <e p=\"not-found-page\" t=\"Include\">\r\n                <e p=\"not-found-page.component.css\" t=\"Include\" />\r\n                <e p=\"not-found-page.component.html\" t=\"Include\" />\r\n                <e p=\"not-found-page.component.spec.ts\" t=\"Include\" />\r\n                <e p=\"not-found-page.component.ts\" t=\"Include\" />\r\n              </e>\r\n              <e p=\"register-page\" t=\"Include\">\r\n                <e p=\"register-page.component.css\" t=\"Include\" />\r\n                <e p=\"register-page.component.html\" t=\"Include\" />\r\n                <e p=\"register-page.component.spec.ts\" t=\"Include\" />\r\n                <e p=\"register-page.component.ts\" t=\"Include\" />\r\n              </e>\r\n              <e p=\"user\" t=\"Include\">\r\n                <e p=\"feeder-modal\" t=\"Include\">\r\n                  <e p=\"feeder-modal.component.css\" t=\"Include\" />\r\n                  <e p=\"feeder-modal.component.html\" t=\"Include\" />\r\n                  <e p=\"feeder-modal.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"feeder-modal.component.ts\" t=\"Include\" />\r\n                </e>\r\n                <e p=\"feeders-page\" t=\"Include\">\r\n                  <e p=\"feeders-page.component.css\" t=\"Include\" />\r\n                  <e p=\"feeders-page.component.html\" t=\"Include\" />\r\n                  <e p=\"feeders-page.component.spec.ts\" t=\"Include\" />\r\n                  <e p=\"feeders-page.component.ts\" t=\"Include\" />\r\n                </e>\r\n              </e>\r\n            </e>\r\n            <e p=\"models\" t=\"Include\">\r\n              <e p=\"feeder.ts\" t=\"Include\" />\r\n              <e p=\"request.ts\" t=\"Include\" />\r\n              <e p=\"tag.ts\" t=\"Include\" />\r\n              <e p=\"user.ts\" t=\"Include\" />\r\n            </e>\r\n            <e p=\"services\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"assets\" t=\"Include\">\r\n            <e p=\".gitkeep\" t=\"Include\" />\r\n            <e p=\"images\" t=\"Include\">\r\n              <e p=\"add-button.svg\" t=\"Include\" />\r\n              <e p=\"background-2.png\" t=\"Include\" />\r\n              <e p=\"background-3.png\" t=\"Include\" />\r\n              <e p=\"background.png\" t=\"Include\" />\r\n              <e p=\"error-image-1.jpg\" t=\"Include\" />\r\n              <e p=\"error-image-2.jpg\" t=\"Include\" />\r\n              <e p=\"error-image-3.jpg\" t=\"Include\" />\r\n              <e p=\"error-image-4.jpg\" t=\"Include\" />\r\n              <e p=\"feeder.png\" t=\"Include\" />\r\n              <e p=\"logout.svg\" t=\"Include\" />\r\n              <e p=\"request.png\" t=\"Include\" />\r\n              <e p=\"user.png\" t=\"Include\" />\r\n            </e>\r\n          </e>\r\n          <e p=\"environments\" t=\"Include\">\r\n            <e p=\"environment.prod.ts\" t=\"Include\" />\r\n            <e p=\"environment.ts\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"favicon.ico\" t=\"Include\" />\r\n          <e p=\"index.html\" t=\"Include\" />\r\n          <e p=\"main.ts\" t=\"Include\" />\r\n          <e p=\"polyfills.ts\" t=\"Include\" />\r\n          <e p=\"styles.css\" t=\"Include\" />\r\n          <e p=\"test.ts\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"tsconfig.app.json\" t=\"Include\" />\r\n        <e p=\"tsconfig.json\" t=\"Include\" />\r\n        <e p=\"tsconfig.spec.json\" t=\"Include\" />\r\n        <e p=\"tslint.json\" t=\"Include\" />\r\n      </e>\r\n    </e>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml b/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml
+--- a/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml	(date 1608894864591)
+@@ -1,10 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ContentModelStore">
+-    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+-    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+-    <e p="C:\Users\shtyt\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+-    <e p="W:\Projects\FeedYourCat" t="IncludeRecursive">
++    <e p="D:\RiderProjects" t="IncludeRecursive">
+       <e p="appsettings.Development.json" t="Include" />
+       <e p="appsettings.json" t="Include" />
+       <e p="bin" t="ExcludeRecursive" />
+@@ -36,159 +33,6 @@
+           <e p="tsconfig.json" t="Include" />
+         </e>
+         <e p="karma.conf.js" t="Include" />
+-        <e p="node_modules\@angular\animations" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\cdk" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\cli" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\common" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\core" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\forms" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\localize" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\material" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
+-        <e p="node_modules\@angular\router" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\architect" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\build-angular" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\build-optimizer" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\build-webpack" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\core" t="IncludeRecursive" />
+-        <e p="node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
+-        <e p="node_modules\@fortawesome\fontawesome-free" t="IncludeRecursive" />
+-        <e p="node_modules\@jsdevtools\coverage-istanbul-loader" t="IncludeRecursive" />
+-        <e p="node_modules\@ng-bootstrap\ng-bootstrap" t="IncludeRecursive" />
+-        <e p="node_modules\@ngtools\webpack" t="IncludeRecursive" />
+-        <e p="node_modules\@types" t="IncludeRecursive">
+-          <e p="chart.js" t="IncludeRecursive" />
+-          <e p="jasmine" t="IncludeRecursive" />
+-          <e p="jasminewd2" t="IncludeRecursive" />
+-          <e p="minimatch" t="IncludeRecursive" />
+-          <e p="node" t="IncludeRecursive" />
+-          <e p="source-list-map" t="IncludeRecursive" />
+-        </e>
+-        <e p="node_modules\acorn" t="IncludeRecursive" />
+-        <e p="node_modules\ajv" t="IncludeRecursive" />
+-        <e p="node_modules\ajv-keywords" t="IncludeRecursive" />
+-        <e p="node_modules\angular-bootstrap-md" t="IncludeRecursive" />
+-        <e p="node_modules\animate.css" t="IncludeRecursive" />
+-        <e p="node_modules\ansi-colors" t="IncludeRecursive" />
+-        <e p="node_modules\ansi-regex" t="IncludeRecursive" />
+-        <e p="node_modules\arg" t="IncludeRecursive" />
+-        <e p="node_modules\blocking-proxy" t="IncludeRecursive" />
+-        <e p="node_modules\bootstrap" t="IncludeRecursive" />
+-        <e p="node_modules\canonical-path" t="IncludeRecursive" />
+-        <e p="node_modules\chalk" t="IncludeRecursive" />
+-        <e p="node_modules\chart.js" t="IncludeRecursive" />
+-        <e p="node_modules\cli-cursor" t="IncludeRecursive" />
+-        <e p="node_modules\cli-spinners" t="IncludeRecursive" />
+-        <e p="node_modules\codelyzer" t="IncludeRecursive" />
+-        <e p="node_modules\colorette" t="IncludeRecursive" />
+-        <e p="node_modules\commander" t="IncludeRecursive" />
+-        <e p="node_modules\dependency-graph" t="IncludeRecursive" />
+-        <e p="node_modules\es6-promise" t="IncludeRecursive" />
+-        <e p="node_modules\fast-deep-equal" t="IncludeRecursive" />
+-        <e p="node_modules\fast-json-stable-stringify" t="IncludeRecursive" />
+-        <e p="node_modules\fsevents" t="IncludeRecursive" />
+-        <e p="node_modules\hammerjs" t="IncludeRecursive" />
+-        <e p="node_modules\hash.js" t="IncludeRecursive" />
+-        <e p="node_modules\is-docker" t="IncludeRecursive" />
+-        <e p="node_modules\is-interactive" t="IncludeRecursive" />
+-        <e p="node_modules\is-wsl" t="IncludeRecursive" />
+-        <e p="node_modules\jasmine-core" t="IncludeRecursive" />
+-        <e p="node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
+-        <e p="node_modules\jest-worker" t="IncludeRecursive" />
+-        <e p="node_modules\karma" t="IncludeRecursive" />
+-        <e p="node_modules\karma-chrome-launcher" t="IncludeRecursive" />
+-        <e p="node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
+-        <e p="node_modules\karma-jasmine" t="IncludeRecursive" />
+-        <e p="node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
+-        <e p="node_modules\license-webpack-plugin" t="IncludeRecursive" />
+-        <e p="node_modules\log-symbols" t="IncludeRecursive" />
+-        <e p="node_modules\magic-string" t="IncludeRecursive" />
+-        <e p="node_modules\make-error" t="IncludeRecursive" />
+-        <e p="node_modules\mimic-fn" t="IncludeRecursive" />
+-        <e p="node_modules\moment" t="IncludeRecursive" />
+-        <e p="node_modules\onetime" t="IncludeRecursive" />
+-        <e p="node_modules\open" t="IncludeRecursive" />
+-        <e p="node_modules\ora" t="IncludeRecursive" />
+-        <e p="node_modules\portfinder" t="IncludeRecursive" />
+-        <e p="node_modules\postcss" t="IncludeRecursive" />
+-        <e p="node_modules\protractor" t="IncludeRecursive" />
+-        <e p="node_modules\reflect-metadata" t="IncludeRecursive" />
+-        <e p="node_modules\restore-cursor" t="IncludeRecursive" />
+-        <e p="node_modules\rollup" t="IncludeRecursive" />
+-        <e p="node_modules\rxjs" t="IncludeRecursive" />
+-        <e p="node_modules\schema-utils" t="IncludeRecursive" />
+-        <e p="node_modules\semver-dsl" t="IncludeRecursive" />
+-        <e p="node_modules\source-map" t="IncludeRecursive" />
+-        <e p="node_modules\sourcemap-codec" t="IncludeRecursive" />
+-        <e p="node_modules\strip-ansi" t="IncludeRecursive" />
+-        <e p="node_modules\symbol-observable" t="IncludeRecursive" />
+-        <e p="node_modules\terser" t="IncludeRecursive" />
+-        <e p="node_modules\tree-kill" t="IncludeRecursive" />
+-        <e p="node_modules\ts-node" t="IncludeRecursive" />
+-        <e p="node_modules\tslib" t="IncludeRecursive" />
+-        <e p="node_modules\tslint" t="IncludeRecursive" />
+-        <e p="node_modules\tsutils" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.intl.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.promise.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2018.regexp.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.array.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.object.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.string.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.bigint.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.intl.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.promise.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.string.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.esnext.intl.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.esnext.promise.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.esnext.string.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\typescript\lib\lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
+-        <e p="node_modules\uri-js" t="IncludeRecursive" />
+-        <e p="node_modules\webdriver-js-extender" t="IncludeRecursive" />
+-        <e p="node_modules\webdriver-manager" t="IncludeRecursive" />
+-        <e p="node_modules\yn" t="IncludeRecursive" />
+-        <e p="node_modules\zone.js" t="IncludeRecursive" />
+         <e p="package-lock.json" t="Include" />
+         <e p="package.json" t="Include" />
+         <e p="README.md" t="Include" />
+@@ -308,5 +152,7 @@
+         <e p="tslint.json" t="Include" />
+       </e>
+     </e>
++    <e p="D:\Users\Vladimir\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
++    <e p="D:\Users\Vladimir\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: obj/project.packagespec.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"version\": \"1.0.0\",\r\n  \"restore\": {\r\n    \"projectUniqueName\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n    \"projectName\": \"FeedYourCat\",\r\n    \"projectPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n    \"outputPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\obj\\\\\",\r\n    \"projectStyle\": \"PackageReference\",\r\n    \"originalTargetFrameworks\": [\r\n      \"netcoreapp3.1\"\r\n    ],\r\n    \"sources\": {\r\n      \"https://api.nuget.org/v3/index.json\": {}\r\n    },\r\n    \"frameworks\": {\r\n      \"netcoreapp3.1\": {\r\n        \"projectReferences\": {}\r\n      }\r\n    },\r\n    \"warningProperties\": {\r\n      \"warnAsError\": [\r\n        \"NU1605\"\r\n      ]\r\n    }\r\n  },\r\n  \"frameworks\": {\r\n    \"netcoreapp3.1\": {\r\n      \"imports\": [\r\n        \"net461\",\r\n        \"net462\",\r\n        \"net47\",\r\n        \"net471\",\r\n        \"net472\",\r\n        \"net48\"\r\n      ],\r\n      \"assetTargetFallback\": true,\r\n      \"warn\": true,\r\n      \"frameworkReferences\": {\r\n        \"Microsoft.AspNetCore.App\": {\r\n          \"privateAssets\": \"none\"\r\n        },\r\n        \"Microsoft.NETCore.App\": {\r\n          \"privateAssets\": \"all\"\r\n        }\r\n      },\r\n      \"runtimeIdentifierGraphPath\": \"C:\\\\Users\\\\shtyt\\\\.dotnet\\\\sdk\\\\3.1.402\\\\RuntimeIdentifierGraph.json\"\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/project.packagespec.json b/obj/project.packagespec.json
+--- a/obj/project.packagespec.json	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/obj/project.packagespec.json	(date 1608894845126)
+@@ -1,49 +1,1 @@
+-{
+-  "version": "1.0.0",
+-  "restore": {
+-    "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+-    "projectName": "FeedYourCat",
+-    "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+-    "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
+-    "projectStyle": "PackageReference",
+-    "originalTargetFrameworks": [
+-      "netcoreapp3.1"
+-    ],
+-    "sources": {
+-      "https://api.nuget.org/v3/index.json": {}
+-    },
+-    "frameworks": {
+-      "netcoreapp3.1": {
+-        "projectReferences": {}
+-      }
+-    },
+-    "warningProperties": {
+-      "warnAsError": [
+-        "NU1605"
+-      ]
+-    }
+-  },
+-  "frameworks": {
+-    "netcoreapp3.1": {
+-      "imports": [
+-        "net461",
+-        "net462",
+-        "net47",
+-        "net471",
+-        "net472",
+-        "net48"
+-      ],
+-      "assetTargetFallback": true,
+-      "warn": true,
+-      "frameworkReferences": {
+-        "Microsoft.AspNetCore.App": {
+-          "privateAssets": "none"
+-        },
+-        "Microsoft.NETCore.App": {
+-          "privateAssets": "all"
+-        }
+-      },
+-      "runtimeIdentifierGraphPath": "C:\\Users\\shtyt\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+-    }
+-  }
+-}
+\ No newline at end of file
++"version":"1.0.0","restore":{"projectUniqueName":"D:\\RiderProjects\\FeedYourCat.csproj","projectName":"FeedYourCat","projectPath":"D:\\RiderProjects\\FeedYourCat.csproj","outputPath":"D:\\RiderProjects\\obj\\","projectStyle":"PackageReference","originalTargetFrameworks":["netcoreapp3.1"],"sources":{"https://api.nuget.org/v3/index.json":{}},"frameworks":{"netcoreapp3.1":{"targetAlias":"netcoreapp3.1","projectReferences":{}}},"warningProperties":{"warnAsError":["NU1605"]}}"frameworks":{"netcoreapp3.1":{"targetAlias":"netcoreapp3.1","imports":["net461","net462","net47","net471","net472","net48"],"assetTargetFallback":true,"warn":true,"downloadDependencies":[{"name":"Microsoft.AspNetCore.App.Ref","version":"[3.1.10, 3.1.10]"},{"name":"Microsoft.NETCore.App.Host.win-x64","version":"[3.1.10, 3.1.10]"},{"name":"Microsoft.NETCore.App.Ref","version":"[3.1.0, 3.1.0]"},{"name":"Microsoft.WindowsDesktop.App.Ref","version":"[3.1.0, 3.1.0]"}],"frameworkReferences":{"Microsoft.AspNetCore.App":{"privateAssets":"none"},"Microsoft.NETCore.App":{"privateAssets":"all"}},"runtimeIdentifierGraphPath":"D:\\Users\\Vladimir\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"}}
+\ No newline at end of file
+Index: obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>16039089116429330
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/rider.project.restore.info b/obj/rider.project.restore.info
+--- a/obj/rider.project.restore.info	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/obj/rider.project.restore.info	(date 1608894851906)
+@@ -1,1 +1,1 @@
+-16039089116429330
+\ No newline at end of file
++16088948517980216
+\ No newline at end of file
+Index: obj/FeedYourCat.csproj.nuget.g.props
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<Project ToolsVersion=\"14.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\r\n  <PropertyGroup Condition=\" '$(ExcludeRestorePackageImports)' != 'true' \">\r\n    <RestoreSuccess Condition=\" '$(RestoreSuccess)' == '' \">True</RestoreSuccess>\r\n    <RestoreTool Condition=\" '$(RestoreTool)' == '' \">NuGet</RestoreTool>\r\n    <ProjectAssetsFile Condition=\" '$(ProjectAssetsFile)' == '' \">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>\r\n    <NuGetPackageRoot Condition=\" '$(NuGetPackageRoot)' == '' \">$(UserProfile)\\.nuget\\packages\\</NuGetPackageRoot>\r\n    <NuGetPackageFolders Condition=\" '$(NuGetPackageFolders)' == '' \">C:\\Users\\shtyt\\.nuget\\packages\\</NuGetPackageFolders>\r\n    <NuGetProjectStyle Condition=\" '$(NuGetProjectStyle)' == '' \">PackageReference</NuGetProjectStyle>\r\n    <NuGetToolVersion Condition=\" '$(NuGetToolVersion)' == '' \">5.5.0</NuGetToolVersion>\r\n  </PropertyGroup>\r\n  <PropertyGroup>\r\n    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>\r\n  </PropertyGroup>\r\n</Project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/FeedYourCat.csproj.nuget.g.props b/obj/FeedYourCat.csproj.nuget.g.props
+--- a/obj/FeedYourCat.csproj.nuget.g.props	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/obj/FeedYourCat.csproj.nuget.g.props	(date 1608894851701)
+@@ -5,10 +5,13 @@
+     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\shtyt\.nuget\packages\</NuGetPackageFolders>
++    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">D:\Users\Vladimir\.nuget\packages\</NuGetPackageFolders>
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.5.0</NuGetToolVersion>
++    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.8.0</NuGetToolVersion>
+   </PropertyGroup>
++  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
++    <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageFolders)))" />
++  </ItemGroup>
+   <PropertyGroup>
+     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+   </PropertyGroup>
+Index: obj/project.assets.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"version\": 3,\r\n  \"targets\": {\r\n    \".NETCoreApp,Version=v3.1\": {}\r\n  },\r\n  \"libraries\": {},\r\n  \"projectFileDependencyGroups\": {\r\n    \".NETCoreApp,Version=v3.1\": []\r\n  },\r\n  \"packageFolders\": {\r\n    \"C:\\\\Users\\\\shtyt\\\\.nuget\\\\packages\\\\\": {}\r\n  },\r\n  \"project\": {\r\n    \"version\": \"1.0.0\",\r\n    \"restore\": {\r\n      \"projectUniqueName\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n      \"projectName\": \"FeedYourCat\",\r\n      \"projectPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n      \"packagesPath\": \"C:\\\\Users\\\\shtyt\\\\.nuget\\\\packages\\\\\",\r\n      \"outputPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\obj\\\\\",\r\n      \"projectStyle\": \"PackageReference\",\r\n      \"configFilePaths\": [\r\n        \"C:\\\\Users\\\\shtyt\\\\AppData\\\\Roaming\\\\NuGet\\\\NuGet.Config\"\r\n      ],\r\n      \"originalTargetFrameworks\": [\r\n        \"netcoreapp3.1\"\r\n      ],\r\n      \"sources\": {\r\n        \"https://api.nuget.org/v3/index.json\": {}\r\n      },\r\n      \"frameworks\": {\r\n        \"netcoreapp3.1\": {\r\n          \"projectReferences\": {}\r\n        }\r\n      },\r\n      \"warningProperties\": {\r\n        \"warnAsError\": [\r\n          \"NU1605\"\r\n        ]\r\n      }\r\n    },\r\n    \"frameworks\": {\r\n      \"netcoreapp3.1\": {\r\n        \"imports\": [\r\n          \"net461\",\r\n          \"net462\",\r\n          \"net47\",\r\n          \"net471\",\r\n          \"net472\",\r\n          \"net48\"\r\n        ],\r\n        \"assetTargetFallback\": true,\r\n        \"warn\": true,\r\n        \"frameworkReferences\": {\r\n          \"Microsoft.AspNetCore.App\": {\r\n            \"privateAssets\": \"none\"\r\n          },\r\n          \"Microsoft.NETCore.App\": {\r\n            \"privateAssets\": \"all\"\r\n          }\r\n        },\r\n        \"runtimeIdentifierGraphPath\": \"C:\\\\Users\\\\shtyt\\\\.dotnet\\\\sdk\\\\3.1.402\\\\RuntimeIdentifierGraph.json\"\r\n      }\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/project.assets.json b/obj/project.assets.json
+--- a/obj/project.assets.json	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/obj/project.assets.json	(date 1608894851765)
+@@ -8,19 +8,19 @@
+     ".NETCoreApp,Version=v3.1": []
+   },
+   "packageFolders": {
+-    "C:\\Users\\shtyt\\.nuget\\packages\\": {}
++    "D:\\Users\\Vladimir\\.nuget\\packages\\": {}
+   },
+   "project": {
+     "version": "1.0.0",
+     "restore": {
+-      "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
++      "projectUniqueName": "D:\\RiderProjects\\FeedYourCat.csproj",
+       "projectName": "FeedYourCat",
+-      "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+-      "packagesPath": "C:\\Users\\shtyt\\.nuget\\packages\\",
+-      "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
++      "projectPath": "D:\\RiderProjects\\FeedYourCat.csproj",
++      "packagesPath": "D:\\Users\\Vladimir\\.nuget\\packages\\",
++      "outputPath": "D:\\RiderProjects\\obj\\",
+       "projectStyle": "PackageReference",
+       "configFilePaths": [
+-        "C:\\Users\\shtyt\\AppData\\Roaming\\NuGet\\NuGet.Config"
++        "D:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config"
+       ],
+       "originalTargetFrameworks": [
+         "netcoreapp3.1"
+@@ -30,6 +30,7 @@
+       },
+       "frameworks": {
+         "netcoreapp3.1": {
++          "targetAlias": "netcoreapp3.1",
+           "projectReferences": {}
+         }
+       },
+@@ -41,6 +42,7 @@
+     },
+     "frameworks": {
+       "netcoreapp3.1": {
++        "targetAlias": "netcoreapp3.1",
+         "imports": [
+           "net461",
+           "net462",
+@@ -51,6 +53,24 @@
+         ],
+         "assetTargetFallback": true,
+         "warn": true,
++        "downloadDependencies": [
++          {
++            "name": "Microsoft.AspNetCore.App.Ref",
++            "version": "[3.1.10, 3.1.10]"
++          },
++          {
++            "name": "Microsoft.NETCore.App.Host.win-x64",
++            "version": "[3.1.10, 3.1.10]"
++          },
++          {
++            "name": "Microsoft.NETCore.App.Ref",
++            "version": "[3.1.0, 3.1.0]"
++          },
++          {
++            "name": "Microsoft.WindowsDesktop.App.Ref",
++            "version": "[3.1.0, 3.1.0]"
++          }
++        ],
+         "frameworkReferences": {
+           "Microsoft.AspNetCore.App": {
+             "privateAssets": "none"
+@@ -59,7 +79,7 @@
+             "privateAssets": "all"
+           }
+         },
+-        "runtimeIdentifierGraphPath": "C:\\Users\\shtyt\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
++        "runtimeIdentifierGraphPath": "D:\\Users\\Vladimir\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+       }
+     }
+   }
+Index: obj/FeedYourCat.csproj.nuget.dgspec.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"format\": 1,\r\n  \"restore\": {\r\n    \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\": {}\r\n  },\r\n  \"projects\": {\r\n    \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\": {\r\n      \"version\": \"1.0.0\",\r\n      \"restore\": {\r\n        \"projectUniqueName\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n        \"projectName\": \"FeedYourCat\",\r\n        \"projectPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\FeedYourCat.csproj\",\r\n        \"packagesPath\": \"C:\\\\Users\\\\shtyt\\\\.nuget\\\\packages\\\\\",\r\n        \"outputPath\": \"W:\\\\Projects\\\\FeedYourCat\\\\obj\\\\\",\r\n        \"projectStyle\": \"PackageReference\",\r\n        \"configFilePaths\": [\r\n          \"C:\\\\Users\\\\shtyt\\\\AppData\\\\Roaming\\\\NuGet\\\\NuGet.Config\"\r\n        ],\r\n        \"originalTargetFrameworks\": [\r\n          \"netcoreapp3.1\"\r\n        ],\r\n        \"sources\": {\r\n          \"https://api.nuget.org/v3/index.json\": {}\r\n        },\r\n        \"frameworks\": {\r\n          \"netcoreapp3.1\": {\r\n            \"projectReferences\": {}\r\n          }\r\n        },\r\n        \"warningProperties\": {\r\n          \"warnAsError\": [\r\n            \"NU1605\"\r\n          ]\r\n        }\r\n      },\r\n      \"frameworks\": {\r\n        \"netcoreapp3.1\": {\r\n          \"imports\": [\r\n            \"net461\",\r\n            \"net462\",\r\n            \"net47\",\r\n            \"net471\",\r\n            \"net472\",\r\n            \"net48\"\r\n          ],\r\n          \"assetTargetFallback\": true,\r\n          \"warn\": true,\r\n          \"frameworkReferences\": {\r\n            \"Microsoft.AspNetCore.App\": {\r\n              \"privateAssets\": \"none\"\r\n            },\r\n            \"Microsoft.NETCore.App\": {\r\n              \"privateAssets\": \"all\"\r\n            }\r\n          },\r\n          \"runtimeIdentifierGraphPath\": \"C:\\\\Users\\\\shtyt\\\\.dotnet\\\\sdk\\\\3.1.402\\\\RuntimeIdentifierGraph.json\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/FeedYourCat.csproj.nuget.dgspec.json b/obj/FeedYourCat.csproj.nuget.dgspec.json
+--- a/obj/FeedYourCat.csproj.nuget.dgspec.json	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/obj/FeedYourCat.csproj.nuget.dgspec.json	(date 1608894851798)
+@@ -1,20 +1,20 @@
+ {
+   "format": 1,
+   "restore": {
+-    "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj": {}
++    "D:\\RiderProjects\\FeedYourCat.csproj": {}
+   },
+   "projects": {
+-    "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj": {
++    "D:\\RiderProjects\\FeedYourCat.csproj": {
+       "version": "1.0.0",
+       "restore": {
+-        "projectUniqueName": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
++        "projectUniqueName": "D:\\RiderProjects\\FeedYourCat.csproj",
+         "projectName": "FeedYourCat",
+-        "projectPath": "W:\\Projects\\FeedYourCat\\FeedYourCat.csproj",
+-        "packagesPath": "C:\\Users\\shtyt\\.nuget\\packages\\",
+-        "outputPath": "W:\\Projects\\FeedYourCat\\obj\\",
++        "projectPath": "D:\\RiderProjects\\FeedYourCat.csproj",
++        "packagesPath": "D:\\Users\\Vladimir\\.nuget\\packages\\",
++        "outputPath": "D:\\RiderProjects\\obj\\",
+         "projectStyle": "PackageReference",
+         "configFilePaths": [
+-          "C:\\Users\\shtyt\\AppData\\Roaming\\NuGet\\NuGet.Config"
++          "D:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config"
+         ],
+         "originalTargetFrameworks": [
+           "netcoreapp3.1"
+@@ -24,6 +24,7 @@
+         },
+         "frameworks": {
+           "netcoreapp3.1": {
++            "targetAlias": "netcoreapp3.1",
+             "projectReferences": {}
+           }
+         },
+@@ -35,6 +36,7 @@
+       },
+       "frameworks": {
+         "netcoreapp3.1": {
++          "targetAlias": "netcoreapp3.1",
+           "imports": [
+             "net461",
+             "net462",
+@@ -45,6 +47,24 @@
+           ],
+           "assetTargetFallback": true,
+           "warn": true,
++          "downloadDependencies": [
++            {
++              "name": "Microsoft.AspNetCore.App.Ref",
++              "version": "[3.1.10, 3.1.10]"
++            },
++            {
++              "name": "Microsoft.NETCore.App.Host.win-x64",
++              "version": "[3.1.10, 3.1.10]"
++            },
++            {
++              "name": "Microsoft.NETCore.App.Ref",
++              "version": "[3.1.0, 3.1.0]"
++            },
++            {
++              "name": "Microsoft.WindowsDesktop.App.Ref",
++              "version": "[3.1.0, 3.1.0]"
++            }
++          ],
+           "frameworkReferences": {
+             "Microsoft.AspNetCore.App": {
+               "privateAssets": "none"
+@@ -53,7 +73,7 @@
+               "privateAssets": "all"
+             }
+           },
+-          "runtimeIdentifierGraphPath": "C:\\Users\\shtyt\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
++          "runtimeIdentifierGraphPath": "D:\\Users\\Vladimir\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+         }
+       }
+     }
+Index: .idea/.idea.FeedYourCat.dir/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/riderModule.iml\" filepath=\"$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/riderModule.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.FeedYourCat.dir/.idea/modules.xml b/.idea/.idea.FeedYourCat.dir/.idea/modules.xml
+--- a/.idea/.idea.FeedYourCat.dir/.idea/modules.xml	(revision bcdc4abcdfbc615c6e8014c3c799ad60dddfd9ea)
++++ b/.idea/.idea.FeedYourCat.dir/.idea/modules.xml	(date 1608894864685)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/riderModule.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/riderModule.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/c0cUJBYcdbLwevxRZQhEtSy20x3/U1xKL9KMIu8wH3ochb+5S4t+7CmsaVHzAhL/2dgMUvr8nzr6WmL4MZLaw==",
+  "success": true,
+  "projectFilePath": "D:\\RiderProjects\\FeedYourCat.csproj",
+  "expectedPackageFiles": [
+    "D:\\Users\\Vladimir\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "D:\\Users\\Vladimir\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "D:\\Users\\Vladimir\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "D:\\Users\\Vladimir\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
