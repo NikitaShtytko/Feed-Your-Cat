@@ -15,8 +15,8 @@ export class UserService {
     return this.httpClient.get<any>(this.route + '/api/admin/users');
   }
 
-  getModeration(): Observable<User[]>{
-    return this.httpClient.get<User[]>(this.route + '/api/admin/users/moderation');
+  getModeration(): Observable<any>{
+    return this.httpClient.get<any>(this.route + '/api/admin/users/moderation');
   }
 
   accept(id: number): Observable<User>{

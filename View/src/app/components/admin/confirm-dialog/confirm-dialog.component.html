@@ -2,11 +2,13 @@
   <h2 mat-dialog-title>Do you want to {{data.title}} ?</h2>
   <mat-dialog-actions *ngIf="!reverse">
     <button class="mat-raised-button btn btn-info" (click)="close()">No</button>
-    <button class="mat-raised-button btn btn-danger" (click)="save()">Yes</button>
+    <button class="mat-raised-button btn btn-danger" (click)="notApprove()">Yes</button>
+    notApprove
   </mat-dialog-actions>
 
   <mat-dialog-actions *ngIf="reverse">
     <button class="mat-raised-button btn btn-danger" (click)="close()">No</button>
-    <button class="mat-raised-button btn btn-info" (click)="save()">Yes</button>
+    <button class="mat-raised-button btn btn-info" (click)="approve()">Yes</button>
+    approve
   </mat-dialog-actions>
 </div>

@@ -9,7 +9,6 @@ export class CookieService {
   constructor() { }
 
   getAuth(): string {
-    console.log(Cookie.get('id_token'));
     return Cookie.get('id_token');
   }
 

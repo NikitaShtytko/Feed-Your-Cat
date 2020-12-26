@@ -44,6 +44,7 @@ export class UsersListComponent implements OnInit {
   ngOnInit(): void {
     this.subscriptions.push(this.userService.getUsers().subscribe(response => {
         this.user = response.data;
+        console.log(this.user);
     }));
   }
 }

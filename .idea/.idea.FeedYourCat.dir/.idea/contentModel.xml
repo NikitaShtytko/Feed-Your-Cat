@@ -315,6 +315,10 @@
                 <e p="cookie.service.spec.ts" t="Include" />
                 <e p="cookie.service.ts" t="Include" />
               </e>
+              <e p="feeder" t="Include">
+                <e p="feeder.service.spec.ts" t="Include" />
+                <e p="feeder.service.ts" t="Include" />
+              </e>
               <e p="user" t="Include">
                 <e p="user.service.spec.ts" t="Include" />
                 <e p="user.service.ts" t="Include" />

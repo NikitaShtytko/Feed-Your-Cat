@@ -10,8 +10,8 @@
   </nav>
 
   <div class="spans">
-      <h5>Users</h5>
-      <h5>Feeders</h5>
+    <h5>Users</h5>
+    <h5>Feeders</h5>
   </div>
 
   <div class="table">
@@ -30,8 +30,8 @@
         <td>{{item.email}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', item.id)">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', null)">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'user', item.id)">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', 'user', item.id)">decline</span>
           </div>
         </td>
       </tr>
@@ -48,13 +48,13 @@
       </thead>
 
       <tbody class="thead-dark-child">
-      <tr class="second-raw">
-        <td>{{request.id + 1}}</td>
-        <td>{{request.id + 1}}</td>
+      <tr class="second-raw" *ngFor="let item of feeder; let r = index">
+        <td>{{item.id}}</td>
+        <td>{{item.user.name}}</td>
         <td>
           <div class="actions">
-            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', null)">accept</span>
-            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', null)">decline</span>
+            <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'feeder', item.id)">accept</span>
+            <span style="color: #f12711; cursor: pointer" (click)="openDialog('decline', 'feeder', item.id)">decline</span>
           </div>
         </td>
       </tr>
