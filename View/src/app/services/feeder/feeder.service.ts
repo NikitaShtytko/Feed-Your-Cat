@@ -8,7 +8,7 @@ import {Feeder} from "../../models/feeder";
 })
 export class FeederService {
 
-  route = 'http://localhost:8000';
+  route = 'http://localhost:5000';
   constructor(private httpClient: HttpClient) { }
 
   getFeedersAdmin(): Observable<any>{
