@@ -14,12 +14,12 @@ import {Router} from "@angular/router";
 export class RegisterPageComponent implements OnInit {
 
   error: string;
-  user: User;
+  user: User = new User();
   public subscriptions: Subscription[] = [];
 
 
   form: FormGroup = new FormGroup({
-    login: new FormControl('', [
+    name: new FormControl('', [
       Validators.required,
       Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$'),
     ]),
@@ -27,13 +27,13 @@ export class RegisterPageComponent implements OnInit {
     email: new FormControl('', [
       Validators.required,
       Validators.email,
+    ], [
+      this.emailValidator()
     ]),
 
     password: new FormControl('', [
       Validators.required,
       Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$')
-    ], [
-      this.emailValidator()
     ]),
   });
 
@@ -45,9 +45,9 @@ export class RegisterPageComponent implements OnInit {
   }
 
   register() {
-    this.user.name = this.form.controls.login.value;
-    this.user.password = this.form.controls.password.value;
-    this.user.email = this.form.controls.email.value;
+    this.user.name = this.form.controls.name.value
+    this.user.password = this.form.value.password;
+    this.user.email = this.form.value.email;
 
     this.subscriptions.push(this.userService.register(this.user).subscribe(response => {
         this.router.navigate(['login']);
@@ -60,24 +60,12 @@ export class RegisterPageComponent implements OnInit {
 
   private emailValidator(): AsyncValidatorFn {
     return control => control.valueChanges
-      .pipe(
-        debounceTime(500),
-        distinctUntilChanged(),
-        switchMap((val: string) => this.userService.existEmail(val)),
-        map((res: User) => (res != null ? {emailExist: true} : null)),
+  .pipe(
+    debounceTime(500),
+    distinctUntilChanged(),
+    switchMap((val: string) => this.userService.existEmail(val)),
+        map((res: boolean) => (res == true ? {emailExist: true} : null)),
         first()
       );
   }
-
-  // private emailValidator(): AsyncValidatorFn {
-  //   return control => control.valueChanges
-  //     .pipe(
-  //       debounceTime(500),
-  //       distinctUntilChanged(),
-  //       switchMap(_ => this.userService.existEmail(control.value)
-  //         .pipe(
-  //           map(result => result != null ? {emailExist: true} : null)
-  //         )),
-  //     );
-  // }
 }

@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {ConfirmDialogComponent} from "../../admin/confirm-dialog/confirm-dialog.component";
+import {CookieService} from "../../../services/cookie/cookie.service";
 
 @Component({
   selector: 'app-feeder-modal',
@@ -13,6 +14,7 @@ export class FeederModalComponent implements OnInit {
   time: any;
 
   constructor(
+    private _authCookie: CookieService,
     private dialogRef: MatDialogRef<ConfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data
   ) {
@@ -39,6 +41,7 @@ export class FeederModalComponent implements OnInit {
 
   feed() {
     console.log(this.time);
+    this._authCookie.getAuth();
   }
 
   close() {

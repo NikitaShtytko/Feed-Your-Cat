@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Feeder} from "../../../models/feeder";
+import {Subscription} from "rxjs";
+import {FeederService} from "../../../services/feeder/feeder.service";
+import {User} from "../../../models/user";
 
 
 @Component({
@@ -8,17 +11,19 @@ import {Feeder} from "../../../models/feeder";
   styleUrls: ['./feeders-list.component.css']
 })
 export class FeedersListComponent implements OnInit {
-  public feeder: Feeder;
+  public feeder: Feeder[];
 
-  constructor() { }
+  constructor(
+    private feederService: FeederService
+  ) { }
+
+  public subscriptions: Subscription[] = [];
+
 
   ngOnInit(): void {
-    this.feeder = new Feeder();
-    this.feeder.id = 2;
-    this.feeder.user_id = 'nick';
-    this.feeder.type = 'qewq';
-    this.feeder.empty = false;
-    this.feeder.status = 80;
-    this.feeder.log_id = 1;
+    this.subscriptions.push(this.feederService.getFeedersAdmin().subscribe(response => {
+      this.feeder = response.data;
+      console.log(this.feeder);
+    }));
   }
 }

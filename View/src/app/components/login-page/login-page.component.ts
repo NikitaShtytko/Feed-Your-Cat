@@ -37,7 +37,7 @@ export class LoginPageComponent implements OnInit {
   login() {
 
     const user = {
-      login: this.form.controls.email.value,
+      email: this.form.controls.email.value,
       password: this.form.controls.password.value,
     };
 
@@ -46,11 +46,13 @@ export class LoginPageComponent implements OnInit {
     this.userService.login(user)
       .subscribe(
         (data: any) => {
-          this._authCookie.setAuth(JSON.stringify(data));
+          JSON.stringify(data);
+          this._authCookie.setAuth(data.data.token);
           console.log(this._authCookie);
-          this.router.navigate(['/home']);
+          this.router.navigate(['']);
         },
         error => {
+          console.log(error);
           this.error = 'Incorrect Login Or Password';
         },
       );

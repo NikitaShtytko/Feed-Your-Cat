@@ -12,7 +12,7 @@
     <thead class="thead-color">
     <tr class="raw">
       <th scope="col">#</th>
-      <th scope="col">Name</th>
+      <th scope="col">Owner</th>
       <th scope="col">Type</th>
       <th scope="col">Empty</th>
       <th scope="col">Status</th>
@@ -20,15 +20,15 @@
     </tr>
     </thead>
 
-    <tbody class="thead-dark-child">
+    <tbody class="thead-dark-child" *ngFor="let item of feeder; let r = index ">
     <tr class="second-raw">
-      <td>{{feeder.id}}</td>
-      <td>{{feeder.user_id}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.user.name}}</td>
       <!--    <td>{{feeder.user_id.name}}</td>-->
-      <td>{{feeder.type}}</td>
-      <td>{{feeder.empty}}</td>
-      <td>{{feeder.status}}%</td>
-      <td>{{feeder.log_id}}</td>
+      <td>{{item.type}}</td>
+      <td>{{item.is_empty}}</td>
+      <td>{{item.fullness}}%</td>
+      <td>Сделать лог</td>
     </tr>
     </tbody>
   </table>
