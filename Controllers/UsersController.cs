@@ -61,9 +61,10 @@ namespace FeedYourCat.Controllers
             // return basic user info and authentication token
             return Ok(new
             {
-                Id = user.Id,
-                Name = user.Name,
-                Token = tokenString
+                id = user.Id,
+                name = user.Name,
+                role = user.Role,
+                token = tokenString
             });
         }
 
@@ -106,7 +107,7 @@ namespace FeedYourCat.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("/api/users/email")]
+        [HttpGet("/api/email")]
         public bool CheckEmail([FromQuery]string email)
         {
             var user = _userService.GetByEmail(email);

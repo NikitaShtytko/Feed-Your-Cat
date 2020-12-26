@@ -47,8 +47,7 @@ export class LoginPageComponent implements OnInit {
       .subscribe(
         (data: any) => {
           JSON.stringify(data);
-          this._authCookie.setAuth(data.data.token);
-          console.log(this._authCookie);
+          this._authCookie.setAuth(data.token);
           this.router.navigate(['']);
         },
         error => {

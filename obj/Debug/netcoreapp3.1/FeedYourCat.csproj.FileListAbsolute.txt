@@ -180,7 +180,6 @@ D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\angular.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\e2e\tsconfig.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\package.json
-D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\proxy.conf.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\tsconfig.app.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\tsconfig.json
 D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\tsconfig.spec.json
@@ -262,3 +261,4 @@ D:\Feeder\FeedYourCat\obj\Debug\netcoreapp3.1\staticwebassets\FeedYourCat.Static
 D:\Feeder\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.dll
 D:\Feeder\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.pdb
 D:\Feeder\FeedYourCat\obj\Debug\netcoreapp3.1\FeedYourCat.genruntimeconfig.cache
+D:\Feeder\FeedYourCat\bin\Debug\netcoreapp3.1\View\proxy.config.json
