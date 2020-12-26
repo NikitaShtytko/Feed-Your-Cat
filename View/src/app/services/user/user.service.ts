@@ -8,7 +8,7 @@ import {User} from "../../models/user";
 })
 export class UserService {
 
-  route = 'http://localhost:8000';
+  route = 'http://localhost:5000';
   constructor(private httpClient: HttpClient) { }
 
   getUsers(): Observable<any>{
