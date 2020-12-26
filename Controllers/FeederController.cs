@@ -21,15 +21,18 @@ namespace FeedYourCat.Controllers
     public class FeederController : ControllerBase
     {
         private IFeederService _feederService;
+        private ILogService _logService;
         private IMapper _mapper;
         private readonly AppSettings _appSettings;
         
         public FeederController(
             IFeederService feederService,
+            ILogService logService,
             IMapper mapper,
             IOptions<AppSettings> appSettings)
         {
-            _feederService = feederService;
+            _feederService = feederService; 
+            _logService = logService;
             _mapper = mapper;
             _appSettings = appSettings.Value;
         }
@@ -66,13 +69,17 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
         
+        [AllowAnonymous]
         [HttpPost("/feeder")]
         public IActionResult CreateFeeder([FromBody]NewFeederModel model)
         {
             var feeder = _mapper.Map<Feeder>(model);
+            Log log = new Log();
             try
             {
                 _feederService.Create(feeder);
+                log.Data = "create feeder " + feeder.Id + " by UserID " + feeder.User_Id;
+                _logService.Create(log);
                 return Ok();
             }
             catch (AppException ex)
@@ -85,14 +92,20 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/feeders/approve/{id}")]
         public IActionResult Accept(int id)
         {
+            Log log = new Log();
             _feederService.Accept(id);
+            log.Data = "approve feeder " + id;
+            _logService.Create(log);
             return Ok();
         }
         
         [HttpDelete("/api/admin/feeders/not-approve/{id}")]
         public IActionResult Delete(int id)
         {
+            Log log = new Log();
             _feederService.Delete(id);
+            log.Data = "not approve feeder " + id;
+            _logService.Create(log);
             return Ok();
         }
     }

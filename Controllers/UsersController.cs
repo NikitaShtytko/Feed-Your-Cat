@@ -22,15 +22,18 @@ namespace FeedYourCat.Controllers
     public class UsersController : ControllerBase
     {
         private IUserService _userService;
+        private ILogService _logService;
         private IMapper _mapper;
         private readonly AppSettings _appSettings;
 
         public UsersController(
             IUserService userService,
+            ILogService logService,
             IMapper mapper,
             IOptions<AppSettings> appSettings)
         {
             _userService = userService;
+            _logService = logService;
             _mapper = mapper;
             _appSettings = appSettings.Value;
         }
@@ -152,14 +155,20 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/users/approve/{id}")]
         public IActionResult Accept(int id)
         {
+            Log log = new Log();
             _userService.Accept(id);
+            log.Data = "approve user " + id;
+            _logService.Create(log);
             return Ok();
         }
         
         [HttpDelete("/api/admin/users/not-approve/{id}")]
         public IActionResult Delete(int id)
         {
+            Log log = new Log();
             _userService.Delete(id);
+            log.Data = "delete user " + id;
+            _logService.Create(log);
             return Ok();
         }
     }

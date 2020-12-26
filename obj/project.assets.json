@@ -5770,19 +5770,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\куколд\\.nuget\\packages\\": {}
+    "D:\\Users\\Vladimir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Feeder\\FeedYourCat\\FeedYourCat.csproj",
+      "projectUniqueName": "D:\\RiderProjects\\FeedYourCat.csproj",
       "projectName": "FeedYourCat",
-      "projectPath": "D:\\Feeder\\FeedYourCat\\FeedYourCat.csproj",
-      "packagesPath": "C:\\Users\\куколд\\.nuget\\packages\\",
-      "outputPath": "D:\\Feeder\\FeedYourCat\\obj\\",
+      "projectPath": "D:\\RiderProjects\\FeedYourCat.csproj",
+      "packagesPath": "D:\\Users\\Vladimir\\.nuget\\packages\\",
+      "outputPath": "D:\\RiderProjects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\куколд\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "D:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5865,7 +5865,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\куколд\\.dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

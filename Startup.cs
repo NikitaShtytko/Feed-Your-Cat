@@ -95,6 +95,7 @@ namespace FeedYourCat
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IFeederService, FeederService>();
+            services.AddScoped<ILogService, LogService>();
         }
  
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataContext dataContext)
