@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 using FeedYourCat.Services;
 using FeedYourCat.Entities;
 using FeedYourCat.Models.Users;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FeedYourCat.Controllers
 {
@@ -113,6 +114,14 @@ namespace FeedYourCat.Controllers
             return Ok(model);
         }
 
+        [AllowAnonymous]
+        [HttpGet("/api/users/email")]
+        public bool CheckEmail([FromQuery]string email)
+        {
+            var user = _userService.GetByEmail(email);
+            return user != null && user.Any() ? true : false;
+        }
+        
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {

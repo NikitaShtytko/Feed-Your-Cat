@@ -10,7 +10,7 @@ namespace FeedYourCat.Helpers
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             // connect to sqlite database
-            options.UseMySql("server=localhost;port=3306;database=feeder_project;user=root;password=root");
+            options.UseMySql("server=localhost;port=3306;database=feeder_project;user=kolwot;password=qwerty123");
         }
     }
 }
