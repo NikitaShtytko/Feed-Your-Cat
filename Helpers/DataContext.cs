@@ -20,6 +20,6 @@ namespace FeedYourCat.Helpers
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Feeder> Feeders { get; set; }
+        public DbSet<Feeder> Feeders{ get; set; }
     }
 }
