@@ -28,8 +28,6 @@ export class FeederModalComponent implements OnInit {
   ) {
     this.is_exist = data.data !== 'request';
 
-    console.log(data);
-
     if (this.is_exist) {
       this.feeder = data.data;
       switch (this.feeder.is_empty) {
@@ -108,8 +106,11 @@ export class FeederModalComponent implements OnInit {
   newTag() {
     const tag = {
       id: this.feeder.id,
-      tag: this.form.controls.tag.value
+      tag: this.tag.controls.tag.value
     }
+
+    console.log(tag);
+
     this.subscriptions.push(this.feederService.newTag(tag).subscribe(response => {
       this.feeder = response;
     }));
