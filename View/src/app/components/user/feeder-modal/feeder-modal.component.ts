@@ -17,6 +17,7 @@ export class FeederModalComponent implements OnInit {
   public is_exist = false;
   public empty;
   time: any;
+  newTime: boolean;
 
   public subscriptions: Subscription[] = [];
 
@@ -123,8 +124,19 @@ export class FeederModalComponent implements OnInit {
   }
 
   newSchedule(){
+    const schedule = {
+      id: this.feeder.id,
+      time: this.time,
+    }
 
+    this.subscriptions.push(this.feederService.newSchedule(schedule).subscribe(response => {
+      this.feeder = response;
+    }));
   }
 
-
+  deleteSchedule(id: number){
+    this.subscriptions.push(this.feederService.deleteSchedule(id).subscribe(response => {
+      this.feeder = response;
+    }));
+  }
 }
