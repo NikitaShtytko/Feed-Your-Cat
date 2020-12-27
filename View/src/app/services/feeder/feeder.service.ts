@@ -42,4 +42,12 @@ export class FeederService {
   newFeeder(feeder: Feeder): Observable<Feeder>{
     return this.httpClient.post<Feeder>(this.route + '/api/feeders', feeder);
   }
+
+  newTag(tag: any): Observable<Feeder> {
+    return this.httpClient.put<Feeder>(this.route + '/api/feeders', tag);
+  }
+
+  deleteTag(id: number): Observable<Feeder> {
+    return this.httpClient.delete<Feeder>(this.route + '/api/feeders' + id);
+  }
 }

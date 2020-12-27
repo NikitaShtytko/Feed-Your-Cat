@@ -58,6 +58,13 @@ export class FeederModalComponent implements OnInit {
     ]),
   });
 
+  tag: FormGroup = new FormGroup({
+    tag: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{2,10}$'),
+    ])
+  });
+
 
   ngOnInit(): void {
 
@@ -75,6 +82,9 @@ export class FeederModalComponent implements OnInit {
       this.feeder.fullness = response;
       if (response == 0){
         this.empty = 'Empty';
+      }
+      else if(response == 100){
+        this.empty = 'Full';
       }
       else {
         this.empty = 'Not empty';
@@ -94,4 +104,26 @@ export class FeederModalComponent implements OnInit {
   close() {
     this.dialogRef.close(false);
   }
+
+  newTag() {
+    const tag = {
+      id: this.feeder.id,
+      tag: this.form.controls.tag.value
+    }
+    this.subscriptions.push(this.feederService.newTag(tag).subscribe(response => {
+      this.feeder = response;
+    }));
+  }
+
+  deleteTag(id: number) {
+    this.subscriptions.push(this.feederService.deleteTag(id).subscribe(response => {
+      this.feeder = response;
+    }));
+  }
+
+  newSchedule(){
+
+  }
+
+
 }

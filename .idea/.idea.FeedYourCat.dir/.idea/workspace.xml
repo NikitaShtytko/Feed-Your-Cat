@@ -44,7 +44,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="add support back">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +75,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Users/UserModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helpers/MySQLDataContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helpers/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Users/UpdateModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Users/RegisterModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Users/AuthenticateModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -132,11 +136,11 @@
         <option value="$PROJECT_DIR$/View/src/app/models/tag.ts" />
         <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" />
       </list>
     </option>
   </component>
@@ -277,6 +281,8 @@
       <workItem from="1608847547002" duration="5462000" />
       <workItem from="1608915058578" duration="9662000" />
       <workItem from="1608972643692" duration="6996000" />
+      <workItem from="1609076891764" duration="2053000" />
+      <workItem from="1609085815268" duration="1106000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Angular">
       <created>1603909331058</created>
@@ -397,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609000254262</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=".">
+      <created>1609077134715</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609077134715</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +462,8 @@
     <MESSAGE value="fix interseptor" />
     <MESSAGE value="Feeders page" />
     <MESSAGE value="New feeder method" />
-    <option name="LAST_COMMIT_MESSAGE" value="New feeder method" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607160342105">
@@ -465,30 +479,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="279" key="Github.CreatePullRequestDialog/0.0.1536.824@0.0.1536.824" timestamp="1607159227741" />
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1609003445272">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1609085658811">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="855" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
     <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609003445272" />
-    <state width="938" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1609003445272">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1609085658811" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1609085658811">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="855" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
     <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609003445272" />
-    <state width="938" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1609003445272">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1609085658811" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1609085658811">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="855" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
     <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609003445272" />
-    <state width="938" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1609003445272">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1609085658811" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1609085658811">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="855" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
     <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609003445272" />
-    <state width="938" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1609085658811" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -551,11 +565,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606838014422" />
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1609000255343">
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2" timestamp="1609077137096">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="197" y="213" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607159192755" />
-    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609000255343" />
+    <state x="142" y="410" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1609077137096" />
     <state x="659" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606838914064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
