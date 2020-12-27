@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CookieService {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   getAuth(): string {
     return Cookie.get('id_token');
@@ -19,6 +20,7 @@ export class CookieService {
 
   deleteAuth(): void {
     Cookie.delete('id_token', '/');
+    this.router.navigate(['login']);
   }
 
   public isAuthenticated(): boolean {
