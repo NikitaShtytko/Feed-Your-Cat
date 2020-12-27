@@ -28,8 +28,10 @@
 
     <div class="center-column">
       <h3>Tags</h3>
-      <ul>
-        <li *ngFor="let tag of feeder.tags" (click)="deleteTag(tag.id)">{{tag.tag}}</li>
+      <ul class="tags-list">
+        <li class="tags-list-item" *ngFor="let tag of feeder.tags">{{tag.tag}}
+          <button class="delete-button btn-danger" (click)="deleteTag(tag.id)">x</button>
+        </li>
         <div style="display: flex; margin-top: 10px">
           <form [formGroup]="tag" class="new-feeder-form">
             <input style="width: 110px" type="text" placeholder="new tag" formControlName="tag">
@@ -41,8 +43,15 @@
 
     <div class="right-column">
       <h2>Расписание кормления</h2>
-      <div class="time-picker">
+      <ul class="tags-list">
+        <li *ngFor="let time of feeder.schedules">{{time.time}}
+          <button class="delete-button btn-danger" (click)="deleteSchedule(time.id)">x</button>
+        </li>
+      </ul>
+      <button class="mat-raised-button btn btn-info" style="width: 100px!important;" (click)="newTime = true">+</button>
+      <div class="time-picker" style="display: flex" *ngIf="newTime">
         <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+        <button style="width: 41px; height: 36px; margin: auto 0 auto 10px" (click)="newSchedule()">Ok</button>
       </div>
     </div>
   </div>

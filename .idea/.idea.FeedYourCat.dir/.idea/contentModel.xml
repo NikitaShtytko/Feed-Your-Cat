@@ -312,6 +312,7 @@
             <e p="models" t="Include">
               <e p="feeder.ts" t="Include" />
               <e p="request.ts" t="Include" />
+              <e p="schedule.ts" t="Include" />
               <e p="tag.ts" t="Include" />
               <e p="user.ts" t="Include" />
             </e>

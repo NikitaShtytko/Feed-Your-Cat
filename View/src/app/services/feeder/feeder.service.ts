@@ -43,11 +43,27 @@ export class FeederService {
     return this.httpClient.post<Feeder>(this.route + '/api/user/feeders/register', feeder);
   }
 
+
+
+
+
+
+
+
+
   newTag(tag: any): Observable<Feeder> {
     return this.httpClient.put<Feeder>(this.route + '/api/feeders', tag);
   }
 
   deleteTag(id: number): Observable<Feeder> {
+    return this.httpClient.delete<Feeder>(this.route + '/api/feeders' + id);
+  }
+
+  newSchedule(schedule: { id: number; time: any }): Observable<Feeder>  {
+    return this.httpClient.put<Feeder>(this.route + '/api/feeders', schedule);
+  }
+
+  deleteSchedule(id: number): Observable<Feeder> {
     return this.httpClient.delete<Feeder>(this.route + '/api/feeders' + id);
   }
 }
