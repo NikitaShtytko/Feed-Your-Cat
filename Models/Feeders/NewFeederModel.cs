@@ -1,19 +1,18 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace FeedYourCat.Models.Feeders
 {
     public class NewFeederModel
     {
         [Required]
-        public int User_Id { get; set; }
-        [Required]
         public string Type { get; set; }
         [Required]
-        public int State { get; set; }
-        public bool Status { get; set; }
-        public bool Empty { get; set; }
+        public bool Is_Empty { get; set; }
         [Required]
-        public string Schedule_Feed { get; set; }
+        public int Fullness { get; set; }
+        [Required]
+        public string Name { get; set; }
     }
 }

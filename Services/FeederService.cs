@@ -1,78 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using FeedYourCat.Entities;
 using FeedYourCat.Helpers;
+using FeedYourCat.Models.Feeders;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FeedYourCat.Services
 {
     public interface IFeederService
     {
-        IEnumerable<Feeder> GetAll();
-        Feeder GetById(int id);
-        IEnumerable<Feeder> GetByUserId(int id);
-        Feeder Create(Feeder feeder);
-        IEnumerable<Feeder> GetNonModerated();
-        void Accept(int id);
-        void Delete(int id);
+        IEnumerable<Feeder> GetAllFeeders();
+        IEnumerable<Feeder> GetFeederRequests();
+        IEnumerable<Feeder> GetRegisteredFeeders();
+        IEnumerable<Feeder> GetUserFeeders(int user_id);
+        void Approve(int id);
+        void Decline(int id);
+        void RegisterFeeder(Feeder feeder);
     }
     public class FeederService : IFeederService
     {
-        private DataContext _context;
+        private IFeederRepository _feederRepository;
 
-        public FeederService(DataContext context)
+        public FeederService(IFeederRepository feederRepository)
         {
-            _context = context;
-        }
-        
-        public IEnumerable<Feeder> GetAll()
-        {
-            return _context.Feeders;
+            _feederRepository = feederRepository;
         }
 
-        public Feeder GetById(int id)
+        public IEnumerable<Feeder> GetAllFeeders()
         {
-            return _context.Feeders.Find(id);
+            return _feederRepository.FindAll();
         }
 
-        public IEnumerable<Feeder> GetByUserId(int id)
+        public IEnumerable<Feeder> GetFeederRequests()
         {
-            return _context.Feeders.Where(feeder => feeder.User_Id == id && feeder.Status == true);
+            return _feederRepository.FindByCondition(feeder => feeder.Is_Registered == false);
         }
 
-        public Feeder Create(Feeder feeder)
+        public IEnumerable<Feeder> GetRegisteredFeeders()
         {
-            feeder.Status = false;
-            _context.Feeders.Add(feeder);
-            _context.SaveChanges();
-            return feeder;
+            return _feederRepository.FindByCondition(feeder => feeder.Is_Registered == true);
         }
 
-        public IEnumerable<Feeder> GetNonModerated()
+        public void Approve(int id)
         {
-            return _context.Feeders.Where(feeder => feeder.Status == false);
-        }
-
-        public void Accept(int id)
-        {
-            var feeder = _context.Feeders.Find(id);
-            if (feeder != null)
+            var feeders = _feederRepository.FindByCondition(f => f.Id == id &&
+                                                                 f.Is_Registered == false);
+            if (feeders.Any())
             {
-                feeder.Status = true;
-                _context.Feeders.Update(feeder);
-                _context.SaveChanges();
+                var feeder = feeders.First();
+                feeder.Is_Registered = true;
+                _feederRepository.Update(feeder);
+                _feederRepository.Save();
             }
         }
 
-        public void Delete(int id)
+        public void Decline(int id)
         {
-            var feeder = _context.Feeders.Find(id);
-            if (feeder != null)
+            var feeders = _feederRepository.FindByCondition(f => f.Id == id &&
+                                                                 f.Is_Registered == false);
+            if (feeders.Any())
             {
-                _context.Feeders.Remove(feeder);
-                _context.SaveChanges();
+                var feeder = feeders.First();
+                _feederRepository.Delete(feeder);
+                _feederRepository.Save();
             }
+        }
+
+        public IEnumerable<Feeder> GetUserFeeders(int user_id)
+        {
+            return _feederRepository.FindByCondition(f => f.User_Id == user_id);
+        }
+
+        public void RegisterFeeder(Feeder feeder)
+        {
+            if (string.IsNullOrEmpty(feeder.Name) || string.IsNullOrEmpty(feeder.Type))
+                return;
+            feeder.Is_Registered = false;
+            _feederRepository.Create(feeder);
+            _feederRepository.Save();
         }
     }
 }

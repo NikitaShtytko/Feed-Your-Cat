@@ -18,8 +18,7 @@ namespace FeedYourCat.Helpers
             // connect to sql server database
             options.UseSqlServer("");
         }
-
         public DbSet<User> Users { get; set; }
-        public DbSet<Feeder> Feeders{ get; set; }
+        public DbSet<Feeder> Feeders { get; set; }
     }
 }

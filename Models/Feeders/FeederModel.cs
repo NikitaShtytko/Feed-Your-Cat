@@ -8,9 +8,8 @@ namespace FeedYourCat.Models.Feeders
         public int Id { get; set; }
         public int User_Id { get; set; }
         public string Type { get; set; }
-        public int State { get; set; }
-        public bool Status { get; set; }
-        public bool Empty { get; set; }
-        public string Schedule_Feed { get; set; }
+        public bool Is_Empty { get; set; }
+        public int Fullness { get; set; }
+        public string Name { get; set; }
     }
 }

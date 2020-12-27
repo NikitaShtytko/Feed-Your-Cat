@@ -1,162 +1,147 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using FeedYourCat.Entities;
 using FeedYourCat.Helpers;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FeedYourCat.Services
 {
     public interface IUserService
     {
-        User Authenticate(string username, string password);
+        Tuple<string ,string> Authenticate(string username, string password);
         IEnumerable<User> GetAll();
-        public IEnumerable<User> GetModerated();
-        public IEnumerable<User> GetNonModerated();
-        public IEnumerable<User> GetByEmail(string email);
-        User GetById(int id);
-        User Create(User user, string password);
-        void Update(User user, string password = null);
-        void Accept(int id);
-        void Delete(int id);
+        public IEnumerable<User> GetRegisteredUsers();
+        public IEnumerable<User> GetUserRequests();
+        void Create(User user, string password);
+        void Approve(int id);
+        void Decline(int id);
     }
 
     public class UserService : IUserService
     {
-        private DataContext _context;
+        
+        private IUserRepository _userRepository;
+        private readonly AppSettings _appSettings;
 
-        public UserService(DataContext context)
+        public UserService(IUserRepository userRepository,
+            IOptions<AppSettings> appSettings)
         {
-            _context = context;
-        }
-
-        public User Authenticate(string email, string password)
-        {
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-                return null;
-
-            var user = _context.Users.SingleOrDefault(x => x.Email == email);
-
-            // check if username exists
-            if (user == null)
-                return null;
-
-            // check if password is correct
-            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-                return null;
-
-            // authentication successful
-            return user;
+            _userRepository = userRepository;
+            _appSettings = appSettings.Value;
         }
 
         public IEnumerable<User> GetAll()
         {
-            return _context.Users;
+            return _userRepository.FindAll();
         }
 
-        public IEnumerable<User> GetByEmail(string email)
+        public Tuple<string ,string> Authenticate(string email, string password)
         {
-            return _context.Users.Where(user => user.Email == email);
-        }
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                return null;
 
-        public IEnumerable<User> GetModerated()
-        {
-            return _context.Users.Where(p=> p.Status==1);
-        }
+            var users = _userRepository.FindByCondition(u => u.Email.Equals(email) 
+                                                             && u.Is_Registered == true);
+            if(!users.Any())
+            {
+                return null;
+            }
 
-        public IEnumerable<User> GetNonModerated()
-        {
-            return _context.Users.Where(p=> p.Status==0);
+            var user = users.First();
+            
+            // check if password is correct
+            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+                return null;
+        
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name,  user.Id.ToString())
+                }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+            
+            user.Remember_Token = tokenString;
+            _userRepository.Update(user);
+            _userRepository.Save();
+            
+            Tuple<string, string> result = new Tuple<string, string>(tokenString, user.Role);
+            
+            // authentication successful
+            return result;
         }
         
-        public User GetById(int id)
+        public IEnumerable<User> GetRegisteredUsers()
         {
-            return _context.Users.Find(id);
+            return _userRepository.FindByCondition(user => user.Is_Registered == true);
         }
 
-        public User Create(User user, string password)
+        public IEnumerable<User> GetUserRequests()
+        {
+            return _userRepository.FindByCondition(user => user.Is_Registered == false);
+        }
+        
+        public void Create(User user, string password)
         {
             // validation
             if (string.IsNullOrWhiteSpace(password))
                 throw new AppException("Password is required");
-
-            if (_context.Users.Any(x => x.Email == user.Email))
+        
+            if (_userRepository.FindByCondition(x => x.Email.Equals(user.Email)).Any())
                 throw new AppException("Email \"" + user.Email + "\" is already taken");
-
+        
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-
-            _context.Users.Add(user);
-            _context.SaveChanges();
-
-            return user;
+        
+            _userRepository.Create(user);
+            _userRepository.Save();
         }
-
-        public void Update(User userParam, string password = null)
+        
+        public void Approve(int id)
         {
-            var user = _context.Users.Find(userParam.Id);
-
-            if (user == null)
-                throw new AppException("User not found");
-
-            // update username if it has changed
-            if (!string.IsNullOrWhiteSpace(userParam.Name) && userParam.Name != user.Name)
+            var users = _userRepository.FindByCondition(u => u.Id == id && 
+                                                             u.Is_Registered == false);
+            if (users.Any())
             {
-                // throw error if the new username is already taken
-                if (_context.Users.Any(x => x.Name == userParam.Name))
-                    throw new AppException("Username " + userParam.Name + " is already taken");
-
-                user.Name = userParam.Name;
+                var user = users.First();
+                user.Is_Registered = true;
+                _userRepository.Update(user);
+                _userRepository.Save();
             }
-
-            // update user properties if provided
-            if (!string.IsNullOrWhiteSpace(userParam.Name))
-                user.Name = userParam.Name;
-            
-            // update password if provided
-            if (!string.IsNullOrWhiteSpace(password))
-            {
-                byte[] passwordHash, passwordSalt;
-                CreatePasswordHash(password, out passwordHash, out passwordSalt);
-                user.PasswordHash = passwordHash;
-                user.PasswordSalt = passwordSalt;
-
-            }
-
-            _context.Users.Update(user);
-            _context.SaveChanges();
         }
-
-        public void Accept(int id)
+        
+        public void Decline(int id)
         {
-            var user = _context.Users.Find(id);
-            if (user != null)
+            var users = _userRepository.FindByCondition(u => u.Id == id && 
+                                                             u.Is_Registered == false);
+            if (users.Any())
             {
-                user.Status = 1;
-                _context.Users.Update(user);
-                _context.SaveChanges();
+                var user = users.First();
+                _userRepository.Delete(user);
+                _userRepository.Save();
             }
         }
-
-        public void Delete(int id)
-        {
-            var user = _context.Users.Find(id);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-                _context.SaveChanges();
-            }
-        }
-
-        // private helper methods
-
+        
+        
         private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             if (password == null) throw new ArgumentNullException("password");
             if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");
-
+        
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {
                 passwordSalt = hmac.Key;
@@ -164,14 +149,14 @@ namespace FeedYourCat.Services
             }
             
         }
-
+        
         private static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
         {
             if (password == null) throw new ArgumentNullException("password");
             if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");
             if (storedHash.Length != 64) throw new ArgumentException("Invalid length of password hash (64 bytes expected).", "passwordHash");
             if (storedSalt.Length != 128) throw new ArgumentException("Invalid length of password salt (128 bytes expected).", "passwordHash");
-
+        
             using (var hmac = new System.Security.Cryptography.HMACSHA512(storedSalt))
             {
                 var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
@@ -180,7 +165,7 @@ namespace FeedYourCat.Services
                     if (computedHash[i] != storedHash[i]) return false;
                 }
             }
-
+        
             return true;
         }
     }

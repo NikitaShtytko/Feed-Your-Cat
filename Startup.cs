@@ -66,21 +66,6 @@ namespace FeedYourCat
             })
             .AddJwtBearer(x =>
             {
-                x.Events = new JwtBearerEvents
-                {
-                    OnTokenValidated = context =>
-                    {
-                        var userService = context.HttpContext.RequestServices.GetRequiredService<IUserService>();
-                        var userId = int.Parse(context.Principal.Identity.Name);
-                        var user = userService.GetById(userId);
-                        if (user == null)
-                        {
-                            // return unauthorized if user no longer exists
-                            context.Fail("Unauthorized");
-                        }
-                        return Task.CompletedTask;
-                    }
-                };
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = true;
                 x.TokenValidationParameters = new TokenValidationParameters
@@ -94,6 +79,10 @@ namespace FeedYourCat
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IFeederRepository, FeederRepository>();
+            services.AddScoped<IValidationService, ValidationService>();
             services.AddScoped<IFeederService, FeederService>();
         }
  

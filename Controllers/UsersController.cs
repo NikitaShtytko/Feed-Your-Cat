@@ -16,65 +16,48 @@ using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FeedYourCat.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("")]
     public class UsersController : ControllerBase
     {
         private IUserService _userService;
+        private IValidationService _validationService;
         private IMapper _mapper;
-        private readonly AppSettings _appSettings;
 
         public UsersController(
             IUserService userService,
-            IMapper mapper,
-            IOptions<AppSettings> appSettings)
+            IValidationService validationService,
+            IMapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
-            _appSettings = appSettings.Value;
+            _validationService = validationService;
         }
-
-        [AllowAnonymous]
+        
         [HttpPost("/api/auth/sign-in")]
         public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
-            var user = _userService.Authenticate(model.Email, model.Password);
+            var result = _userService.Authenticate(model.Email, model.Password);
 
-            if (user == null)
+            if (result == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
-                {
-                    new Claim(ClaimTypes.Name, user.Id.ToString())
-                }),
-                Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
-
+            
+            var token = result.Item1;
+            var role = result.Item2;
+            
             // return basic user info and authentication token
             return Ok(new
             {
-                id = user.Id,
-                name = user.Name,
-                role = user.Role,
-                token = tokenString
+                token = token,
+                role = role
             });
         }
-
-        [AllowAnonymous]
+        
         [HttpPost]
         public IActionResult Register([FromBody]RegisterModel model)
         {
             // map model to entity
             var user = _mapper.Map<User>(model);
-            
             try
             {
                 // create user
@@ -87,80 +70,61 @@ namespace FeedYourCat.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        
-        // [AllowAnonymous]
-        // [HttpGet("/api/users")]
-        // public IActionResult GetAll()
-        // {
-        //     var users = _userService.GetAll();
-        //     var model = _mapper.Map<IList<UserModel>>(users);
-        //     return Ok(model);
-        // }
-        
-        [HttpGet("/api/admin/users/moderation/moderated")]
-        public IActionResult GetAuth()
-        {
-            var users = _userService.GetModerated();
-            var model = _mapper.Map<IList<UserModel>>(users);
-            return Ok(model);
-        }
-        
-        [AllowAnonymous]
-        [HttpGet("/api/email")]
-        public bool CheckEmail([FromQuery]string email)
-        {
-            var user = _userService.GetByEmail(email);
-            return user != null && user.Any() ? true : false;
-        }
-        
-        [HttpGet("/api/admin/users/moderation")]
-        public IActionResult GetNonModerated()
-        {
-            var users = _userService.GetNonModerated();
-            var model = _mapper.Map<IList<UserModel>>(users);
-            return Ok(model);
-        }
 
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        [HttpGet("/api/admin/moderation/users")]
+        public IActionResult GetUserRequests([FromQuery] string token)
         {
-            var user = _userService.GetById(id);
-            var model = _mapper.Map<UserModel>(user);
-            return Ok(model);
-        }
-
-        [HttpPut("/api/users/{id}")]
-        public IActionResult Update(int id, [FromBody]UpdateModel model)
-        {
-            // map model to entity and set id
-            var user = _mapper.Map<User>(model);
-            user.Id = id;
-
-            try
+            if (!_validationService.ValidateRole(token, "admin"))
             {
-                // update user 
-                _userService.Update(user, model.Password);
-                return Ok();
+                return BadRequest("You are not admin!");
             }
-            catch (AppException ex)
+            var users = _mapper.Map<IList<UserModel>>(_userService.GetUserRequests());
+            return Ok(users);
+        }
+
+        [HttpGet("/api/admin/moderated/users")]
+        public IActionResult GetRegisteredUsers([FromQuery] string token)
+        {
+            if (!_validationService.ValidateRole(token, "admin"))
             {
-                // return error message if there was an exception
-                return BadRequest(new { message = ex.Message });
+                return BadRequest("You are not admin!");
             }
+            var users = _mapper.Map<IList<UserModel>>(_userService.GetRegisteredUsers());
+            return Ok(users);
         }
         
         [HttpGet("/api/admin/users/approve/{id}")]
-        public IActionResult Accept(int id)
+        public IActionResult Approve(int id, [FromQuery] string token)
         {
-            _userService.Accept(id);
+            if (!_validationService.ValidateRole(token, "admin"))
+            {
+                return BadRequest("You are not admin!");
+            }
+            _userService.Approve(id);
             return Ok();
         }
         
-        [HttpDelete("/api/admin/users/not-approve/{id}")]
-        public IActionResult Delete(int id)
+        
+        [HttpDelete("/api/admin/users/decline/{id}")]
+        public IActionResult Delete(int id, [FromQuery] string token)
         {
-            _userService.Delete(id);
+            if (!_validationService.ValidateRole(token, "admin"))
+            {
+                return BadRequest("You are not admin!");
+            }
+            _userService.Decline(id);
             return Ok();
+        }
+        
+        [HttpGet("/api/admin/users")]
+        public IActionResult GetAllUsers([FromQuery] string token)
+        {
+            if (!_validationService.ValidateRole(token, "admin"))
+            {
+                return BadRequest("You are not admin!");
+            }
+            var users = _mapper.Map<IList<UserModel>>(_userService.GetAll());
+            return Ok(users);
         }
     }
 }
