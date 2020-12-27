@@ -22,6 +22,7 @@ namespace FeedYourCat.Services
         void Approve(int id);
         void Decline(int id);
         void RegisterFeeder(Feeder feeder);
+        void UpdateFeeder(Feeder feeder);
     }
     public class FeederService : IFeederService
     {
@@ -83,6 +84,14 @@ namespace FeedYourCat.Services
                 return;
             feeder.Is_Registered = false;
             _feederRepository.Create(feeder);
+            _feederRepository.Save();
+        }
+
+        public void UpdateFeeder(Feeder feeder)
+        {
+            if (string.IsNullOrEmpty(feeder.Name) || string.IsNullOrEmpty(feeder.Type))
+                return;
+            _feederRepository.Update(feeder);
             _feederRepository.Save();
         }
     }

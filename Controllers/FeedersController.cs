@@ -128,5 +128,28 @@ namespace FeedYourCat.Controllers
             _feederService.RegisterFeeder(feeder);
             return Ok();
         }
+
+        [HttpPost("/api/user/feeders/redact")]
+        public IActionResult RedactFeeder([FromQuery] string token, [FromBody] FeederModel model)
+        {
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+
+            if (userId != model.User_Id)
+            {
+                return BadRequest("It's not your feeder!");
+            }
+
+            var feeder = _mapper.Map<Feeder>(model);
+            _feederService.UpdateFeeder(feeder);
+            return Ok();
+        }
     }
 }
