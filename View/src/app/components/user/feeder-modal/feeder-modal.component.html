@@ -27,8 +27,15 @@
     </div>
 
     <div class="center-column">
+      <h3>Tags</h3>
       <ul>
-        <li *ngFor="let tag of feeder.tags">{{tag.tag}}</li>
+        <li *ngFor="let tag of feeder.tags" (click)="deleteTag(tag.id)">{{tag.tag}}</li>
+        <div style="display: flex; margin-top: 10px">
+          <form [formGroup]="tag" class="new-feeder-form">
+            <input style="width: 110px" type="text" placeholder="new tag" formControlName="tag">
+            <button (click)="newTag()">Ok</button>
+          </form>
+        </div>
       </ul>
     </div>
 
