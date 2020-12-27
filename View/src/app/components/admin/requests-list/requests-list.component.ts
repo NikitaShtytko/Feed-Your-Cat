@@ -7,6 +7,7 @@ import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
 import {FeederService} from "../../../services/feeder/feeder.service";
 import {Feeder} from "../../../models/feeder";
+import {CookieService} from "../../../services/cookie/cookie.service";
 
 @Component({
   selector: 'app-requests-list',
@@ -17,9 +18,13 @@ export class RequestsListComponent implements OnInit {
   public user: User[];
   public feeder: Feeder[];
 
+  public loadingUsers = true;
+  public loadingFeeders = true;
+
   constructor(private dialog: MatDialog,
               private userService: UserService,
-              private feederService: FeederService) {
+              private feederService: FeederService,
+              private cookieService: CookieService) {
   }
 
   public subscriptions: Subscription[] = [];
@@ -28,10 +33,12 @@ export class RequestsListComponent implements OnInit {
 
     this.subscriptions.push(this.userService.getModeration().subscribe(response => {
       this.user = response.data;
+      this.loadingUsers = false;
     }));
 
     this.subscriptions.push(this.feederService.getModeration().subscribe(response => {
       this.feeder = response.data;
+      this.loadingFeeders = false;
     }));
   }
 
@@ -40,8 +47,6 @@ export class RequestsListComponent implements OnInit {
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-
-    console.log(id);
 
     dialogConfig.data = {
       title: title,
@@ -57,29 +62,15 @@ export class RequestsListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(
       data => {
-                                           console.log('data = ' + data);
-                                             console.log('type = ' + type);
-
-        if (type === 'user'){
-                                            console.log('user');
-
-          let index = this.user.findIndex(item => item.id == data);
-          this.user = this.user.slice(index, 1);
-        }
-        else {
-                                        console.log('feeder');
-
-          let index = this.feeder.findIndex(item => item.id == data);
-
-                                                console.log('index = ' + index);
-                                                console.log(this.feeder);
-
-          this.feeder = this.feeder.slice(index, 1);
-
-                                                   console.log(this.feeder);
+        if (data === true){
+          this.ngOnInit();
         }
       }
     );
+  }
+
+  logOut() {
+    this.cookieService.deleteAuth();
   }
 
 }

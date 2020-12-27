@@ -1,8 +1,8 @@
 .dialog{
   border-radius: 20px;
   background-color: whitesmoke;
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 900px;
   opacity: 0.95;
   text-align: center;
   display: flex;
@@ -31,6 +31,7 @@
 }
 
 .feeder-exist{
+  margin-right: 25px;
   display: flex;
   /*justify-content: space-between;*/
   justify-content: space-around;
@@ -38,18 +39,57 @@
 }
 
 .right-column{
-  overflow: scroll;
-  height: 250px;
-  text-align: left;
+  text-align: center;
+  overflow: hidden;
+  height: 450px;
   font-size: 20px;
   margin-right: -30px;
-  width: 40%;
+  width: 240px;
+  background: rgba(246, 125, 39, 0.6);
+  border-radius: 10px;
+}
+
+.center-column{
+  overflow-y: scroll;
+  margin: auto 0;
+  height: 450px;
+  width: 240px;
+  font-size: 20px;
+  background: rgba(160, 246, 39, 0.6);
+  border-radius: 10px;
 }
 
 .left-column{
   margin: auto 0;
+  height: 450px;
+  width: 240px;
+  background: rgba(39, 232, 246, 0.5);
+  border-radius: 10px;
 }
 
-.close-button{
+.mat-raised-button{
   width: 70%!important;
 }
+
+mat-dialog-actions{
+  margin-top: 50px;
+}
+
+.time-picker{
+  margin: 0 55px;
+}
+
+.left-column__item{
+  margin-top: 10px;
+}
+
+#materialRegisterFormName{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.alert-danger{
+  width: 50%;
+  margin: 0 auto;
+}
+

@@ -12,9 +12,10 @@
   <div *ngIf="loading" class="loading-bar" role="status"></div>
 
   <div class="masonry">
-    <div class="item relative waves-light" *ngFor="let t of arr" (click)="openDialog(t)" mdbBtn mdbWavesEffect>
+    <div class="item relative waves-light" *ngFor="let item of feeder" (click)="openDialog(item)" mdbBtn mdbWavesEffect>
       <div class="item-content">
-        {{t}}
+        <h3>{{item.name}}</h3>
+        <h5>{{item.fullness}}</h5>
       </div>
     </div>
     <div id="add-icon-box" mdbBtn class="item relative waves-light" mdbWavesEffect (click)="openDialog('request')">

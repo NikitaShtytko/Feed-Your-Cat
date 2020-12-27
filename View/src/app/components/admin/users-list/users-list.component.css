@@ -73,3 +73,20 @@
   color: black;
   margin-left: 20px;
 }
+
+.loading-bar {
+  margin: 0;
+  height: 1.5%;
+  width: 300%;
+  background: linear-gradient(90deg, #f12711, #f5af19, #799F0C, #5614B0, #f12711, #f5af19, #799F0C, #5614B0);
+  animation: load 1.75s ease infinite normal;
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

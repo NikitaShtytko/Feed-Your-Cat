@@ -17,7 +17,6 @@ export class NotFoundPageComponent implements OnInit {
 
     getRandomInt(max) {
     this.random =  Math.floor(Math.random() * Math.floor(max)) + 1;
-    console.log(this.random);
   }
 
 }

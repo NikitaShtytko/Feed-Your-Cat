@@ -1,35 +1,49 @@
 <div class="dialog">
   <div *ngIf="!is_exist">
-    <label for="type">Select feeder type</label>
-    <br>
-    <select name="type" id="type">
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
+
+    <form [formGroup]="form" class="new-feeder-form">
+      <label for="type">Выберите тип</label>
+      <select name="type" id="type" formControlName="type">
+        <option value="dispenser">Дозаторный</option>
+        <option value="sensor">Весовой</option>
+      </select>
+
+      <br>
+
+      <label for="materialRegisterFormName">Название</label>
+      <input type="text" id="materialRegisterFormName" class="form-control" mdbInput formControlName="name">
+      <div class="alert alert-danger mt-3" *ngIf="form.controls['name'].invalid && form.controls['name'].dirty">
+        Введите нормальное название
+      </div>
+    </form>
+
   </div>
+
   <div *ngIf="is_exist" class="feeder-exist">
     <div class="left-column">
-      <h2>State {{data.state}} %</h2>
-      <h2>{{data.empty}}</h2>
-      <button mdbBtn mdbWavesEffect class="btn btn-primary">Logs</button>
+      <h2 class="left-column__item" *ngIf="feeder.type === 'sensor'">State {{feeder.fullness}} %</h2>
+      <h2 class="left-column__item">{{empty}}</h2>
+      <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item">Logs</button>
     </div>
-    <div class="right-column">
+
+    <div class="center-column">
       <ul>
-        <li *ngFor="let t of data.tags">{{t}}</li>
+        <li *ngFor="let tag of feeder.tags">{{tag.tag}}</li>
       </ul>
-      <!--      <div *ngFor="let t of data.tags">-->
-      <!--        <h2>{{t}}</h2>-->
-      <!--      </div>-->
-      <!--        <h2 *ngFor="let t of data.tags">{{t}}</h2>-->
     </div>
-    <!--    <h2 mat-dialog-title>exist</h2>-->
+
+    <div class="right-column">
+      <h2>Расписание кормления</h2>
+      <div class="time-picker">
+        <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+      </div>
+    </div>
   </div>
-  <div>
-    <h2>Расписание кормления</h2>
-    <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
-  </div>
+
   <mat-dialog-actions>
-    <button class="mat-raised-button btn btn-info close-button" (click)="feed()">Feed the cat</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="is_exist" (click)="fill()">Fill the feeder</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="!is_exist" (click)="save()">Save</button>
+    <button class="mat-raised-button btn btn-info" *ngIf="feeder.fullness >= 20" (click)="feed()">Feed the cat</button>
     <button class="mat-raised-button btn btn-danger close-button" (click)="close()">Close</button>
   </mat-dialog-actions>
 </div>

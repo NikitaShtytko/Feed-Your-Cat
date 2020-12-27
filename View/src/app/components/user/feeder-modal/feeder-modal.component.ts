@@ -2,6 +2,10 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {ConfirmDialogComponent} from "../../admin/confirm-dialog/confirm-dialog.component";
 import {CookieService} from "../../../services/cookie/cookie.service";
+import {Feeder} from "../../../models/feeder";
+import {FeederService} from "../../../services/feeder/feeder.service";
+import {Subscription} from "rxjs";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-feeder-modal',
@@ -9,43 +13,85 @@ import {CookieService} from "../../../services/cookie/cookie.service";
   styleUrls: ['./feeder-modal.component.css']
 })
 export class FeederModalComponent implements OnInit {
-  public data: any;
-  public is_exist;
+  public feeder: Feeder;
+  public is_exist = false;
+  public empty;
   time: any;
+
+  public subscriptions: Subscription[] = [];
 
   constructor(
     private _authCookie: CookieService,
     private dialogRef: MatDialogRef<ConfirmDialogComponent>,
+    private feederService: FeederService,
     @Inject(MAT_DIALOG_DATA) data
   ) {
-    this.is_exist = data.title != 'request';
+    this.is_exist = data.data !== 'request';
+
+    console.log(data);
 
     if (this.is_exist) {
-      this.data = data;
-
-      switch (this.data.empty) {
-        case 0:
-          this.data.empty = "Not empty";
+      this.feeder = data.data;
+      switch (this.feeder.is_empty) {
+        case false:
+          this.empty = "Not empty";
           break;
-        case 1:
-          this.data.empty = "Empty"
+        case true:
+          this.empty = "Empty"
           break;
       }
     }
+    else{
+      this.feeder = new Feeder();
+    }
   }
+
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$'),
+    ]),
+
+    type: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Zа-яА-Я\'_0-9]{4,40}$'),
+    ]),
+  });
 
 
   ngOnInit(): void {
 
   }
 
+  fill() {
+    this.subscriptions.push(this.feederService.fillTheFeeder(this.feeder.id).subscribe(response => {
+      this.feeder.fullness = response;
+      this.empty = 'Full';
+    }));
+  }
+
   feed() {
-    console.log(this.time);
-    this._authCookie.getAuth();
+    this.subscriptions.push(this.feederService.feedTheCat(this.feeder.id).subscribe(response => {
+      this.feeder.fullness = response;
+      if (response == 0){
+        this.empty = 'Empty';
+      }
+      else {
+        this.empty = 'Not empty';
+      }
+    }));
+  }
+
+  save() {
+    this.feeder.type = this.form.controls.type.value;
+    this.feeder.name = this.form.controls.name.value;
+
+    this.subscriptions.push(this.feederService.newFeeder(this.feeder).subscribe(response => {
+      this.dialogRef.close(true);
+    }));
   }
 
   close() {
     this.dialogRef.close(false);
   }
-
 }

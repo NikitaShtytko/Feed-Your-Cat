@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {ConfirmDialogComponent} from "../../admin/confirm-dialog/confirm-dialog.component";
 import {FeederModalComponent} from "../feeder-modal/feeder-modal.component";
+import {FeederService} from "../../../services/feeder/feeder.service";
+import {Subscription} from "rxjs";
+import {Feeder} from "../../../models/feeder";
 
 @Component({
   selector: 'app-feeders-page',
@@ -9,15 +11,21 @@ import {FeederModalComponent} from "../feeder-modal/feeder-modal.component";
   styleUrls: ['./feeders-page.component.css']
 })
 export class FeedersPageComponent implements OnInit {
-// public loading = true;
-  public loading = false;
-  // public arr = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16];
-  public arr = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14];
+  public feeder: Feeder[];
+  public loading = true;
+  // public loading = false;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog,
+              private feederService: FeederService) {}
+
+  public subscriptions: Subscription[] = [];
 
   ngOnInit(): void {
-
+    this.subscriptions.push(this.feederService.feederList().subscribe(response => {
+      this.feeder = response.data;
+      console.log(this.feeder);
+      this.loading = false;
+    }));
   }
 
   openDialog(way) {
@@ -26,15 +34,8 @@ export class FeedersPageComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
-    let tags = ['дом', 'любимый', 'барсик', 'кухня', 'дом', 'любимый', 'барсик', 'кухня', '0123456789'];
-    let status = 1, state = 80, empty = 0;
-
     dialogConfig.data = {
-      title: way,
-      tags: tags,
-      status: status,
-      state: state,
-      empty: empty,
+      data: way
     };
     const dialogRef = this.dialog.open(FeederModalComponent, dialogConfig);
 
@@ -43,7 +44,12 @@ export class FeedersPageComponent implements OnInit {
     }
 
     dialogRef.afterClosed().subscribe(
-      data => console.log("Dialog output:", data)
+      data => {
+        if (data === true){
+          this.ngOnInit();
+        }
+        console.log("Dialog output:", data)
+      }
     );
   }
 

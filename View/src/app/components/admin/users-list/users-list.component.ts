@@ -4,6 +4,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
 import {UserService} from "../../../services/user/user.service";
 import {Subscription} from "rxjs";
+import {CookieService} from "../../../services/cookie/cookie.service";
 
 @Component({
   selector: 'app-users-list',
@@ -12,10 +13,12 @@ import {Subscription} from "rxjs";
 })
 export class UsersListComponent implements OnInit {
   public user: User[];
+  public loading = true;
 
   constructor(
     private dialog: MatDialog,
     private userService: UserService,
+    private cookieService: CookieService
   ) {}
 
   public subscriptions: Subscription[] = [];
@@ -44,7 +47,11 @@ export class UsersListComponent implements OnInit {
   ngOnInit(): void {
     this.subscriptions.push(this.userService.getUsers().subscribe(response => {
         this.user = response.data;
-        console.log(this.user);
+        this.loading = false;
     }));
+  }
+
+  logOut() {
+    this.cookieService.deleteAuth();
   }
 }

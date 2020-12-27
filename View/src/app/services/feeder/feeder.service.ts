@@ -26,4 +26,20 @@ export class FeederService {
   decline(id: number): Observable<Feeder>{
     return this.httpClient.delete<Feeder>(this.route + '/api/feeders/not-approve/' + id);
   }
+
+  feederList(): Observable<any>{
+    return this.httpClient.get<any>(this.route + '/api/feeders');
+  }
+
+  feedTheCat(id: number): Observable<number>{
+    return this.httpClient.get<number>(this.route + '/api/feeders/feed/' + id);
+  }
+
+  fillTheFeeder(id: number): Observable<number>{
+    return this.httpClient.get<number>(this.route + '/api/feeders/fill/' + id);
+  }
+
+  newFeeder(feeder: Feeder): Observable<Feeder>{
+    return this.httpClient.post<Feeder>(this.route + '/api/feeders', feeder);
+  }
 }
