@@ -32,7 +32,7 @@ export class FeederModalComponent implements OnInit {
 
     if (this.is_exist) {
       this.feeder = data.data;
-      switch (this.feeder.is_empty) {
+      switch (this.feeder.is_Empty) {
         case false:
           this.empty = "Not empty";
           break;

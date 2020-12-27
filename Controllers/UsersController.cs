@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 using FeedYourCat.Services;
 using FeedYourCat.Entities;
 using FeedYourCat.Models.Users;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FeedYourCat.Controllers
@@ -23,15 +24,18 @@ namespace FeedYourCat.Controllers
         private IUserService _userService;
         private IValidationService _validationService;
         private IMapper _mapper;
+        private IHttpContextAccessor _httpContextAccessor;
 
         public UsersController(
             IUserService userService,
             IValidationService validationService,
-            IMapper mapper)
+            IMapper mapper,
+            IHttpContextAccessor httpContextAccessor)
         {
             _userService = userService;
             _mapper = mapper;
             _validationService = validationService;
+            _httpContextAccessor = httpContextAccessor;
         }
         
         [HttpPost("/api/auth/sign-in")]
@@ -53,7 +57,7 @@ namespace FeedYourCat.Controllers
             });
         }
         
-        [HttpPost]
+        [HttpPost("/api/auth/sign-up")]
         public IActionResult Register([FromBody]RegisterModel model)
         {
             // map model to entity
@@ -72,8 +76,10 @@ namespace FeedYourCat.Controllers
         }
 
         [HttpGet("/api/admin/moderation/users")]
-        public IActionResult GetUserRequests([FromQuery] string token)
+        public IActionResult GetUserRequests()
         {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -83,19 +89,23 @@ namespace FeedYourCat.Controllers
         }
 
         [HttpGet("/api/admin/moderated/users")]
-        public IActionResult GetRegisteredUsers([FromQuery] string token)
+        public IActionResult GetRegisteredUsers()
         {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
             }
-            var users = _mapper.Map<IList<UserModel>>(_userService.GetRegisteredUsers());
+            var users = _mapper.Map<IList<UserListModel>>(_userService.GetRegisteredUsers());
             return Ok(users);
         }
         
         [HttpGet("/api/admin/users/approve/{id}")]
-        public IActionResult Approve(int id, [FromQuery] string token)
+        public IActionResult Approve(int id)
         {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -106,8 +116,10 @@ namespace FeedYourCat.Controllers
         
         
         [HttpDelete("/api/admin/users/decline/{id}")]
-        public IActionResult Delete(int id, [FromQuery] string token)
+        public IActionResult Delete(int id)
         {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -117,8 +129,10 @@ namespace FeedYourCat.Controllers
         }
         
         [HttpGet("/api/admin/users")]
-        public IActionResult GetAllUsers([FromQuery] string token)
+        public IActionResult GetAllUsers()
         {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");

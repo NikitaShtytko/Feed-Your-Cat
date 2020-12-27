@@ -8,6 +8,7 @@ using FeedYourCat.Entities;
 using FeedYourCat.Helpers;
 using FeedYourCat.Models.Feeders;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -23,6 +24,7 @@ namespace FeedYourCat.Services
         void Decline(int id);
         void RegisterFeeder(Feeder feeder);
         void UpdateFeeder(Feeder feeder);
+        int FillFeeder(int id);
     }
     public class FeederService : IFeederService
     {
@@ -75,7 +77,8 @@ namespace FeedYourCat.Services
 
         public IEnumerable<Feeder> GetUserFeeders(int user_id)
         {
-            return _feederRepository.FindByCondition(f => f.User_Id == user_id);
+            return _feederRepository.FindByCondition(f => f.User_Id == user_id &&
+                                                          f.Is_Registered == true);
         }
 
         public void RegisterFeeder(Feeder feeder)
@@ -83,6 +86,8 @@ namespace FeedYourCat.Services
             if (string.IsNullOrEmpty(feeder.Name) || string.IsNullOrEmpty(feeder.Type))
                 return;
             feeder.Is_Registered = false;
+            feeder.Fullness = 0;
+            feeder.Is_Empty = true;
             _feederRepository.Create(feeder);
             _feederRepository.Save();
         }
@@ -93,6 +98,17 @@ namespace FeedYourCat.Services
                 return;
             _feederRepository.Update(feeder);
             _feederRepository.Save();
+        }
+
+        public int FillFeeder(int id)
+        {
+            var feeders = _feederRepository.FindByCondition(f => f.Id == id);
+            var feeder = feeders.First();
+            feeder.Fullness = 100;
+            feeder.Is_Empty = false;
+            _feederRepository.Update(feeder);
+            _feederRepository.Save();
+            return feeder.Fullness;
         }
     }
 }

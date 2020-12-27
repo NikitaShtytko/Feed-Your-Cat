@@ -15,7 +15,7 @@
     <div class="item relative waves-light" *ngFor="let item of feeder" (click)="openDialog(item)" mdbBtn mdbWavesEffect>
       <div class="item-content">
         <h3>{{item.name}}</h3>
-        <h5>{{item.fullness}}</h5>
+        <h5>{{item.fullness}}%</h5>
       </div>
     </div>
     <div id="add-icon-box" mdbBtn class="item relative waves-light" mdbWavesEffect (click)="openDialog('request')">

@@ -12,11 +12,11 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   getUsers(): Observable<any>{
-    return this.httpClient.get<any>(this.route + '/api/admin/users');
+    return this.httpClient.get<any>(this.route + '/api/admin/moderated/users');
   }
 
   getModeration(): Observable<any>{
-    return this.httpClient.get<any>(this.route + '/api/admin/users/moderation');
+    return this.httpClient.get<any>(this.route + '/api/admin/moderation/users');
   }
 
   accept(id: number): Observable<User>{
@@ -24,7 +24,7 @@ export class UserService {
   }
 
   decline(id: number): Observable<User>{
-    return this.httpClient.delete<User>(this.route + '/api/admin/users/not-approve/' + id);
+    return this.httpClient.delete<User>(this.route + '/api/admin/users/decline/' + id);
   }
 
   register(user: User): Observable<User[]>{

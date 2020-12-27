@@ -30,7 +30,7 @@
         <tbody class="thead-dark-child">
         <tr class="second-raw" *ngFor="let item of user; let r = index">
           <td>{{item.id}}</td>
-          <td>{{item.email}}</td>
+          <td>{{item.name}}</td>
           <td>
             <div class="actions">
               <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'user', item.id)">accept</span>
@@ -54,7 +54,7 @@
         <tbody class="thead-dark-child">
         <tr class="second-raw" *ngFor="let item of feeder; let r = index">
           <td>{{item.id}}</td>
-          <td>{{item.user.name}}</td>
+          <td>{{item.name}}</td>
           <td>
             <div class="actions">
               <span style="color: blue; cursor: pointer" (click)="openDialog('accept', 'feeder', item.id)">accept</span>

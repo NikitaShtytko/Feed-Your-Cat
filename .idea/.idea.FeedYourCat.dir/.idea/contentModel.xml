@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\shtyt\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\shtyt\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\shtyt\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="W:\Projects\FeedYourCat" t="IncludeRecursive">
+    <e p="C:\Users\куколд\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\куколд\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\куколд\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\куколд\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="D:\Feeder\FeedYourCat" t="IncludeRecursive">
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
+        <e p="FeedersController.cs" t="Include" />
         <e p="UsersController.cs" t="Include" />
       </e>
       <e p="Entities" t="Include">
+        <e p="Feeder.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="FeedYourCat.csproj" t="IncludeRecursive" />
@@ -28,10 +30,15 @@
         <e p="SqlServerMigrations" t="Include" />
       </e>
       <e p="models" t="Include">
+        <e p="Feeders" t="Include">
+          <e p="FeederModel.cs" t="Include" />
+          <e p="NewFeederModel.cs" t="Include" />
+        </e>
         <e p="Users" t="Include">
           <e p="AuthenticateModel.cs" t="Include" />
           <e p="RegisterModel.cs" t="Include" />
           <e p="UpdateModel.cs" t="Include" />
+          <e p="UserListModel.cs" t="Include" />
           <e p="UserModel.cs" t="Include" />
         </e>
       </e>
@@ -48,7 +55,10 @@
         <e p="launchSettings.json" t="Include" />
       </e>
       <e p="services" t="Include">
+        <e p="FeederService.cs" t="Include" />
+        <e p="Repository.cs" t="Include" />
         <e p="UserService.cs" t="Include" />
+        <e p="ValidationService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="View" t="Include">
@@ -118,7 +128,6 @@
         <e p="node_modules\es6-promise" t="IncludeRecursive" />
         <e p="node_modules\fast-deep-equal" t="IncludeRecursive" />
         <e p="node_modules\fast-json-stable-stringify" t="IncludeRecursive" />
-        <e p="node_modules\fsevents" t="IncludeRecursive" />
         <e p="node_modules\hammerjs" t="IncludeRecursive" />
         <e p="node_modules\hash.js" t="IncludeRecursive" />
         <e p="node_modules\is-docker" t="IncludeRecursive" />
@@ -315,7 +324,7 @@
                 <e p="cookie.service.spec.ts" t="Include" />
                 <e p="cookie.service.ts" t="Include" />
               </e>
-              <e p="feeder" t="Include">
+              <e p="Feeder" t="Include">
                 <e p="feeder.service.spec.ts" t="Include" />
                 <e p="feeder.service.ts" t="Include" />
               </e>

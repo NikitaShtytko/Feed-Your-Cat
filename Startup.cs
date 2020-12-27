@@ -18,9 +18,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
+using Microsoft.AspNetCore.Http;
 
 
- 
 namespace FeedYourCat
 {
     public class Startup
@@ -84,6 +84,7 @@ namespace FeedYourCat
             services.AddScoped<IFeederRepository, FeederRepository>();
             services.AddScoped<IValidationService, ValidationService>();
             services.AddScoped<IFeederService, FeederService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
  
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataContext dataContext)

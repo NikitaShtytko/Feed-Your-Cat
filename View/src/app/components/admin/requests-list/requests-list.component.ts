@@ -32,12 +32,12 @@ export class RequestsListComponent implements OnInit {
   ngOnInit(): void {
 
     this.subscriptions.push(this.userService.getModeration().subscribe(response => {
-      this.user = response.data;
+      this.user = response;
       this.loadingUsers = false;
     }));
 
     this.subscriptions.push(this.feederService.getModeration().subscribe(response => {
-      this.feeder = response.data;
+      this.feeder = response;
       this.loadingFeeders = false;
     }));
   }

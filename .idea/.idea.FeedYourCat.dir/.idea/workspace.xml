@@ -14,17 +14,6 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:user" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -43,9 +32,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dcbe6f-1ef2-405f-a515-b83254e29025" name="Default Changelist" comment="add support back">
+      <change afterPath="$PROJECT_DIR$/Models/Users/UserListModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FeedYourCat.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FeedersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FeedersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Feeders/NewFeederModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Feeders/NewFeederModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/FeederService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FeederService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ValidationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ValidationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/app/models/feeder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/models/feeder.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/app/services/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/app/services/user/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/FeedYourCat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/FeedYourCat.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,31 +78,34 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/authorization" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Models/Users/AuthenticateModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Users/UpdateModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Users/RegisterModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Users/UserModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/MySQLDataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/models/tag.ts" />
-        <option value="$PROJECT_DIR$/View/src/index.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.css" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/67af1978-147d-4488-b1a1-e8897580ac22/console.sql" />
         <option value="$PROJECT_DIR$/View/AccountController.cs" />
         <option value="$PROJECT_DIR$/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/Models/User.cs" />
         <option value="$PROJECT_DIR$/Helpers/AppException.cs" />
         <option value="$PROJECT_DIR$/Helpers/AppSettings.cs" />
-        <option value="$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" />
         <option value="$PROJECT_DIR$/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Models/Users/UserModel.cs" />
         <option value="$PROJECT_DIR$/Helpers/DataContext.cs" />
@@ -98,36 +114,43 @@
         <option value="$PROJECT_DIR$/Services/UserService.cs" />
         <option value="$PROJECT_DIR$/Models/Users/RegisterModel.cs" />
         <option value="$PROJECT_DIR$/appsettings.json" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Helpers/MySQLDataContext.cs" />
         <option value="$PROJECT_DIR$/Entities/User.cs" />
-        <option value="$PROJECT_DIR$/Controllers/UsersController.cs" />
         <option value="$PROJECT_DIR$/View/src/app/services/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.ts" />
         <option value="$PROJECT_DIR$/View/angular.json" />
         <option value="$PROJECT_DIR$/View/proxy.conf.json" />
         <option value="$PROJECT_DIR$/View/proxy.config.json" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/register-page/register-page.component.html" />
         <option value="$PROJECT_DIR$/View/package.json" />
-        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/login-page/login-page.component.ts" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/View/src/app/interceptor/authentication.interceptor.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/users-list/users-list.component.ts" />
+        <option value="$PROJECT_DIR$/Models/Users/UserListModel.cs" />
+        <option value="$PROJECT_DIR$/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/models/feeder.ts" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/feeders-list/feeders-list.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/services/cookie/cookie.service.ts" />
-        <option value="$PROJECT_DIR$/View/src/app/components/admin/confirm-dialog/confirm-dialog.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/admin/requests-list/requests-list.component.html" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.ts" />
         <option value="$PROJECT_DIR$/View/src/app/services/user/user.service.ts" />
+        <option value="$PROJECT_DIR$/Models/Feeders/NewFeederModel.cs" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeder-modal/feeder-modal.component.ts" />
+        <option value="$PROJECT_DIR$/View/src/app/components/user/feeders-page/feeders-page.component.html" />
         <option value="$PROJECT_DIR$/View/src/app/services/feeder/feeder.service.ts" />
+        <option value="$PROJECT_DIR$/Services/ValidationService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/FeedersController.cs" />
+        <option value="$PROJECT_DIR$/Services/FeederService.cs" />
       </list>
     </option>
   </component>
@@ -150,10 +173,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/View/src/app/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="dotNetConsole" />
-    <property name="ts.external.directory.path" value="W:\Projects\FeedYourCat\View\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Feeder\FeedYourCat\View\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected=".NET Launch Settings Profile.FeedYourCat">
     <configuration name="FeedYourCat" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FeedYourCat.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -440,28 +463,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="279" key="Github.CreatePullRequestDialog/0.0.1536.824@0.0.1536.824" timestamp="1607159227741" />
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1608982051985">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1609086359213">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="855" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609086359213" />
     <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1608982051985" />
     <state width="938" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1608982051985">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1609086359213">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="855" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609086359213" />
     <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1608982051985" />
     <state width="938" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1608982051985">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1609086359213">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="855" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609086359213" />
     <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1608982051985" />
     <state width="938" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
-    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1608982051985">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1609086359213">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="855" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607159332075" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609086359213" />
     <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1608982051985" />
     <state width="938" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605367862104" />
     <state width="1877" height="390" key="GridCell.Tab.1.bottom" timestamp="1604093732076">
@@ -517,10 +540,10 @@
     </state>
     <state x="34" y="69" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1607177740989" />
     <state x="42" y="90" width="1826" height="900" key="MergeDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160151154" />
-    <state x="478" y="230" key="MultipleFileMergeDialog" timestamp="1607177754917">
+    <state x="478" y="230" key="MultipleFileMergeDialog" timestamp="1609077197220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="230" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1607177754917" />
+    <state x="478" y="230" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1609077197220" />
     <state x="598" y="301" key="MultipleFileMergeDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607160127419" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1606838014422">
       <screen x="0" y="0" width="1536" height="824" />
@@ -553,9 +576,10 @@
     <state x="510" y="106" width="594" height="612" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607154732112" />
     <state x="638" y="139" width="644" height="801" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1608917493219" />
     <state x="2558" y="139" width="743" height="803" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607177252880" />
-    <state x="740" y="254" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607973010310">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="592" y="194" key="git4idea.branch.GitSmartOperationDialog" timestamp="1609077180383">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="592" y="194" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1609077180383" />
     <state x="740" y="254" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1607973010310" />
     <state x="823" y="425" width="348" height="298" key="org.angular.cli.generate" timestamp="1608975042147">
       <screen x="0" y="0" width="1920" height="1080" />

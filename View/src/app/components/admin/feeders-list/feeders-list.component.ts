@@ -25,7 +25,8 @@ export class FeedersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscriptions.push(this.feederService.getFeedersAdmin().subscribe(response => {
-      this.feeder = response.data;
+      console.log(response);
+      this.feeder = response;
       this.loading = false;
     }));
   }

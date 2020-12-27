@@ -45,9 +45,9 @@ export class LoginPageComponent implements OnInit {
       .subscribe(
         (data: any) => {
           JSON.stringify(data);
-          this._authCookie.setAuth(data.data.token);
+          this._authCookie.setAuth(data.token);
 
-          if (data.data.role === 'admin'){
+          if (data.role === 'admin'){
             this.router.navigate(['/admin']);
           }
           else {

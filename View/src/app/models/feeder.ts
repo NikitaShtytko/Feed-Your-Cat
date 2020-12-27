@@ -5,7 +5,7 @@ export class Feeder {
   id: number;
   name: string;
   type: string;
-  is_empty: boolean;
+  is_Empty: boolean;
   fullness: number;
   is_registered: boolean;
   tags :Tag[];
