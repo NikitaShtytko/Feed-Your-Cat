@@ -68,6 +68,9 @@ export class FeederModalComponent implements OnInit {
     this.subscriptions.push(this.feederService.TagList(this.feeder.id).subscribe(response => {
       this.feeder.tags = response;
     }));
+    this.subscriptions.push(this.feederService.ScheduleList(this.feeder.id).subscribe(response => {
+      this.feeder.schedules = response;
+    }));
   }
 
   fill() {
@@ -126,13 +129,19 @@ export class FeederModalComponent implements OnInit {
   }
 
   newSchedule(){
+    let hours = this.time.hour;
+    if(hours.toString().length == 1) hours = "0" + hours;
+    let minutes = this.time.minute;
+    if(minutes.toString().length == 1) minutes = "0" + minutes;
     const schedule = {
       id: this.feeder.id,
-      time: this.time,
+      time: hours + ':' + minutes + ":00",
     }
 
+    console.log(schedule);
     this.subscriptions.push(this.feederService.newSchedule(schedule).subscribe(response => {
       this.feeder.schedules = response;
+      this.newTime = false;
     }));
   }
 

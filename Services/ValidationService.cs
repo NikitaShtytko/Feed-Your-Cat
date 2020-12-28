@@ -9,6 +9,7 @@ namespace FeedYourCat.Services
         int ValidateUserId(string token);
         bool ValidateUserFeeder(int feeder_id, int user_id);
         bool ValidateTag(int tagId, int userId);
+        bool ValidateSchedule(int scheduleId, int userId);
     }
     
     public class ValidationService : IValidationService
@@ -16,12 +17,14 @@ namespace FeedYourCat.Services
         private IUserRepository _userRepository;
         private IFeederRepository _feederRepository;
         private ITagRepository _tagRepository;
+        private IScheduleRepository _scheduleRepository;
 
         public ValidationService(IRepositoryWrapper repository)
         {
             _userRepository = repository.User;
             _feederRepository = repository.Feeder;
             _tagRepository = repository.Tag;
+            _scheduleRepository = repository.Schedule;
         }
 
         public bool ValidateRole(string token, string role)
@@ -62,6 +65,19 @@ namespace FeedYourCat.Services
             if (!tags.Any()) return false;
             var tag = tags.First();
             var feeders = _feederRepository.FindByCondition(f => f.Id == tag.Feeder_Id);
+            if (!feeders.Any()) return false;
+            var feeder = feeders.First();
+            var users = _userRepository.FindByCondition(u => u.Id == feeder.User_Id);
+            if (!users.Any()) return false;
+            return true;
+        }
+
+        public bool ValidateSchedule(int scheduleId, int userId)
+        {
+            var schedules = _scheduleRepository.FindByCondition(t => t.Id == scheduleId);
+            if (!schedules.Any()) return false;
+            var schedule = schedules.First();
+            var feeders = _feederRepository.FindByCondition(f => f.Id == schedule.Feeder_Id);
             if (!feeders.Any()) return false;
             var feeder = feeders.First();
             var users = _userRepository.FindByCondition(u => u.Id == feeder.User_Id);
