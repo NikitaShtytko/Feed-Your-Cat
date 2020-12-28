@@ -31,6 +31,7 @@ namespace FeedYourCat.Services
         IEnumerable<Tag> GetFeederTags(int id);
         IEnumerable<Schedule> AddFeederSchedule(Schedule schedule);
         IEnumerable<Schedule> DeleteFeederSchedule(int id);
+        IEnumerable<Schedule> GetFeederSchedules(int id);
     }
     public class FeederService : IFeederService
     {
@@ -187,6 +188,11 @@ namespace FeedYourCat.Services
             }
 
             return _scheduleRepository.FindByCondition(s => s.Feeder_Id == feeder_id);
+        }
+
+        public IEnumerable<Schedule> GetFeederSchedules(int id)
+        {
+            return _scheduleRepository.FindByCondition(s => s.Feeder_Id == id);
         }
     }
 }

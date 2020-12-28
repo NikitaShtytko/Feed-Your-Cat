@@ -358,7 +358,8 @@ namespace FeedYourCat.Controllers
                 return BadRequest("It's not your feeder!");
             }
 
-            return Ok();
+            var schedules = _feederService.GetFeederSchedules(id);
+            return Ok(schedules);
         }
     }
 }
