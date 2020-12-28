@@ -45,12 +45,6 @@ export class FeederService {
     return this.httpClient.post<Feeder>(this.route + '/api/user/feeders/register', feeder);
   }
 
-
-
-
-
-
-
   TagList(id: number): Observable<Tag[]> {
     return this.httpClient.get<Tag[]>(this.route + '/api/user/feeders/tags/' + id);
   }
@@ -69,5 +63,9 @@ export class FeederService {
 
   deleteSchedule(id: number): Observable<Schedule[]> {
     return this.httpClient.delete<Schedule[]>(this.route + '/api/user/feeders/schedule/' + id);
+  }
+
+  logs(id: number): Observable<any>{
+    return this.httpClient.get<any>(this.route + '/api/user/feeders/log/id');
   }
 }

@@ -141,4 +141,12 @@ export class FeederModalComponent implements OnInit {
       this.feeder.schedules = response;
     }));
   }
+
+  logs(id: number){
+    this.subscriptions.push(this.feederService.logs(id).subscribe(response => {
+      let blob = new Blob([response], { type: 'text/csv' });
+      let url = window.URL.createObjectURL(blob);
+      window.open(url);
+    }));
+  }
 }
