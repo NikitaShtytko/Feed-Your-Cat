@@ -40,7 +40,7 @@
 
 .right-column{
   text-align: center;
-  overflow: hidden;
+  overflow-y: scroll;
   height: 450px;
   font-size: 20px;
   margin-right: -30px;

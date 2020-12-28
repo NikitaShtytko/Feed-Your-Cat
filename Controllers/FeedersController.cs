@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
@@ -241,9 +241,7 @@ namespace FeedYourCat.Controllers
             var tag = _mapper.Map<Tag>(model);
             tag.Feeder_Id = tag.Id;
             tag.Id = 0;
-            
-            Console.WriteLine(tag.Id + " " + tag.Feeder_Id + " " + tag.Tag_Data);
-            
+
             return Ok(_feederService.AddTag(tag));
         }
 
@@ -311,14 +309,56 @@ namespace FeedYourCat.Controllers
                 return BadRequest("It's not your feeder!");
             }
             
-            Console.WriteLine(model.Id + " " + model.Date);
-
             var schedule = _mapper.Map<Schedule>(model);
             schedule.Feeder_Id = schedule.Id;
             schedule.Id = 0;
             var schedules = _feederService.AddFeederSchedule(schedule);
             return Ok(schedules);
         }
-        
+
+        [HttpDelete("/api/user/feeders/schedule/{id}")]
+        public IActionResult DeleteFeederSchedule(int id)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateSchedule(id, userId))
+            {
+                return BadRequest("Schedule validation failed");
+            }
+
+            var schedules = _feederService.DeleteFeederSchedule(id);
+            return Ok(schedules);
+        }
+
+        [HttpGet("/api/user/feeders/schedules/{id}")]
+        public IActionResult GetFeederSchedules(int id)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateUserFeeder(id, userId))
+            {
+                return BadRequest("It's not your feeder!");
+            }
+
+            return Ok();
+        }
     }
 }

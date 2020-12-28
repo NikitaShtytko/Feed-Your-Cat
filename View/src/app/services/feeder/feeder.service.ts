@@ -67,6 +67,10 @@ export class FeederService {
     return this.httpClient.put<Schedule[]>(this.route + '/api/user/feeders/schedule', schedule);
   }
 
+  ScheduleList(id: number): Observable<Schedule[]> {
+    return this.httpClient.get<Schedule[]>(this.route + '/api/user/feeders/schedules/' + id);
+  }
+
   deleteSchedule(id: number): Observable<Schedule[]> {
     return this.httpClient.delete<Schedule[]>(this.route + '/api/user/feeders/schedule/' + id);
   }
