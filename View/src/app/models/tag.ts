@@ -2,6 +2,5 @@
 
 export class Tag {
   id: number;
-  tag: string;
-  feeder: Feeder;
+  tag_Data: string;
 }

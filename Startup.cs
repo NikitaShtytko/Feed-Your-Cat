@@ -84,6 +84,8 @@ namespace FeedYourCat
             services.AddScoped<IFeederRepository, FeederRepository>();
             services.AddScoped<IValidationService, ValidationService>();
             services.AddScoped<IFeederService, FeederService>();
+            services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
  

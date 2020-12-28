@@ -64,9 +64,10 @@ export class FeederModalComponent implements OnInit {
     ])
   });
 
-
   ngOnInit(): void {
-
+    this.subscriptions.push(this.feederService.TagList(this.feeder.id).subscribe(response => {
+      this.feeder.tags = response;
+    }));
   }
 
   fill() {
@@ -107,19 +108,20 @@ export class FeederModalComponent implements OnInit {
   newTag() {
     const tag = {
       id: this.feeder.id,
-      tag: this.tag.controls.tag.value
+      tag_data: this.tag.controls.tag.value
     }
 
     console.log(tag);
 
     this.subscriptions.push(this.feederService.newTag(tag).subscribe(response => {
-      this.feeder = response;
+      console.log(response);
+      this.feeder.tags = response;
     }));
   }
 
   deleteTag(id: number) {
     this.subscriptions.push(this.feederService.deleteTag(id).subscribe(response => {
-      this.feeder = response;
+      this.feeder.tags = response;
     }));
   }
 
@@ -130,13 +132,13 @@ export class FeederModalComponent implements OnInit {
     }
 
     this.subscriptions.push(this.feederService.newSchedule(schedule).subscribe(response => {
-      this.feeder = response;
+      this.feeder.schedules = response;
     }));
   }
 
   deleteSchedule(id: number){
     this.subscriptions.push(this.feederService.deleteSchedule(id).subscribe(response => {
-      this.feeder = response;
+      this.feeder.schedules = response;
     }));
   }
 }

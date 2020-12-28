@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
@@ -14,7 +14,8 @@ using FeedYourCat.Entities;
 using FeedYourCat.Models.Feeders;
 using FeedYourCat.Models.Users;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore.Internal;
+ using Microsoft.AspNetCore.Razor.TagHelpers;
+ using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FeedYourCat.Controllers
 {
@@ -194,5 +195,130 @@ namespace FeedYourCat.Controllers
             int newFullness = _feederService.FillFeeder(id);
             return Ok(newFullness);
         }
+
+        [HttpGet("/api/user/feeders/feed/{id}")]
+        public IActionResult FeedCat(int id)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateUserFeeder(id, userId))
+            {
+                return BadRequest("It's not your feeder!");
+            }
+
+            int newFullness = _feederService.FeedCat(id);
+            return Ok(newFullness);
+        }
+
+        [HttpPut("/api/user/feeders/tag")]
+        public IActionResult AddFeederTag([FromBody] TagModel model)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateUserFeeder(model.Id, userId))
+            {
+                return BadRequest("It's not your feeder!");
+            }
+
+            var tag = _mapper.Map<Tag>(model);
+            tag.Feeder_Id = tag.Id;
+            tag.Id = 0;
+            
+            Console.WriteLine(tag.Id + " " + tag.Feeder_Id + " " + tag.Tag_Data);
+            
+            return Ok(_feederService.AddTag(tag));
+        }
+
+        [HttpDelete("/api/user/feeders/tag/{id}")]
+        public IActionResult DeleteTag(int id)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateTag(id, userId))
+            {
+                return BadRequest("Tag validation failed");
+            }
+            var tags = _feederService.DeleteTag(id);
+            return Ok(tags);
+        }
+
+        [HttpGet("/api/user/feeders/tags/{id}")]
+        public IActionResult GetUserTags(int id)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateUserFeeder(id, userId))
+            {
+                return BadRequest("It's not your feeder!");
+            }
+
+            var tags = _feederService.GetFeederTags(id);
+            return Ok(tags);
+        }
+
+        [HttpPut("/api/user/feeders/schedule")]
+        public IActionResult AddFeederSchedule([FromBody] ScheduleModel model)
+        {
+            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = token_base.Split(" ")[1];
+            if (!_validationService.ValidateRole(token, "user"))
+            {
+                return BadRequest("You are not user!");
+            }
+            int userId = _validationService.ValidateUserId(token);
+            if (userId == -1)
+            {
+                return BadRequest("You are not user!");
+            }
+            if (!_validationService.ValidateUserFeeder(model.Id, userId))
+            {
+                return BadRequest("It's not your feeder!");
+            }
+            
+            Console.WriteLine(model.Id + " " + model.Date);
+
+            var schedule = _mapper.Map<Schedule>(model);
+            schedule.Feeder_Id = schedule.Id;
+            schedule.Id = 0;
+            var schedules = _feederService.AddFeederSchedule(schedule);
+            return Ok(schedules);
+        }
+        
     }
 }

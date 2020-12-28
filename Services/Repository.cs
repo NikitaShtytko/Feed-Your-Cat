@@ -76,10 +76,36 @@ namespace FeedYourCat.Services
         }
     }
     
+    public interface ITagRepository : IRepositoryBase<Tag>
+    {
+    }
+    
+    public class TagRepository : RepositoryBase<Tag>, ITagRepository
+    {
+        public TagRepository(DataContext repositoryContext)
+            :base(repositoryContext)
+        {
+        }
+    }
+    
+    public interface IScheduleRepository : IRepositoryBase<Schedule>
+    {
+    }
+    
+    public class ScheduleRepository : RepositoryBase<Schedule>, IScheduleRepository
+    {
+        public ScheduleRepository(DataContext repositoryContext)
+            :base(repositoryContext)
+        {
+        }
+    }
+    
     public interface IRepositoryWrapper
     {
         IUserRepository User { get; }
         IFeederRepository Feeder { get; }
+        ITagRepository Tag { get; }
+        IScheduleRepository Schedule { get; }
         void Save();
     }
     
@@ -88,6 +114,8 @@ namespace FeedYourCat.Services
         private DataContext _repoContext;
         private IUserRepository _user;
         private IFeederRepository _feeder;
+        private ITagRepository _tag;
+        private IScheduleRepository _schedule;
         public IUserRepository User {
             get {
                 if(_user == null)
@@ -106,6 +134,27 @@ namespace FeedYourCat.Services
                 return _feeder;
             }
         }
+        public ITagRepository Tag {
+            get {
+                if(_tag == null)
+                {
+                    _tag = new TagRepository(_repoContext);
+                }
+                return _tag;
+            }
+        }
+
+        public IScheduleRepository Schedule
+        {
+            get {
+                if(_schedule == null)
+                {
+                    _schedule = new ScheduleRepository(_repoContext);
+                }
+                return _schedule;
+            }
+        }
+
         public RepositoryWrapper(DataContext repositoryContext)
         {
             _repoContext = repositoryContext;

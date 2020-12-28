@@ -16,6 +16,8 @@ namespace FeedYourCat.Helpers
             CreateMap<NewFeederModel, Feeder>();
             CreateMap<FeederModel, Feeder>();
             CreateMap<User, UserListModel>();
+            CreateMap<TagModel, Tag>();
+            CreateMap<ScheduleModel, Schedule>();
         }
     }
 }

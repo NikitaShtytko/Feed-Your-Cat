@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -25,14 +25,23 @@ namespace FeedYourCat.Services
         void RegisterFeeder(Feeder feeder);
         void UpdateFeeder(Feeder feeder);
         int FillFeeder(int id);
+        int FeedCat(int id);
+        IEnumerable<Tag> AddTag(Tag tag);
+        IEnumerable<Tag> DeleteTag(int id);
+        IEnumerable<Tag> GetFeederTags(int id);
+        IEnumerable<Schedule> AddFeederSchedule(Schedule schedule);
     }
     public class FeederService : IFeederService
     {
         private IFeederRepository _feederRepository;
+        private ITagRepository _tagRepository;
+        private IScheduleRepository _scheduleRepository;
 
-        public FeederService(IFeederRepository feederRepository)
+        public FeederService(IRepositoryWrapper repositoryWrapper)
         {
-            _feederRepository = feederRepository;
+            _feederRepository = repositoryWrapper.Feeder;
+            _tagRepository = repositoryWrapper.Tag;
+            _scheduleRepository = repositoryWrapper.Schedule;
         }
 
         public IEnumerable<Feeder> GetAllFeeders()
@@ -103,12 +112,65 @@ namespace FeedYourCat.Services
         public int FillFeeder(int id)
         {
             var feeders = _feederRepository.FindByCondition(f => f.Id == id);
+            if (!feeders.Any())
+            {
+                return -1;
+            }
             var feeder = feeders.First();
             feeder.Fullness = 100;
             feeder.Is_Empty = false;
             _feederRepository.Update(feeder);
             _feederRepository.Save();
             return feeder.Fullness;
+        }
+
+        public int FeedCat(int id)
+        {
+            var feeders = _feederRepository.FindByCondition(f => f.Id == id);
+            if (!feeders.Any())
+            {
+                return -1;
+            }
+            var feeder = feeders.First();
+            feeder.Fullness = feeder.Fullness - 20 >= 0 ? feeder.Fullness - 20 : 0;
+            if (feeder.Fullness == 0) feeder.Is_Empty = true;
+            _feederRepository.Update(feeder);
+            _feederRepository.Save();
+            return feeder.Fullness;
+        }
+
+        public IEnumerable<Tag> AddTag(Tag tag)
+        {
+            _tagRepository.Create(tag);
+            _tagRepository.Save();
+            return _tagRepository.FindByCondition(t => t.Feeder_Id == tag.Feeder_Id);
+        }
+
+        public IEnumerable<Tag> DeleteTag(int id)
+        {
+            var tags = _tagRepository.FindByCondition(t => t.Id == id);
+            int feeder_id = -1;
+            if (tags.Any())
+            {
+                var tag = tags.First();
+                feeder_id = tag.Feeder_Id;
+                _tagRepository.Delete(tag);
+                _tagRepository.Save();
+            }
+            tags = _tagRepository.FindByCondition(t => t.Feeder_Id == feeder_id);
+            return tags;
+        }
+
+        public IEnumerable<Tag> GetFeederTags(int id)
+        {
+            return _tagRepository.FindByCondition(tag => tag.Feeder_Id == id);
+        }
+
+        public IEnumerable<Schedule> AddFeederSchedule(Schedule schedule)
+        {
+            _scheduleRepository.Create(schedule);
+            _scheduleRepository.Save();
+            return _scheduleRepository.FindByCondition(s => s.Feeder_Id == schedule.Feeder_Id);
         }
     }
 }

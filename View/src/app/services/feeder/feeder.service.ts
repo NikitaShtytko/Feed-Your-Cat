@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Feeder} from "../../models/feeder";
+import {Tag} from "../../models/tag";
+import {Schedule} from "../../models/schedule";
 
 @Injectable({
   providedIn: 'root'
@@ -49,21 +51,23 @@ export class FeederService {
 
 
 
-
-
-  newTag(tag: any): Observable<Feeder> {
-    return this.httpClient.put<Feeder>(this.route + '/api/feeders', tag);
+  TagList(id: number): Observable<Tag[]> {
+    return this.httpClient.get<Tag[]>(this.route + '/api/user/feeders/tags/' + id);
   }
 
-  deleteTag(id: number): Observable<Feeder> {
-    return this.httpClient.delete<Feeder>(this.route + '/api/feeders' + id);
+  newTag(tag: any): Observable<Tag[]> {
+    return this.httpClient.put<Tag[]>(this.route + '/api/user/feeders/tag', tag);
   }
 
-  newSchedule(schedule: { id: number; time: any }): Observable<Feeder>  {
-    return this.httpClient.put<Feeder>(this.route + '/api/feeders', schedule);
+  deleteTag(id: number): Observable<Tag[]> {
+    return this.httpClient.delete<Tag[]>(this.route + '/api/user/feeders/tag/' + id);
   }
 
-  deleteSchedule(id: number): Observable<Feeder> {
-    return this.httpClient.delete<Feeder>(this.route + '/api/feeders' + id);
+  newSchedule(schedule: { id: number; time: any }): Observable<Schedule[]>  {
+    return this.httpClient.put<Schedule[]>(this.route + '/api/user/feeders/schedule', schedule);
+  }
+
+  deleteSchedule(id: number): Observable<Schedule[]> {
+    return this.httpClient.delete<Schedule[]>(this.route + '/api/user/feeders/schedule/' + id);
   }
 }
