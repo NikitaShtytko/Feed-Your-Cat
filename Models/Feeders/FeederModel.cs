@@ -1,6 +1,4 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
-
+﻿
 namespace FeedYourCat.Models.Feeders
 {
     public class FeederModel

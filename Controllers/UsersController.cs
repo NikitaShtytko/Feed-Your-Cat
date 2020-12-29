@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using System.IdentityModel.Tokens.Jwt;
 using FeedYourCat.Helpers;
-using Microsoft.Extensions.Options;
-using System.Text;
-using Microsoft.IdentityModel.Tokens;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
+using System.Text.Json;
 using FeedYourCat.Services;
 using FeedYourCat.Entities;
 using FeedYourCat.Models.Users;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FeedYourCat.Controllers
 {
@@ -25,14 +18,17 @@ namespace FeedYourCat.Controllers
         private IValidationService _validationService;
         private IMapper _mapper;
         private IHttpContextAccessor _httpContextAccessor;
+        private IUserLogService _userLogService;
 
         public UsersController(
             IUserService userService,
             IValidationService validationService,
+            IUserLogService userLogService,
             IMapper mapper,
             IHttpContextAccessor httpContextAccessor)
         {
             _userService = userService;
+            _userLogService = userLogService;
             _mapper = mapper;
             _validationService = validationService;
             _httpContextAccessor = httpContextAccessor;
@@ -78,8 +74,8 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/moderation/users")]
         public IActionResult GetUserRequests()
         {
-            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-            var token = token_base.Split(" ")[1];
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -91,8 +87,8 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/moderated/users")]
         public IActionResult GetRegisteredUsers()
         {
-            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-            var token = token_base.Split(" ")[1];
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -104,8 +100,8 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/users/approve/{id}")]
         public IActionResult Approve(int id)
         {
-            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-            var token = token_base.Split(" ")[1];
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -118,8 +114,8 @@ namespace FeedYourCat.Controllers
         [HttpDelete("/api/admin/users/decline/{id}")]
         public IActionResult Delete(int id)
         {
-            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-            var token = token_base.Split(" ")[1];
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
@@ -131,14 +127,36 @@ namespace FeedYourCat.Controllers
         [HttpGet("/api/admin/users")]
         public IActionResult GetAllUsers()
         {
-            string token_base = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-            var token = token_base.Split(" ")[1];
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
             if (!_validationService.ValidateRole(token, "admin"))
             {
                 return BadRequest("You are not admin!");
             }
             var users = _mapper.Map<IList<UserModel>>(_userService.GetAll());
             return Ok(users);
+        }
+        
+        [HttpGet("/api/admin/users/log/{id}")]
+        public IActionResult GetUserLogsAdmin(int id)
+        {
+            string tokenBase = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+            var token = tokenBase.Split(" ")[1];
+            
+            if (!_validationService.ValidateRole(token, "admin"))
+            {
+                return BadRequest("You are not admin!");
+            }
+
+            var logs = _userLogService.GetUserLogs(id);
+            string data = "";
+            foreach(var item in logs)
+            {
+                data += item.Action + " " + item.Date + "\n";
+            }
+
+            var obj = JsonSerializer.Serialize(data);
+            return Ok(obj);
         }
     }
 }

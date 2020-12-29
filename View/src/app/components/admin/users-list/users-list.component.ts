@@ -5,6 +5,7 @@ import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component
 import {UserService} from "../../../services/user/user.service";
 import {Subscription} from "rxjs";
 import {CookieService} from "../../../services/cookie/cookie.service";
+import {saveAs} from 'file-saver';
 
 @Component({
   selector: 'app-users-list',
@@ -53,5 +54,12 @@ export class UsersListComponent implements OnInit {
 
   logOut() {
     this.cookieService.deleteAuth();
+  }
+
+  logs(id: number, name: string) {
+    this.subscriptions.push(this.userService.logs(id).subscribe(response => {
+      let blob = new Blob([response], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "User " + name + ".txt");
+    }));
   }
 }

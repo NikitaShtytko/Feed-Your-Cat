@@ -23,9 +23,7 @@
     <div class="left-column">
       <h2 class="left-column__item" *ngIf="feeder.type === 'sensor'">State {{feeder.fullness}} %</h2>
       <h2 class="left-column__item">{{empty}}</h2>
-      <a download="feeder{{feeder.name}}.txt" style='cursor: pointer;' class="nav-link" target="_blank" (click)="logs(feeder.id)">
-        <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item">Logs</button>
-      </a>
+        <button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item" (click)="logs(feeder.id, feeder.name)">Logs</button>
     </div>
 
     <div class="center-column">

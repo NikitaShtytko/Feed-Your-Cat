@@ -69,7 +69,11 @@ export class FeederService {
     return this.httpClient.delete<Schedule[]>(this.route + '/api/user/feeders/schedule/' + id);
   }
 
-  logs(id: number): Observable<any>{
-    return this.httpClient.get<any>(this.route + '/api/user/feeders/log/id');
+  logs(id: number): Observable<string>{
+    return this.httpClient.get<string>(this.route + '/api/user/feeders/log/' + id);
+  }
+
+  logsAdmin(id: number): Observable<string>{
+    return this.httpClient.get<string>(this.route + '/api/admin/feeders/log/' + id);
   }
 }

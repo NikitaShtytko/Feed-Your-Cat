@@ -20,7 +20,6 @@
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Logs</th>
-        <th scope="col">Manage</th>
       </tr>
       </thead>
 
@@ -30,10 +29,7 @@
         <td>{{item.role}}</td>
         <td>{{item.name}}</td>
         <td>{{item.email}}</td>
-        <td>{{item.id}}</td>
-        <td>
-          <span style="color: #f12711; cursor: pointer" (click)="openDialog()">delete</span>
-        </td>
+        <td><button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item" (click)="logs(item.id, item.name)">Logs</button></td>
       </tr>
       </tbody>
     </table>

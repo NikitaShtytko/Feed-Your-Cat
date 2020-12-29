@@ -6,7 +6,6 @@ using System.Security.Claims;
 using System.Text;
 using FeedYourCat.Entities;
 using FeedYourCat.Helpers;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -27,12 +26,15 @@ namespace FeedYourCat.Services
     {
         
         private IUserRepository _userRepository;
+        private IUserLogService _userLogService;
         private readonly AppSettings _appSettings;
 
         public UserService(IUserRepository userRepository,
+            IUserLogService userLogService,
             IOptions<AppSettings> appSettings)
         {
             _userRepository = userRepository;
+            _userLogService = userLogService;
             _appSettings = appSettings.Value;
         }
 
@@ -121,6 +123,7 @@ namespace FeedYourCat.Services
                 user.Is_Registered = true;
                 _userRepository.Update(user);
                 _userRepository.Save();
+                _userLogService.AddLog("Approved", user.Id);
             }
         }
         
@@ -133,6 +136,7 @@ namespace FeedYourCat.Services
                 var user = users.First();
                 _userRepository.Delete(user);
                 _userRepository.Save();
+                _userLogService.AddLog("Declined", user.Id);
             }
         }
         

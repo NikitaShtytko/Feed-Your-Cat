@@ -6,6 +6,7 @@ import {Feeder} from "../../../models/feeder";
 import {FeederService} from "../../../services/feeder/feeder.service";
 import {Subscription} from "rxjs";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {saveAs} from 'file-saver';
 
 @Component({
   selector: 'app-feeder-modal',
@@ -114,10 +115,8 @@ export class FeederModalComponent implements OnInit {
       tag_data: this.tag.controls.tag.value
     }
 
-    console.log(tag);
 
     this.subscriptions.push(this.feederService.newTag(tag).subscribe(response => {
-      console.log(response);
       this.feeder.tags = response;
     }));
   }
@@ -138,7 +137,6 @@ export class FeederModalComponent implements OnInit {
       time: hours + ':' + minutes + ":00",
     }
 
-    console.log(schedule);
     this.subscriptions.push(this.feederService.newSchedule(schedule).subscribe(response => {
       this.feeder.schedules = response;
       this.newTime = false;
@@ -151,11 +149,10 @@ export class FeederModalComponent implements OnInit {
     }));
   }
 
-  logs(id: number){
+  logs(id: number, name: string){
     this.subscriptions.push(this.feederService.logs(id).subscribe(response => {
-      let blob = new Blob([response], { type: 'text/csv' });
-      let url = window.URL.createObjectURL(blob);
-      window.open(url);
+      let blob = new Blob([response], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "Feeder " + name + ".txt");
     }));
   }
 }

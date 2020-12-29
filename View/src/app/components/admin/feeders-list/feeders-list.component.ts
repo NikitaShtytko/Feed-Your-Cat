@@ -4,6 +4,7 @@ import {Subscription} from "rxjs";
 import {FeederService} from "../../../services/feeder/feeder.service";
 import {User} from "../../../models/user";
 import {CookieService} from "../../../services/cookie/cookie.service";
+import {saveAs} from 'file-saver';
 
 
 @Component({
@@ -25,7 +26,6 @@ export class FeedersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscriptions.push(this.feederService.getFeedersAdmin().subscribe(response => {
-      console.log(response);
       this.feeder = response;
       this.loading = false;
     }));
@@ -33,5 +33,12 @@ export class FeedersListComponent implements OnInit {
 
   logOut() {
     this.cookieService.deleteAuth();
+  }
+
+  logs(id: number, name: string){
+    this.subscriptions.push(this.feederService.logsAdmin(id).subscribe(response => {
+      let blob = new Blob([response], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "Feeder " + name + ".txt");
+    }));
   }
 }

@@ -38,4 +38,8 @@ export class UserService {
   existEmail(email: string): Observable<boolean>{
     return this.httpClient.get<boolean>(this.route + '/api/email?email=' + email);
   }
+
+  logs(id: number): Observable<string>{
+    return this.httpClient.get<string>(this.route + '/api/admin/users/log/' + id);
+  }
 }

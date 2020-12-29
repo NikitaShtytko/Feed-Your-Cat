@@ -22,5 +22,7 @@ namespace FeedYourCat.Helpers
         public DbSet<Feeder> Feeders { get; set; }
         public DbSet<Tag> Feeder_Tags { get; set; }
         public DbSet<Schedule> Feeder_Schedules { get; set; }
+        public DbSet<FeederLog> Feeder_Logs { get; set; }
+        public DbSet<UserLog> User_Logs { get; set; }
     }
 }

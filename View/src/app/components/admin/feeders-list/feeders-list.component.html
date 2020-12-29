@@ -31,7 +31,7 @@
       <td>{{item.type}}</td>
       <td>{{item.is_Empty}}</td>
       <td>{{item.fullness}}%</td>
-      <td>Сделать лог</td>
+      <td><button mdbBtn mdbWavesEffect class="btn btn-primary left-column__item" (click)="logs(item.id, item.name)">Logs</button></td>
     </tr>
     </tbody>
   </table>

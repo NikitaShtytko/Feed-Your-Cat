@@ -100,12 +100,40 @@ namespace FeedYourCat.Services
         }
     }
     
+    public interface IFeederLogRepository : IRepositoryBase<FeederLog>
+    {
+        
+    }
+    
+    public class FeederLogRepository : RepositoryBase<FeederLog>, IFeederLogRepository
+    {
+        public FeederLogRepository(DataContext repositoryContext)
+            :base(repositoryContext)
+        {
+        }
+    }
+    
+    public interface IUserLogRepository : IRepositoryBase<UserLog>
+    {
+        
+    }
+    
+    public class UserLogRepository : RepositoryBase<UserLog>, IUserLogRepository
+    {
+        public UserLogRepository(DataContext repositoryContext)
+            :base(repositoryContext)
+        {
+        }
+    }
+    
     public interface IRepositoryWrapper
     {
         IUserRepository User { get; }
         IFeederRepository Feeder { get; }
         ITagRepository Tag { get; }
         IScheduleRepository Schedule { get; }
+        IFeederLogRepository FeederLog { get; }
+        IUserLogRepository UserLog { get; }
         void Save();
     }
     
@@ -116,6 +144,8 @@ namespace FeedYourCat.Services
         private IFeederRepository _feeder;
         private ITagRepository _tag;
         private IScheduleRepository _schedule;
+        private IFeederLogRepository _feederLogRepository;
+        private IUserLogRepository _userLogRepository;
         public IUserRepository User {
             get {
                 if(_user == null)
@@ -152,6 +182,28 @@ namespace FeedYourCat.Services
                     _schedule = new ScheduleRepository(_repoContext);
                 }
                 return _schedule;
+            }
+        }
+        
+        public IFeederLogRepository FeederLog
+        {
+            get {
+                if(_feederLogRepository == null)
+                {
+                    _feederLogRepository = new FeederLogRepository(_repoContext);
+                }
+                return _feederLogRepository;
+            }
+        }
+        
+        public IUserLogRepository UserLog
+        {
+            get {
+                if(_userLogRepository == null)
+                {
+                    _userLogRepository = new UserLogRepository(_repoContext);
+                }
+                return _userLogRepository;
             }
         }
 

@@ -1,18 +1,8 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
-using System.Text;
 using FeedYourCat.Entities;
-using FeedYourCat.Helpers;
-using FeedYourCat.Models.Feeders;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 
-namespace FeedYourCat.Services
+ namespace FeedYourCat.Services
 {
     public interface IFeederService
     {
@@ -38,12 +28,18 @@ namespace FeedYourCat.Services
         private IFeederRepository _feederRepository;
         private ITagRepository _tagRepository;
         private IScheduleRepository _scheduleRepository;
+        private IFeederLogService _feederLogService;
+        private IUserLogService _userLogService;
 
-        public FeederService(IRepositoryWrapper repositoryWrapper)
+        public FeederService(IRepositoryWrapper repositoryWrapper,
+            IFeederLogService feederLogService,
+            IUserLogService userLogService)
         {
             _feederRepository = repositoryWrapper.Feeder;
             _tagRepository = repositoryWrapper.Tag;
             _scheduleRepository = repositoryWrapper.Schedule;
+            _feederLogService = feederLogService;
+            _userLogService = userLogService;
         }
 
         public IEnumerable<Feeder> GetAllFeeders()
@@ -101,6 +97,7 @@ namespace FeedYourCat.Services
             feeder.Is_Empty = true;
             _feederRepository.Create(feeder);
             _feederRepository.Save();
+            _userLogService.AddLog("Register feeder " + feeder.Name, feeder.User_Id);
         }
 
         public void UpdateFeeder(Feeder feeder)
@@ -123,6 +120,7 @@ namespace FeedYourCat.Services
             feeder.Is_Empty = false;
             _feederRepository.Update(feeder);
             _feederRepository.Save();
+            _feederLogService.AddLog("Filled", feeder.Id);
             return feeder.Fullness;
         }
 
@@ -138,6 +136,7 @@ namespace FeedYourCat.Services
             if (feeder.Fullness == 0) feeder.Is_Empty = true;
             _feederRepository.Update(feeder);
             _feederRepository.Save();
+            _feederLogService.AddLog("Feed the cat", feeder.Id);
             return feeder.Fullness;
         }
 
@@ -145,6 +144,7 @@ namespace FeedYourCat.Services
         {
             _tagRepository.Create(tag);
             _tagRepository.Save();
+            _feederLogService.AddLog("Added tag " + tag.Tag_Data, tag.Feeder_Id);
             return _tagRepository.FindByCondition(t => t.Feeder_Id == tag.Feeder_Id);
         }
 
@@ -158,6 +158,7 @@ namespace FeedYourCat.Services
                 feeder_id = tag.Feeder_Id;
                 _tagRepository.Delete(tag);
                 _tagRepository.Save();
+                _feederLogService.AddLog("Deleted tag " + tag.Tag_Data, tag.Feeder_Id);
             }
             tags = _tagRepository.FindByCondition(t => t.Feeder_Id == feeder_id);
             return tags;
@@ -172,6 +173,7 @@ namespace FeedYourCat.Services
         {
             _scheduleRepository.Create(schedule);
             _scheduleRepository.Save();
+            _feederLogService.AddLog("Added schedule " + schedule.Time, schedule.Feeder_Id);
             return _scheduleRepository.FindByCondition(s => s.Feeder_Id == schedule.Feeder_Id);
         }
 
@@ -185,6 +187,7 @@ namespace FeedYourCat.Services
                 feeder_id = schedule.Feeder_Id;
                 _scheduleRepository.Delete(schedule);
                 _scheduleRepository.Save();
+                _feederLogService.AddLog("Deleted schedule " + schedule.Time, schedule.Feeder_Id);
             }
 
             return _scheduleRepository.FindByCondition(s => s.Feeder_Id == feeder_id);

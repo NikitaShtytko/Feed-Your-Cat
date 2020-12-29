@@ -23,7 +23,6 @@ export class FeedersPageComponent implements OnInit {
   ngOnInit(): void {
     this.subscriptions.push(this.feederService.feederList().subscribe(response => {
       this.feeder = response;
-      console.log(this.feeder);
       this.loading = false;
     }));
   }
@@ -48,7 +47,6 @@ export class FeedersPageComponent implements OnInit {
         if (data === true){
           this.ngOnInit();
         }
-        console.log("Dialog output:", data)
       }
     );
   }
